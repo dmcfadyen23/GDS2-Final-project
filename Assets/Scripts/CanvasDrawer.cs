@@ -1,3 +1,4 @@
+using PDollarGestureRecognizer;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -86,6 +87,8 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     private void DrawLine(Vector2 start, Vector2 end)
     {
+        DrawCheck drawCheck = GetComponent<DrawCheck>();
+        drawCheck.candidatePoints.Add(new Point(start.x, start.y, 0));
         // Bresenham's Line Algorithm to ensure continuous solid strokes
         int x0 = (int)start.x;
         int y0 = (int)start.y;

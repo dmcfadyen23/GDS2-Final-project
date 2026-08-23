@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using PDollarGestureRecognizer;
 using UnityEngine.InputSystem;
@@ -8,6 +9,7 @@ public class DrawCheck : MonoBehaviour
 {
     private Gesture[] trainingSet = null;
     private CanvasDrawer canvasDrawer;
+    public List<Point> candidatePoints = new List<Point>();
 
     private Gesture[] LoadTrainingSet()
     {
@@ -91,6 +93,9 @@ public class DrawCheck : MonoBehaviour
         if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
             Debug.Log("finish");
+            Gesture candidate = new Gesture(candidatePoints.ToArray());
+            string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
+            Debug.Log("shape is " + gestureShape);
         }
     }
 }
