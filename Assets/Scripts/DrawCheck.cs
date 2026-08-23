@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class DrawCheck : MonoBehaviour
 {
     private Gesture[] trainingSet = null;
+    private CanvasDrawer canvasDrawer;
 
     private Gesture[] LoadTrainingSet()
     {
@@ -71,16 +72,20 @@ public class DrawCheck : MonoBehaviour
     void Start()
     {
         trainingSet = LoadTrainingSet();
-        Debug.Log(trainingSet.Length);
+        canvasDrawer = GetComponent<CanvasDrawer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.isPressed)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), Mouse.current.position.ReadValue()))
-            Debug.Log("left inside");
+            canvasDrawer.ToggleBrushColour();
+        }
+        
+        if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+        {
+            canvasDrawer.ClearCanvas();
         }
 
         if (Keyboard.current.enterKey.wasPressedThisFrame)
