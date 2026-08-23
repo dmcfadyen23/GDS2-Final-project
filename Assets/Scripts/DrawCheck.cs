@@ -9,7 +9,7 @@ public class DrawCheck : MonoBehaviour
 {
     private Gesture[] trainingSet = null;
     private CanvasDrawer canvasDrawer;
-    public List<Point> candidatePoints = new List<Point>();
+    public readonly List<Point> CandidatePoints = new List<Point>();
 
     private Gesture[] LoadTrainingSet()
     {
@@ -74,6 +74,7 @@ public class DrawCheck : MonoBehaviour
     void Start()
     {
         trainingSet = LoadTrainingSet();
+        Debug.Log(trainingSet.Length);
         canvasDrawer = GetComponent<CanvasDrawer>();
     }
 
@@ -88,12 +89,14 @@ public class DrawCheck : MonoBehaviour
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
         {
             canvasDrawer.ClearCanvas();
+            CandidatePoints.Clear();
+            Debug.Log(CandidatePoints.Count());
         }
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        if (Keyboard.current.enterKey.wasPressedThisFrame && CandidatePoints.Count > 0)
         {
             Debug.Log("finish");
-            Gesture candidate = new Gesture(candidatePoints.ToArray());
+            Gesture candidate = new Gesture(CandidatePoints.ToArray());
             string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
             Debug.Log("shape is " + gestureShape);
         }
