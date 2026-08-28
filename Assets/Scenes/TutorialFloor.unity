@@ -503,6 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179284377}
   - component: {fileID: 179284378}
+  - component: {fileID: 179284379}
   m_Layer: 0
   m_Name: PlaceholderScroll - Combat Mechanics?
   m_TagString: Untagged
@@ -571,6 +572,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0603237, y: 1.7641382}
   m_EdgeRadius: 0
+--- !u!114 &179284379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179284376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialScribble
+  tutorialUI: {fileID: 0}
+  message: Sneak attack/Turn based/ # of paints per battle
 --- !u!1 &362626083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9643,6 +9658,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1001340577}
   - component: {fileID: 1001340578}
+  - component: {fileID: 1001340580}
+  - component: {fileID: 1001340579}
   m_Layer: 0
   m_Name: DummyScroll
   m_TagString: Untagged
@@ -9711,6 +9728,35 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0603237, y: 1.7641382}
   m_EdgeRadius: 0
+--- !u!114 &1001340579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001340576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0145b81e3577add42a01c141c70da3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialUI
+  tutorialText: {fileID: 1267041642}
+--- !u!114 &1001340580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001340576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialScribble
+  tutorialUI: {fileID: 1001340579}
+  message: 'Try fighitng this dummy
+
+'
 --- !u!1 &1136546300
 GameObject:
   m_ObjectHideFlags: 0
@@ -10460,6 +10506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780160561}
   - component: {fileID: 1780160562}
+  - component: {fileID: 1780160563}
   m_Layer: 0
   m_Name: PlaceholderScroll - Spells?
   m_TagString: Untagged
@@ -10528,6 +10575,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0603237, y: 1.7641382}
   m_EdgeRadius: 0
+--- !u!114 &1780160563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780160560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialScribble
+  tutorialUI: {fileID: 0}
+  message: Telling spells ie sqauare trangle circle
 --- !u!1 &1950645294
 GameObject:
   m_ObjectHideFlags: 0
