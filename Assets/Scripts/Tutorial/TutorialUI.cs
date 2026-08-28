@@ -5,7 +5,16 @@ public class TutorialUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text tutorialText;
 
-    private int paintsCollected = 0;
+    private void Start()
+    {
+        if (GameManager.Instance == null)
+            return;
+
+        if (GameManager.Instance.HasTutorialStarted())
+        {
+            tutorialText.text = "";
+        }
+    }
 
     public void ShowMessage(string message)
     {
@@ -19,9 +28,9 @@ public class TutorialUI : MonoBehaviour
 
     public void CollectPaint()
     {
-        paintsCollected++;
+        int paintsCollected = GameManager.Instance.GetPaintsCollected();
 
-        if (paintsCollected <= 3)
+        if (paintsCollected >= 3)
         {
             ShowMessage("Read the scrolls on the walls");
         }
