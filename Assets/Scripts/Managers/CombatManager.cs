@@ -12,6 +12,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
     public void WinCombat()
     {
         GameManager.Instance.DefeatEnemy();
+
         GameManager.Instance.ReturnToOverworld();
     }
 }

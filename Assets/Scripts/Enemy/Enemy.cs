@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour //Add enemy stuff here
 {
     [SerializeField] private string enemyID;
 
-    public string GetEnemyID()//Enemy Identifier
+    public string GetEnemyID()
     {
         return enemyID;
     }

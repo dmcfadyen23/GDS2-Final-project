@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private int paintsCollected = 0;
 
-    private string defeatedEnemyID = "";
+    private HashSet<string> defeatedEnemies = new HashSet<string>();
 
     private void Awake()
     {
@@ -47,25 +48,27 @@ public class GameManager : MonoBehaviour
         return enemyID;
     }
 
+    public void ReturnToOverworld()
+    {
+        SceneManager.LoadScene("TutorialFloor");
+    }
+
     public void DefeatEnemy()
     {
-        defeatedEnemyID = enemyID;
+        if (!string.IsNullOrEmpty(enemyID))
+        {
+            defeatedEnemies.Add(enemyID);
+        }
     }
 
     public bool IsEnemyDefeated(string id)
     {
-        return defeatedEnemyID == id;
+        return defeatedEnemies.Contains(id);
     }
 
-    //Tutorial Stuff
     public bool HasTutorialStarted()
     {
         return tutorialStarted;
-    }
-
-    public void ReturnToOverworld()
-    {
-        SceneManager.LoadScene("TutorialFloor");
     }
 
     public void CollectPaint()
