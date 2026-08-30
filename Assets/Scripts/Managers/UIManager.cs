@@ -11,8 +11,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] 
     private GameObject colourSelection;
 
-    [SerializeField] private Image playerHealthBar;
-    [SerializeField] private Image enemyHealthBar;
+    [SerializeField] private Slider playerHealthBar;
+    [SerializeField] private Slider enemyHealthBar;
     
     public void GoToDrawing()
     {
@@ -44,12 +44,12 @@ public class UIManager : MonoBehaviour
 
     public void UpdatePlayerHealthBar(int health)
     {
-        playerHealthBar.fillAmount = (float)health / 100;
+        playerHealthBar.value = health;
     }
 
     public void UpdateEnemyHealthBar(int health)
     {
-        enemyHealthBar.fillAmount = (float)health / 100;
+        enemyHealthBar.value = health;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -439,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &372651797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2148,7 +2148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1297549206
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2424,6 +2424,7 @@ GameObject:
   - component: {fileID: 1387244709}
   - component: {fileID: 1387244711}
   - component: {fileID: 1387244710}
+  - component: {fileID: 1387244712}
   m_Layer: 5
   m_Name: EnemyPlaceholder
   m_TagString: Untagged
@@ -2489,6 +2490,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387244708}
   m_CullTransparentMesh: 1
+--- !u!114 &1387244712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387244708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  enemyID: Skeleton
+  health: 100
 --- !u!1 &1438091479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,8 +4371,8 @@ MonoBehaviour:
   drawingCanvas: {fileID: 1018504332}
   drawButton: {fileID: 1929307179}
   colourSelection: {fileID: 496144643}
-  playerHealthBar: {fileID: 1153516733}
-  enemyHealthBar: {fileID: 1660628918}
+  playerHealthBar: {fileID: 676069254}
+  enemyHealthBar: {fileID: 709273982}
 --- !u!4 &2043388612
 Transform:
   m_ObjectHideFlags: 0

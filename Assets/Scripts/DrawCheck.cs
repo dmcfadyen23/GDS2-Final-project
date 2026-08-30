@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,7 @@ public class DrawCheck : MonoBehaviour
             uiManager.GoToMain();
             Enemy enemy = FindAnyObjectByType<Enemy>();
             enemy.LoseHealth(50);
+            Debug.Log("Enemy has " + enemy.GetHealth());
             uiManager.UpdateEnemyHealthBar(enemy.GetHealth());
             if (enemy.GetHealth() <= 0)
             {
@@ -35,6 +37,7 @@ public class DrawCheck : MonoBehaviour
             {
                 PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
                 playerHealth.LoseHealth(10);
+                Debug.Log("Player has "+ playerHealth.GetHealth());
                 uiManager.UpdatePlayerHealthBar(playerHealth.GetHealth());
                 if (playerHealth.GetHealth() <= 0)
                 {
