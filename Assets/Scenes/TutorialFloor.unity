@@ -424,6 +424,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyID: TutorialBoss
+  basicAttack:
+    attackName: 
+    damage: 0
 --- !u!61 &133548593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3343,6 +3346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyID: Skeleton1
+  basicAttack:
+    attackName: 
+    damage: 0
 --- !u!61 &606149305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12127,6 +12133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyID: Skeleton2
+  basicAttack:
+    attackName: 
+    damage: 0
 --- !u!61 &1220848617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15024,6 +15033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyID: Skeleton3
+  basicAttack:
+    attackName: 
+    damage: 0
 --- !u!61 &1801476849
 BoxCollider2D:
   m_ObjectHideFlags: 0
