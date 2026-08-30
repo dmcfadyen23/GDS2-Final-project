@@ -12,6 +12,8 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] private Color brushColor = Color.red;
     [SerializeField] private int brushRadius = 5;
 
+    private int strokeNumber = -1;
+
     private Color[] colours = new Color[]
     {
         Color.red, Color.blue, Color.green
@@ -46,6 +48,7 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     public void ClearCanvas()
     {
+        strokeNumber = -1;
         Color[] clearColors = new Color[(int)rectTransform.rect.width * (int)rectTransform.rect.height];
         for (int i = 0; i < clearColors.Length; i++) 
             clearColors[i] = canvasBackgroundColor;
@@ -58,6 +61,7 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         // Capture initial tap position
         TryDraw(eventData.position, out lastPosition);
+        strokeNumber++;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -93,7 +97,7 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
     private void DrawLine(Vector2 start, Vector2 end)
     {
         DrawCheck drawCheck = GetComponent<DrawCheck>();
-        drawCheck.CandidatePoints.Add(new Point(start.x, start.y, 0));
+        drawCheck.CandidatePoints.Add(new Point(start.x, start.y, strokeNumber));
         // Bresenham's Line Algorithm to ensure continuous solid strokes
         int x0 = (int)start.x;
         int y0 = (int)start.y;

@@ -37,11 +37,11 @@ public class DrawCheck : MonoBehaviour
             string gestureName = "CircleWithCross";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
-            string filepath = Path.Combine(Application.dataPath, gestureName + ".txt");
+            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + "2.txt");
+            Debug.Log(filepath);
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
                 writer.WriteLine("Gesture, " + gestureName);
-                writer.WriteLine("Stroke");
                 for (int i = 0; i < candidate.Points.Length; i++)
                 {
                     if (currentStroke == candidate.Points[i].StrokeID)
@@ -50,7 +50,7 @@ public class DrawCheck : MonoBehaviour
                     }
                     else
                     {
-                        writer.WriteLine("Stroke");
+                        currentStroke++;
                     }
                 }
             }
@@ -82,8 +82,6 @@ public class DrawCheck : MonoBehaviour
     {
         List<Point> points = new List<Point>();
         string gestureName = "";
-        int row = 32;
-        int stroke = -1;
         if (File.Exists(filename))
         {
             using (StreamReader reader = new StreamReader(filename))
@@ -97,22 +95,11 @@ public class DrawCheck : MonoBehaviour
                         case "Gesture":
                             gestureName = fields[1];
                             break;
-                        case "Stroke":
-                            stroke++;
-                            break;
                         default:
-                            int col = 0;
-                            row--;
-                    
-                            foreach (string x in fields)
-                            {
-                                if (x == "0xff000000")
-                                {
-                                    points.Add(new Point(col, row, stroke));
-                                }
-                                col++;
-                            }
-
+                            float x = float.Parse(fields[0]);
+                            float y = float.Parse(fields[1]);
+                            int strokeID = int.Parse(fields[2]);
+                            points.Add(new Point(x, y, strokeID));
                             break;
                     }
                     
@@ -129,12 +116,12 @@ public class DrawCheck : MonoBehaviour
     {
         trainingSet = LoadTrainingSet();
         Debug.Log(trainingSet.Length);
-        string str = "";
-        foreach (var point in trainingSet[0].Points)
-        {
-            str += point.X.ToString() + ", " + point.Y.ToString() + ", ";
-        }
-        Debug.Log(str);
+        // string str = "";
+        // foreach (var point in trainingSet[0].Points)
+        // {
+        //     str += point.X.ToString() + ", " + point.Y.ToString() + ", ";
+        // }
+        // Debug.Log(str);
         canvasDrawer = GetComponent<CanvasDrawer>();
         uiManager = FindAnyObjectByType<UIManager>();
     }
