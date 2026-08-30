@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,35 @@ public class DrawCheck : MonoBehaviour
         else
         {
             Debug.Log("No drawing found");
+        }
+    }
+
+    public void WriteDrawing()
+    {
+        if (CandidatePoints.Count > 0)
+        {
+            Debug.Log("writing drawing to database");
+            string gestureName = "CircleWithCross";
+            int currentStroke = 0;
+            Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
+            string filepath = Path.Combine(Application.persistentDataPath, gestureName + ".txt");
+            using (StreamWriter writer = new StreamWriter(filepath, true))
+            {
+                writer.WriteLine("Gesture, " + gestureName);
+                writer.WriteLine("Stroke");
+                for (int i = 0; i < candidate.Points.Length; i++)
+                {
+                    if (currentStroke == candidate.Points[i].StrokeID)
+                    {
+                        writer.WriteLine(candidate.Points[i].X.ToString() + " " + candidate.Points[i].Y.ToString() + " " + candidate.Points[i].StrokeID);
+                    }
+                    else
+                    {
+                        writer.WriteLine("Stroke");
+                    }
+                }
+            }
+            uiManager.GoToMain();
         }
     }
 
