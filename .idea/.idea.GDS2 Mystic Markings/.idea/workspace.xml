@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CanvasDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CanvasDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/CircleWithCross.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ShapeData/CircleWithCross.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/Cross.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/Cross.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/Square.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/Square.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/circle.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/circle.txt.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

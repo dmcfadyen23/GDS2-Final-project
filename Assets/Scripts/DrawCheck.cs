@@ -34,10 +34,10 @@ public class DrawCheck : MonoBehaviour
         if (CandidatePoints.Count > 0)
         {
             Debug.Log("writing drawing to database");
-            string gestureName = "CircleWithCross";
+            string gestureName = "Spiral";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
-            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + "2.txt");
+            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + "1.txt");
             Debug.Log(filepath);
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
