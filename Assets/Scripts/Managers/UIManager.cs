@@ -30,6 +30,13 @@ public class UIManager : MonoBehaviour
         drawButton.SetActive(false);
         colourSelection.SetActive(true);
     }
+
+    public void WaitForEnemy()
+    {
+        drawingCanvas.SetActive(false);
+        drawButton.SetActive(false);
+        colourSelection.SetActive(false);
+    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

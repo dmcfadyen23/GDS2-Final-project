@@ -21,6 +21,7 @@ public class DrawCheck : MonoBehaviour
             Gesture candidate = new Gesture(CandidatePoints.ToArray());
             string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
             Debug.Log("shape is " + gestureShape);
+            // use attack associated with shape, later colour will be taken into account as well
             uiManager.GoToMain();
         }
         else
@@ -29,15 +30,18 @@ public class DrawCheck : MonoBehaviour
         }
     }
 
+    // Dev tool for creating shapes, draw shape then puts data into a txt file for later use
     public void WriteDrawing()
     {
         if (CandidatePoints.Count > 0)
         {
             Debug.Log("writing drawing to database");
+            // name of shape and file here
             string gestureName = "Spiral";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
-            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + "1.txt");
+            // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition
+            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + ".txt");
             Debug.Log(filepath);
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
