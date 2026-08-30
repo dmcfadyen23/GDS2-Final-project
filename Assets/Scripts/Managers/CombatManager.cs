@@ -9,10 +9,15 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
         Debug.Log("Starting combat against: " + enemyID);
     }
 
-    public void WinCombat()
+    public static void WinCombat()
     {
         GameManager.Instance.DefeatEnemy();
 
+        GameManager.Instance.ReturnToOverworld();
+    }
+
+    public static void LoseCombat()
+    {
         GameManager.Instance.ReturnToOverworld();
     }
 }

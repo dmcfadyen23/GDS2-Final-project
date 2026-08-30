@@ -15,6 +15,11 @@ public class Enemy : MonoBehaviour //Add enemy stuff here
         health -= damage;
     }
 
+    public int GetHealth()
+    {
+        return health;
+    }
+
     private void Start()
     {
         if (GameManager.Instance != null)

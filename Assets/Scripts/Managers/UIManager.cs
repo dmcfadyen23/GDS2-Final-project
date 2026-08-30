@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] 
     private GameObject colourSelection;
+
+    [SerializeField] private Image playerHealthBar;
+    [SerializeField] private Image enemyHealthBar;
     
     public void GoToDrawing()
     {
@@ -36,6 +40,16 @@ public class UIManager : MonoBehaviour
         drawingCanvas.SetActive(false);
         drawButton.SetActive(false);
         colourSelection.SetActive(false);
+    }
+
+    public void UpdatePlayerHealthBar(int health)
+    {
+        playerHealthBar.fillAmount = (float)health / 100;
+    }
+
+    public void UpdateEnemyHealthBar(int health)
+    {
+        enemyHealthBar.fillAmount = (float)health / 100;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

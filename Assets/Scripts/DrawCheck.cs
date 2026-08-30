@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using PDollarGestureRecognizer;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DrawCheck : MonoBehaviour
 {
@@ -25,8 +26,22 @@ public class DrawCheck : MonoBehaviour
             uiManager.GoToMain();
             Enemy enemy = FindAnyObjectByType<Enemy>();
             enemy.LoseHealth(50);
-            PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
-            playerHealth.LoseHealth(10);
+            uiManager.UpdateEnemyHealthBar(enemy.GetHealth());
+            if (enemy.GetHealth() <= 0)
+            {
+                CombatManager.WinCombat();
+            }
+            else
+            {
+                PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
+                playerHealth.LoseHealth(10);
+                uiManager.UpdatePlayerHealthBar(playerHealth.GetHealth());
+                if (playerHealth.GetHealth() <= 0)
+                {
+                    CombatManager.LoseCombat();
+                    SceneManager.LoadScene("TutorialFloor");
+                }
+            }
         }
         else
         {
