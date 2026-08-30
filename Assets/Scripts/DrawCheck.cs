@@ -10,7 +10,31 @@ public class DrawCheck : MonoBehaviour
     private Gesture[] trainingSet = null;
     private CanvasDrawer canvasDrawer;
     public readonly List<Point> CandidatePoints = new List<Point>();
+    private UIManager uiManager;
 
+    public void FinishDrawing()
+    {
+        if (CandidatePoints.Count > 0)
+        {
+            Debug.Log("finish");
+            Gesture candidate = new Gesture(CandidatePoints.ToArray());
+            string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
+            Debug.Log("shape is " + gestureShape);
+            uiManager.GoToMain();
+        }
+        else
+        {
+            Debug.Log("No drawing found");
+        }
+    }
+
+    public void ClearDrawing()
+    {
+        canvasDrawer.ClearCanvas();
+        CandidatePoints.Clear();
+        Debug.Log(CandidatePoints.Count());
+    }
+    
     private Gesture[] LoadTrainingSet()
     {
         List<Gesture> gestures = new List<Gesture>();
@@ -75,7 +99,14 @@ public class DrawCheck : MonoBehaviour
     {
         trainingSet = LoadTrainingSet();
         Debug.Log(trainingSet.Length);
+        string str = "";
+        foreach (var point in trainingSet[0].Points)
+        {
+            str += point.X.ToString() + ", " + point.Y.ToString() + ", ";
+        }
+        Debug.Log(str);
         canvasDrawer = GetComponent<CanvasDrawer>();
+        uiManager = FindAnyObjectByType<UIManager>();
     }
 
     // Update is called once per frame

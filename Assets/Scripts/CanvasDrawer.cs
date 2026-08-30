@@ -24,6 +24,11 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
         if (colourIndex >= 2) colourIndex = -1;
     }
 
+    public void ChooseCanvasColour(int colour)
+    {
+        brushColor = colours[colour];
+    }
+
     private Texture2D drawingTexture;
     private RawImage rawImage;
     private RectTransform rectTransform;
