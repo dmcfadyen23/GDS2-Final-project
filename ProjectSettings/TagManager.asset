@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - DrawCanvas
+  - Ground
+  - Interactables
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - Interactables
   - 
   - 
   - 
