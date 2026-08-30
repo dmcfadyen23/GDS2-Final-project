@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShapeData/circle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ShapeData/circle.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +18,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/10/770146f2/PointCloudRecognizer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/2d/c11121f5/Geometry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/cb/55eb6769/Gesture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/10/770146f2/PointCloudRecognizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/2d/c11121f5/Geometry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/cb/55eb6769/Gesture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GDS1/Final Project/GDS1 Project/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Plugins.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Plugins.meta" root0="SKIP_HIGHLIGHTING" />

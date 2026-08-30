@@ -37,7 +37,7 @@ public class DrawCheck : MonoBehaviour
             string gestureName = "CircleWithCross";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
-            string filepath = Path.Combine(Application.persistentDataPath, gestureName + ".txt");
+            string filepath = Path.Combine(Application.dataPath, gestureName + ".txt");
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
                 writer.WriteLine("Gesture, " + gestureName);
@@ -46,7 +46,7 @@ public class DrawCheck : MonoBehaviour
                 {
                     if (currentStroke == candidate.Points[i].StrokeID)
                     {
-                        writer.WriteLine(candidate.Points[i].X.ToString() + " " + candidate.Points[i].Y.ToString() + " " + candidate.Points[i].StrokeID);
+                        writer.WriteLine(candidate.Points[i].X.ToString() + ", " + candidate.Points[i].Y.ToString() + ", " + candidate.Points[i].StrokeID);
                     }
                     else
                     {
@@ -142,24 +142,24 @@ public class DrawCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            canvasDrawer.ToggleBrushColour();
-        }
-        
-        if (Keyboard.current.backspaceKey.wasPressedThisFrame)
-        {
-            canvasDrawer.ClearCanvas();
-            CandidatePoints.Clear();
-            Debug.Log(CandidatePoints.Count());
-        }
-
-        if (Keyboard.current.enterKey.wasPressedThisFrame && CandidatePoints.Count > 0)
-        {
-            Debug.Log("finish");
-            Gesture candidate = new Gesture(CandidatePoints.ToArray());
-            string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
-            Debug.Log("shape is " + gestureShape);
-        }
+        // if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        // {
+        //     canvasDrawer.ToggleBrushColour();
+        // }
+        //
+        // if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+        // {
+        //     canvasDrawer.ClearCanvas();
+        //     CandidatePoints.Clear();
+        //     Debug.Log(CandidatePoints.Count());
+        // }
+        //
+        // if (Keyboard.current.enterKey.wasPressedThisFrame && CandidatePoints.Count > 0)
+        // {
+        //     Debug.Log("finish");
+        //     Gesture candidate = new Gesture(CandidatePoints.ToArray());
+        //     string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
+        //     Debug.Log("shape is " + gestureShape);
+        // }
     }
 }
