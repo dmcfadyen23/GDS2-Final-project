@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="" />
+    <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialFloor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TutorialFloor.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../GDS1/Final Project/GDS1 Project/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneSwitch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3IJeDSDuFzHKGwWC52cmgKqR06B" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,6 +32,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature-draw",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
