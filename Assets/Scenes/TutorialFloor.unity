@@ -294,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -421.58252, y: -200.26672}
+  m_AnchoredPosition: {x: 0, y: 210}
   m_SizeDelta: {x: -1014.241, y: -433.4666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106296990
@@ -427,6 +427,7 @@ MonoBehaviour:
   basicAttack:
     attackName: 
     damage: 0
+  health: 100
 --- !u!61 &133548593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -663,8 +664,8 @@ Transform:
   - {fileID: 2111357953}
   - {fileID: 147585777}
   - {fileID: 983805709}
-  - {fileID: 1303850060}
   - {fileID: 1780160561}
+  - {fileID: 1303850060}
   - {fileID: 179284377}
   - {fileID: 1001340577}
   - {fileID: 1169472522}
@@ -902,7 +903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &179284377
 Transform:
   m_ObjectHideFlags: 0
@@ -971,12 +972,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179284376}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialScribble
-  tutorialUI: {fileID: 0}
+  tutorialUI: {fileID: 179284380}
   message: Sneak attack/Turn based/ # of paints per battle
 --- !u!114 &179284380
 MonoBehaviour:
@@ -985,7 +986,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179284376}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0145b81e3577add42a01c141c70da3be, type: 3}
   m_Name: 
@@ -3349,6 +3350,7 @@ MonoBehaviour:
   basicAttack:
     attackName: 
     damage: 0
+  health: 100
 --- !u!61 &606149305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6042,7 +6044,7 @@ Transform:
   m_GameObject: {fileID: 788570974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.018609047, y: 0.3499868, z: -18.539244}
+  m_LocalPosition: {x: 0.3524027, y: 0.3499868, z: -18.539244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7561,7 +7563,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.018609226, y: 0.009986758}
+  m_Offset: {x: 0.35240263, y: 0.009986758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7571,7 +7573,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6970521, y: 2.3840888}
+  m_Size: {x: 0.95666945, y: 2.3840888}
   m_EdgeRadius: 0
 --- !u!224 &874976539
 RectTransform:
@@ -11320,7 +11322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1001340577
 Transform:
   m_ObjectHideFlags: 0
@@ -11389,7 +11391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001340576}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0145b81e3577add42a01c141c70da3be, type: 3}
   m_Name: 
@@ -11402,7 +11404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001340576}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
   m_Name: 
@@ -12136,6 +12138,7 @@ MonoBehaviour:
   basicAttack:
     attackName: 
     damage: 0
+  health: 100
 --- !u!61 &1220848617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12373,8 +12376,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 148.88, y: 61.267}
-  m_SizeDelta: {x: 297.76, y: 122.53}
+  m_AnchoredPosition: {x: -13.121, y: 61.268}
+  m_SizeDelta: {x: 416.363, y: 122.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267041642
 MonoBehaviour:
@@ -12398,25 +12401,24 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'WASD to move
 
-
     Pick up the brush'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4293523968
+  m_fontColor: {r: 0, g: 0.98039216, b: 0.9127307, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0.6472527, b: 0, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 0.64705884, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -12426,14 +12428,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 47.9
+  m_fontSizeBase: 47.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -13231,7 +13233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1303850060
 Transform:
   m_ObjectHideFlags: 0
@@ -13241,7 +13243,7 @@ Transform:
   m_GameObject: {fileID: 1303850059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.92, y: 0, z: 0}
+  m_LocalPosition: {x: 14.92, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14865,7 +14867,7 @@ Transform:
   m_GameObject: {fileID: 1780160560}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.979998, y: 0, z: 0}
+  m_LocalPosition: {x: 13.05, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14929,7 +14931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44584a57244e27541a012877ab22a1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialScribble
-  tutorialUI: {fileID: 0}
+  tutorialUI: {fileID: 1780160564}
   message: Common spells include squares, circles and triangles
 --- !u!114 &1780160564
 MonoBehaviour:
@@ -15036,6 +15038,7 @@ MonoBehaviour:
   basicAttack:
     attackName: 
     damage: 0
+  health: 100
 --- !u!61 &1801476849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15392,7 +15395,7 @@ Transform:
   m_GameObject: {fileID: 1994749047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 2.5, z: 0.01}
+  m_LocalPosition: {x: 2, y: 2.5, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
