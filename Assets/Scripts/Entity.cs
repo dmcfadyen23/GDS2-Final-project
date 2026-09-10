@@ -1,18 +1,11 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class Entity : MonoBehaviour
 {
-    private int health = 100;
+    
+    public float health = 100;
 
-    public void LoseHealth(int damage)
-    {
-        health -= damage;
-    }
-
-    public int GetHealth()
-    {
-        return health;
-    }
+    public float attackStat;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
