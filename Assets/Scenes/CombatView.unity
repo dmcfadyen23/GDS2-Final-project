@@ -2502,8 +2502,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Skeleton
   health: 100
+  attackStat: 0
+  enemyID: Skeleton
+  basicAttack:
+    attackName: 
+    damage: 0
+  weakness: LightningBolt
+  resistance: 
 --- !u!1 &1438091479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,9 +4480,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2092846582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46887445433830447a558500004ebe7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 506860ab4a6b529409169d9cbc5e67fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  health: 100
+  attackStat: 100
+  possibleAttacks:
+  - {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

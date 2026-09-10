@@ -3,7 +3,7 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     
-    public float health = 100;
+    public float health = 100.0f;
 
     public float attackStat;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

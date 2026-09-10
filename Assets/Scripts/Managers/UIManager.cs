@@ -42,12 +42,12 @@ public class UIManager : MonoBehaviour
         colourSelection.SetActive(false);
     }
 
-    public void UpdatePlayerHealthBar(int health)
+    public void UpdatePlayerHealthBar(float health)
     {
         playerHealthBar.value = health;
     }
 
-    public void UpdateEnemyHealthBar(int health)
+    public void UpdateEnemyHealthBar(float health)
     {
         enemyHealthBar.value = health;
     }
