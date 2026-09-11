@@ -1,10 +1,12 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour //Add enemy stuff here
+public class Enemy : Entity //Add enemy stuff here
 {
     [SerializeField] private string enemyID;
     [SerializeField] private Attack basicAttack;
-    public int health = 100;
+    public string weakness;
+    public string resistance;
+    
 
     public string GetEnemyID()
     {
@@ -26,7 +28,7 @@ public class Enemy : MonoBehaviour //Add enemy stuff here
         health -= damage;
     }
 
-    public int GetHealth()
+    public float GetHealth()
     {
         return health;
     }

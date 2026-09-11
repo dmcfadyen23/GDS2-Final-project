@@ -14,6 +14,7 @@ public class DrawCheck : MonoBehaviour
     private CanvasDrawer canvasDrawer;
     public readonly List<Point> CandidatePoints = new List<Point>();
     private UIManager uiManager;
+    
 
     public void FinishDrawing()
     {
@@ -26,20 +27,19 @@ public class DrawCheck : MonoBehaviour
             // use attack associated with shape, later colour will be taken into account as well
             uiManager.GoToMain();
             Enemy enemy = FindAnyObjectByType<Enemy>();
-            enemy.LoseHealth(50);
-            Debug.Log("Enemy has " + enemy.GetHealth());
-            uiManager.UpdateEnemyHealthBar(enemy.GetHealth());
-            if (enemy.GetHealth() <= 0)
+            Player player = FindAnyObjectByType<Player>();
+            player.UseAttack(gestureShape);
+            uiManager.WaitForEnemy();
+            // enemy.LoseHealth(50);
+            // Debug.Log("Enemy has " + enemy.GetHealth());
+            uiManager.UpdateEnemyHealthBar(enemy.health);
+            if (enemy.health <= 0)
             {
                 CombatManager.WinCombat();
             }
             else
             {
-                PlayerHealth playerHealth = FindAnyObjectByType<PlayerHealth>();
-                playerHealth.LoseHealth(10);
-                Debug.Log("Player has "+ playerHealth.GetHealth());
-                uiManager.UpdatePlayerHealthBar(playerHealth.GetHealth());
-                if (playerHealth.GetHealth() <= 0)
+                if (player.health <= 0)
                 {
                     CombatManager.LoseCombat();
                     SceneManager.LoadScene("TutorialFloor");

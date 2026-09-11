@@ -7,8 +7,12 @@
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/AttackLightning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/AttackLightning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +27,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/2d/c11121f5/Geometry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/cb/55eb6769/Gesture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GDS1/Final Project/GDS1 Project/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Plugins.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Plugins.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneSwitch.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/pdollar/$P/PDollarDemo/GestureIO.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -40,7 +41,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature-draw&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;attacks&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -103,6 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1787486978846</updated>
       <workItem from="1787486981967" duration="1431000" />
+      <workItem from="1789044857603" duration="5101000" />
+      <workItem from="1789123610074" duration="3672000" />
     </task>
     <servers />
   </component>
