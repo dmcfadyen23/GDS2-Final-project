@@ -14,9 +14,10 @@ public class Player : Entity
     {
         Enemy targetEnemy = FindAnyObjectByType<Enemy>();
         attackContext.target = targetEnemy;
+        attackContext.sourceUnit = this;
         foreach (AttackSO attack in possibleAttacks)
         {
-            if (attack.attackName == gestureName)
+            if (attack.gestureName == gestureName)
             {
                 attack.Attack(attackContext);
             }

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] 
     private GameObject colourSelection;
+
+    public TextMeshProUGUI battleLogText;
 
     [SerializeField] private Slider playerHealthBar;
     [SerializeField] private Slider enemyHealthBar;

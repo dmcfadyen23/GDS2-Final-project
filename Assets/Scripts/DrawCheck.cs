@@ -27,6 +27,9 @@ public class DrawCheck : MonoBehaviour
             // use attack associated with shape, later colour will be taken into account as well
             uiManager.GoToMain();
             Enemy enemy = FindAnyObjectByType<Enemy>();
+            Player player = FindAnyObjectByType<Player>();
+            player.UseAttack(gestureShape);
+            uiManager.WaitForEnemy();
             // enemy.LoseHealth(50);
             // Debug.Log("Enemy has " + enemy.GetHealth());
             uiManager.UpdateEnemyHealthBar(enemy.health);
@@ -36,8 +39,6 @@ public class DrawCheck : MonoBehaviour
             }
             else
             {
-                Player player = FindAnyObjectByType<Player>();
-                player.UseAttack(gestureShape);
                 if (player.health <= 0)
                 {
                     CombatManager.LoseCombat();

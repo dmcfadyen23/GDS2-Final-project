@@ -2,10 +2,13 @@ using System;
 using Attacks;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "AttackSO", menuName = "Scriptable Objects/AttackSO")]
 public class AttackSO : ScriptableObject
 {
     public string attackName = null;
     public int basePower = 0;
+    public string gestureName;
+    private UIManager uiManager;
 
     public enum TargetingType
     {
@@ -33,6 +36,7 @@ public class AttackSO : ScriptableObject
         }
 
         target.health -= damageDealt;
+        uiManager.battleLogText.text = context.sourceUnit + " used " + attackName + " and did " + damageDealt + " damage to " + context.target;
 
     }
     
