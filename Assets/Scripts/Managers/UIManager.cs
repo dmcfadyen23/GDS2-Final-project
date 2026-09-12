@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] 
     private GameObject colourSelection;
+
+    public TextMeshProUGUI battleLogText;
 
     [SerializeField] private Slider playerHealthBar;
     [SerializeField] private Slider enemyHealthBar;
@@ -42,12 +45,12 @@ public class UIManager : MonoBehaviour
         colourSelection.SetActive(false);
     }
 
-    public void UpdatePlayerHealthBar(int health)
+    public void UpdatePlayerHealthBar(float health)
     {
         playerHealthBar.value = health;
     }
 
-    public void UpdateEnemyHealthBar(int health)
+    public void UpdateEnemyHealthBar(float health)
     {
         enemyHealthBar.value = health;
     }
