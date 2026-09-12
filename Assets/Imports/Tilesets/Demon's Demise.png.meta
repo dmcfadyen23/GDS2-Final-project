@@ -635,9 +635,9 @@ TextureImporter:
       name: Demon's Demise_23
       rect:
         serializedVersion: 2
-        x: 96
+        x: 97
         y: 128
-        width: 32
+        width: 4
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
