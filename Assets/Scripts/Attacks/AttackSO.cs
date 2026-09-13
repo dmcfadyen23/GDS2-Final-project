@@ -8,7 +8,7 @@ public class AttackSO : ScriptableObject
     public string attackName = null;
     public int basePower = 0;
     public string gestureName;
-    private UIManager uiManager;
+    protected UIManager uiManager;
 
     public enum TargetingType
     {

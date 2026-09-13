@@ -800,6 +800,9 @@ MonoBehaviour:
   possibleAttacks:
   - {fileID: 11400000, guid: 318a6b93144677d45acf9bfc97144692, type: 2}
   - {fileID: 11400000, guid: 1a37c80f131ab4e4c946c407f99ee537, type: 2}
+  - {fileID: 11400000, guid: 72a2910826ca9f944acd618c895bdf28, type: 2}
+  - {fileID: 11400000, guid: 7e0044aff4b15254ca3f64d4f9012caa, type: 2}
+  - {fileID: 11400000, guid: 77212902cab26b147bd206e01808cae3, type: 2}
 --- !u!212 &509256347
 SpriteRenderer:
   serializedVersion: 3
