@@ -8,6 +8,10 @@ public class RoomManager : MonoBehaviour
     [Header("Room Enemies")]
     [SerializeField] private Enemy[] enemies;
 
+    [Header("Room Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip doorOpenSound;
+
     private bool roomActivated = false;
     private bool roomCleared = false;
 
@@ -58,6 +62,8 @@ public class RoomManager : MonoBehaviour
 
         roomCleared = true;
 
+        PlayDoorOpenSound();
+
         OpenDoors();
 
         Debug.Log("Room cleared! Doors opened.");
@@ -82,6 +88,14 @@ public class RoomManager : MonoBehaviour
             {
                 door.SetActive(false);
             }
+        }
+    }
+
+    private void PlayDoorOpenSound()
+    {
+        if (audioSource != null && doorOpenSound != null)
+        {
+            audioSource.PlayOneShot(doorOpenSound);
         }
     }
 }

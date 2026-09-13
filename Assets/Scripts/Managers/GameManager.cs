@@ -7,13 +7,17 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     private Vector3 playerPosition;
+
     private string enemyID;
+
+    private string currentFloor;
 
     private bool tutorialStarted = false;
 
     private int paintsCollected = 0;
 
     private HashSet<string> defeatedEnemies = new HashSet<string>();
+
 
     private void Awake()
     {
@@ -31,26 +35,42 @@ public class GameManager : MonoBehaviour
     public void StartCombat(Vector3 position, string enemy)
     {
         playerPosition = position;
+
         enemyID = enemy;
+
+        currentFloor = SceneManager.GetActiveScene().name;
 
         tutorialStarted = true;
 
+        Debug.Log("Starting combat with: " + enemyID);
+        Debug.Log("Returning to scene: " + currentFloor);
+
         SceneManager.LoadScene("CombatView");
     }
+
 
     public Vector3 GetPlayerPosition()
     {
         return playerPosition;
     }
 
+
     public string GetEnemyID()
     {
         return enemyID;
     }
 
+
+    public string GetCurrentFloor()
+    {
+        return currentFloor;
+    }
+
     public void ReturnToOverworld()
     {
-        SceneManager.LoadScene("TutorialFloor");
+        Debug.Log("Returning to: " + currentFloor);
+
+        SceneManager.LoadScene(currentFloor);
     }
 
     public void DefeatEnemy()
@@ -58,8 +78,11 @@ public class GameManager : MonoBehaviour
         if (!string.IsNullOrEmpty(enemyID))
         {
             defeatedEnemies.Add(enemyID);
+
+            Debug.Log("Enemy defeated: " + enemyID);
         }
     }
+
 
     public bool IsEnemyDefeated(string id)
     {
@@ -74,12 +97,16 @@ public class GameManager : MonoBehaviour
     public void CollectPaint()
     {
         paintsCollected++;
+
+        Debug.Log("Paints collected: " + paintsCollected);
     }
+
 
     public int GetPaintsCollected()
     {
         return paintsCollected;
     }
+
 
     public bool HasCollectedPaint(int paintID)
     {
