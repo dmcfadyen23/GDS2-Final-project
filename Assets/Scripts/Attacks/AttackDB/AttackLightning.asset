@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackLightning
   attackName: Lightning Bolt
   basePower: 50
-  gestureName: Lightning
+  gestureName: LightningBolt
   targetingType: 0

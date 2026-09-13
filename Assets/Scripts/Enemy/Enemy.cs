@@ -7,7 +7,7 @@ public class Enemy : Entity //Add enemy stuff here
     [SerializeField] private AttackSO basicAttack;
     public string weakness;
     public string resistance;
-    private AttackContext attackContext;
+    private AttackContext attackContext = new AttackContext();
     
 
     public string GetEnemyID()

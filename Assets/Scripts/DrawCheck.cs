@@ -27,20 +27,7 @@ public class DrawCheck : MonoBehaviour
             Player player = FindAnyObjectByType<Player>();
             player.UseAttack(gestureShape, enemy);
             uiManager.WaitForEnemy();
-            if (enemy.health <= 0)
-            {
-                CombatManager.WinCombat();
-            }
-            else
-            {
-                enemy.UseAttack(player);
-                
-                if (player.health <= 0)
-                {
-                    CombatManager.LoseCombat();
-                    SceneManager.LoadScene("TutorialFloor");
-                }
-            }
+            
         }
         else
         {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
-    
+    public string unitName;
     public float health = 100.0f;
 
     public float attackStat;

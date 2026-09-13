@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506860ab4a6b529409169d9cbc5e67fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  unitName: Player
   health: 100
   attackStat: 100
   possibleAttacks:
@@ -1088,11 +1089,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1828124820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -775, y: 457}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 44.02, y: -44.919983}
+  m_SizeDelta: {x: 600, y: 50}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &657432518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,6 +2179,7 @@ GameObject:
   - component: {fileID: 1105704063}
   - component: {fileID: 1105704062}
   - component: {fileID: 1105704061}
+  - component: {fileID: 1105704064}
   m_Layer: 0
   m_Name: EnemyEffect
   m_TagString: Untagged
@@ -2282,6 +2284,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1809823404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105704064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105704060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a543e268e1241d14385975793e091f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndTurn
 --- !u!1 &1153516731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,6 +2638,7 @@ GameObject:
   - component: {fileID: 1295218687}
   - component: {fileID: 1295218686}
   - component: {fileID: 1295218685}
+  - component: {fileID: 1295218688}
   m_Layer: 0
   m_Name: PlayerEffect
   m_TagString: Untagged
@@ -2728,6 +2743,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 509256348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1295218688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295218684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a543e268e1241d14385975793e091f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndTurn
 --- !u!1 &1297549205
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,6 +4344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  unitName: Skeleton
   health: 100
   attackStat: 100
   enemyID: Skeleton

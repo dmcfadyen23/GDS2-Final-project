@@ -19,25 +19,26 @@ public class AttackSO : ScriptableObject
 
     public void Attack(AttackContext context)
     {
+        uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;
         float damageDealt = basePower*(target.attackStat/100);
         if (target is Enemy)
         {
             Enemy enemyTarget = (Enemy)target;
-            if (enemyTarget.weakness == this.attackName)
+            if (enemyTarget.weakness == attackName)
             {
                 damageDealt *= 2;
             }
 
-            if (enemyTarget.resistance == this.attackName)
+            if (enemyTarget.resistance == attackName)
             {
                 damageDealt *= 0.5f;
             }
         }
 
         target.health -= damageDealt;
-        context.animator.Play("EnemyAttackEffect");
-        uiManager.battleLogText.text = context.sourceUnit + " used " + attackName + " and did " + damageDealt + " damage to " + context.target;
+        context.animator.Play("AttackAnim");
+        uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
         if (target as Enemy)
         {
             uiManager.UpdateEnemyHealthBar(target.health);

@@ -6,14 +6,14 @@ public class Player : Entity
 {
     public List<AttackSO> possibleAttacks;
 
-    private AttackContext attackContext;
+    private AttackContext attackContext = new AttackContext();
 
     private int playerLevel;
 
     public void UseAttack(string gestureName, Enemy targetEnemy)
     {
         attackContext.target = targetEnemy;
-        attackContext.sourceUnit = FindAnyObjectByType<Player>();
+        attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
         foreach (AttackSO attack in possibleAttacks)
         {
