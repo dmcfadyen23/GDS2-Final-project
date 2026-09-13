@@ -4427,6 +4427,7 @@ MonoBehaviour:
   basicAttack: {fileID: 11400000, guid: 9a81280c339298545822b311d9149d2e, type: 2}
   weakness: Lightning Bolt
   resistance: Fireball
+  immune: 
 --- !u!212 &1809823403
 SpriteRenderer:
   serializedVersion: 3

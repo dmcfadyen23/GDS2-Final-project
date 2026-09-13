@@ -42,7 +42,7 @@ public class DrawCheck : MonoBehaviour
         {
             Debug.Log("writing drawing to database");
             // name of shape and file here
-            string gestureName = "Spiral";
+            string gestureName = "Shield";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
             // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition
