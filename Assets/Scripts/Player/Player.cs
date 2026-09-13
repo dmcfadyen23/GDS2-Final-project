@@ -2,39 +2,36 @@ using System.Collections.Generic;
 using Attacks;
 using UnityEngine;
 
-namespace Player
+public class Player : Entity
 {
-    public class Player : Entity
+    public List<AttackSO> possibleAttacks;
+
+    private AttackContext attackContext;
+
+    private int playerLevel;
+
+    public void UseAttack(string gestureName, Enemy targetEnemy)
     {
-        public List<AttackSO> possibleAttacks;
-
-        private AttackContext attackContext;
-
-        private int playerLevel;
-
-        public void UseAttack(string gestureName, Enemy targetEnemy)
+        attackContext.target = targetEnemy;
+        attackContext.sourceUnit = FindAnyObjectByType<Player>();
+        attackContext.animator = GetComponentInChildren<Animator>();
+        foreach (AttackSO attack in possibleAttacks)
         {
-            attackContext.target = targetEnemy;
-            attackContext.sourceUnit = FindAnyObjectByType<Player>();
-            attackContext.animator = GetComponentInChildren<Animator>();
-            foreach (AttackSO attack in possibleAttacks)
+            if (attack.gestureName == gestureName)
             {
-                if (attack.gestureName == gestureName)
-                {
-                    attack.Attack(attackContext);
-                }
+                attack.Attack(attackContext);
             }
         }
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-            // attackStat = playerLevel * 2;
-        }
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        // attackStat = playerLevel * 2;
+    }
 
-        // Update is called once per frame
-        void Update()
-        {
+    // Update is called once per frame
+    void Update()
+    {
         
-        }
     }
 }

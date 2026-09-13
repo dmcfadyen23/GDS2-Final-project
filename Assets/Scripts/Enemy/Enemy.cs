@@ -20,7 +20,7 @@ public class Enemy : Entity //Add enemy stuff here
         return basicAttack;
     }
 
-    public void UseAttack(Player.Player targetPlayer)
+    public void UseAttack(Player targetPlayer)
     {
         attackContext.target = targetPlayer;
         attackContext.sourceUnit = this;

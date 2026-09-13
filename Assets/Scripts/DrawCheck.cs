@@ -24,7 +24,7 @@ public class DrawCheck : MonoBehaviour
             Debug.Log("shape is " + gestureShape);
             // use attack associated with shape, later colour will be taken into account as well
             Enemy enemy = FindAnyObjectByType<Enemy>();
-            Player.Player player = FindAnyObjectByType<Player.Player>();
+            Player player = FindAnyObjectByType<Player>();
             player.UseAttack(gestureShape, enemy);
             uiManager.WaitForEnemy();
             if (enemy.health <= 0)
