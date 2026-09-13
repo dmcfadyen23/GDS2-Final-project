@@ -36,8 +36,17 @@ public class AttackSO : ScriptableObject
         }
 
         target.health -= damageDealt;
+        context.animator.Play("EnemyAttackEffect");
         uiManager.battleLogText.text = context.sourceUnit + " used " + attackName + " and did " + damageDealt + " damage to " + context.target;
-
+        if (target as Enemy)
+        {
+            uiManager.UpdateEnemyHealthBar(target.health);
+        }
+        else
+        {
+            uiManager.UpdatePlayerHealthBar(target.health);
+        }
+        
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

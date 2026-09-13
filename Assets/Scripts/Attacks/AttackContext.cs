@@ -6,6 +6,7 @@ namespace Attacks
     {
         public Entity target;
         public Entity sourceUnit;
+        public Animator animator;
 
     }
 }

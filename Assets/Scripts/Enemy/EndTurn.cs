@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Entity : MonoBehaviour
+public class EndTurn : MonoBehaviour
 {
-    
-    public float health = 100.0f;
 
-    public float attackStat;
-    
+    public void FinishTurn(int i)
+    {
+        UIManager uiManager = FindAnyObjectByType<UIManager>();
+        uiManager.GoToMain();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

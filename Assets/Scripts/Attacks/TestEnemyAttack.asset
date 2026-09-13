@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1219e038272d482aa2ff073ea9fc4f26, type: 3}
-  m_Name: AttackLightning
-  m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackLightning
-  attackName: Lightning Bolt
-  basePower: 50
-  gestureName: Lightning
+  m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
+  m_Name: TestEnemyAttack
+  m_EditorClassIdentifier: Assembly-CSharp::AttackSO
+  attackName: Skull Blast
+  basePower: 20
+  gestureName: 
   targetingType: 0
