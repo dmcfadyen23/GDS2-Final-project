@@ -28,7 +28,7 @@ public class EndTurn : MonoBehaviour
             CombatManager.WinCombat();
         }
         enemy.UseAttack(player);
-        
+        uiManager.GoToMain();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
