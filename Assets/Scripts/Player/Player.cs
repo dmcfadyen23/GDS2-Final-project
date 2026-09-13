@@ -6,15 +6,15 @@ public class Player : Entity
 {
     public List<AttackSO> possibleAttacks;
 
-    private AttackContext attackContext;
+    private AttackContext attackContext = new AttackContext();
 
     private int playerLevel;
 
-    public void UseAttack(string gestureName)
+    public void UseAttack(string gestureName, Enemy targetEnemy)
     {
-        Enemy targetEnemy = FindAnyObjectByType<Enemy>();
         attackContext.target = targetEnemy;
         attackContext.sourceUnit = this;
+        attackContext.animator = GetComponentInChildren<Animator>();
         foreach (AttackSO attack in possibleAttacks)
         {
             if (attack.gestureName == gestureName)
@@ -26,7 +26,7 @@ public class Player : Entity
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        attackStat = playerLevel * 2;
+        // attackStat = playerLevel * 2;
     }
 
     // Update is called once per frame

@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
 using PDollarGestureRecognizer;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class DrawCheck : MonoBehaviour
@@ -14,6 +11,7 @@ public class DrawCheck : MonoBehaviour
     private CanvasDrawer canvasDrawer;
     public readonly List<Point> CandidatePoints = new List<Point>();
     private UIManager uiManager;
+
     
 
     public void FinishDrawing()
@@ -25,26 +23,11 @@ public class DrawCheck : MonoBehaviour
             string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
             Debug.Log("shape is " + gestureShape);
             // use attack associated with shape, later colour will be taken into account as well
-            uiManager.GoToMain();
             Enemy enemy = FindAnyObjectByType<Enemy>();
             Player player = FindAnyObjectByType<Player>();
-            player.UseAttack(gestureShape);
+            player.UseAttack(gestureShape, enemy);
             uiManager.WaitForEnemy();
-            // enemy.LoseHealth(50);
-            // Debug.Log("Enemy has " + enemy.GetHealth());
-            uiManager.UpdateEnemyHealthBar(enemy.health);
-            if (enemy.health <= 0)
-            {
-                CombatManager.WinCombat();
-            }
-            else
-            {
-                if (player.health <= 0)
-                {
-                    CombatManager.LoseCombat();
-                    SceneManager.LoadScene("TutorialFloor");
-                }
-            }
+            
         }
         else
         {
@@ -59,7 +42,7 @@ public class DrawCheck : MonoBehaviour
         {
             Debug.Log("writing drawing to database");
             // name of shape and file here
-            string gestureName = "Spiral";
+            string gestureName = "Shield";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
             // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition
@@ -148,7 +131,7 @@ public class DrawCheck : MonoBehaviour
         //     str += point.X.ToString() + ", " + point.Y.ToString() + ", ";
         // }
         // Debug.Log(str);
-        canvasDrawer = GetComponent<CanvasDrawer>();
+        canvasDrawer = FindAnyObjectByType<CanvasDrawer>();
         uiManager = FindAnyObjectByType<UIManager>();
     }
 

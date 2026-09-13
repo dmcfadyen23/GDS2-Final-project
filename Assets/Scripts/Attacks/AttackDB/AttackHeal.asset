@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1219e038272d482aa2ff073ea9fc4f26, type: 3}
-  m_Name: AttackLightning
-  m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackLightning
-  attackName: Lightning Bolt
+  m_Script: {fileID: 11500000, guid: 3f8d483fbde648d38671386629f7d96b, type: 3}
+  m_Name: AttackHeal
+  m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackHeal
+  attackName: Heal
   basePower: 50
-  gestureName: LightningBolt
-  targetingType: 0
+  gestureName: Heart
+  targetingType: 3

@@ -1,11 +1,14 @@
+using Attacks;
 using UnityEngine;
 
 public class Enemy : Entity //Add enemy stuff here
 {
     [SerializeField] private string enemyID;
-    [SerializeField] private Attack basicAttack;
+    [SerializeField] private AttackSO basicAttack;
     public string weakness;
     public string resistance;
+    public string immune;
+    private AttackContext attackContext = new AttackContext();
     
 
     public string GetEnemyID()
@@ -13,14 +16,17 @@ public class Enemy : Entity //Add enemy stuff here
         return enemyID;
     }
 
-    public Attack GetAttack()
+    public AttackSO GetAttack()
     {
         return basicAttack;
     }
 
-    public Attack initiateAttack()
+    public void UseAttack(Player targetPlayer)
     {
-        return basicAttack;
+        attackContext.target = targetPlayer;
+        attackContext.sourceUnit = this;
+        attackContext.animator = GetComponentInChildren<Animator>();
+        basicAttack.Attack(attackContext);
     }
 
     public void LoseHealth(int damage)

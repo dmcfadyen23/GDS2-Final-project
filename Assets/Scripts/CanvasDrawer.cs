@@ -96,7 +96,7 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     private void DrawLine(Vector2 start, Vector2 end)
     {
-        DrawCheck drawCheck = GetComponent<DrawCheck>();
+        DrawCheck drawCheck = FindAnyObjectByType<DrawCheck>();
         drawCheck.CandidatePoints.Add(new Point(start.x, start.y, strokeNumber));
         // Bresenham's Line Algorithm to ensure continuous solid strokes
         int x0 = (int)start.x;
