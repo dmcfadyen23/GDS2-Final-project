@@ -46,7 +46,7 @@ public class DrawCheck : MonoBehaviour
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
             // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition
-            string filepath = Path.Combine(Application.dataPath, "ShapeData", gestureName + ".txt");
+            string filepath = Path.Combine(Application.dataPath, "StreamingAssets", "ShapeData", gestureName + ".txt");
             Debug.Log(filepath);
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
@@ -77,7 +77,8 @@ public class DrawCheck : MonoBehaviour
     private Gesture[] LoadTrainingSet()
     {
         List<Gesture> gestures = new List<Gesture>();
-        string[] gestureFolders = Directory.GetDirectories(Application.dataPath);
+        string[] gestureFolders = Directory.GetDirectories(Path.Combine(Application.dataPath, "StreamingAssets"));
+        Debug.Log(gestureFolders[0].ToString());
         foreach (string folder in gestureFolders)
         {
             string[] gestureFiles = Directory.GetFiles(folder, "*.txt");
@@ -125,6 +126,7 @@ public class DrawCheck : MonoBehaviour
     {
         trainingSet = LoadTrainingSet();
         Debug.Log(trainingSet.Length);
+        Debug.Log(Path.Combine(Application.dataPath, "StreamingAssets", "ShapeData"));
         // string str = "";
         // foreach (var point in trainingSet[0].Points)
         // {
