@@ -684,11 +684,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Floor1Boss
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Floor1Boss
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &133548593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4039,11 +4042,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone6
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone6
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &489983614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4413,11 +4419,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone5
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone5
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &492462286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4704,7 +4713,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.421875, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4719,16 +4728,6 @@ Tilemap:
   m_GameObject: {fileID: 527021710}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 2, y: 8, z: 0}
     second:
       serializedVersion: 2
@@ -4755,7 +4754,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
@@ -4768,7 +4767,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 0
@@ -4778,7 +4777,7 @@ Tilemap:
     m_Data: {fileID: 6575621594449455519, guid: bd54220532bc2d04498133b53baab0a7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 3
+    m_RefCount: 2
     m_Data:
       e00: 1
       e01: 0
@@ -4836,7 +4835,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 3
+    m_RefCount: 2
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -6511,11 +6510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone1
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone1
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &606149305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9066,7 +9068,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.421875, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -9081,16 +9083,6 @@ Tilemap:
   m_GameObject: {fileID: 675438699}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 2, y: 18, z: 0}
     second:
       serializedVersion: 2
@@ -9107,7 +9099,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
@@ -9120,7 +9112,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 0
@@ -9130,7 +9122,7 @@ Tilemap:
     m_Data: {fileID: 6575621594449455519, guid: bd54220532bc2d04498133b53baab0a7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data:
       e00: 1
       e01: 0
@@ -9188,7 +9180,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -20201,11 +20193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone4
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone4
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &1220848617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21809,7 +21804,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -21824,16 +21819,6 @@ Tilemap:
   m_GameObject: {fileID: 1424377095}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 11, y: 13, z: 0}
     second:
       serializedVersion: 2
@@ -21850,7 +21835,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 1
@@ -21863,7 +21848,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
@@ -21873,7 +21858,7 @@ Tilemap:
     m_Data: {fileID: 683269284, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data:
       e00: 1
       e01: 0
@@ -21931,7 +21916,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -22040,7 +22025,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -22055,16 +22040,6 @@ Tilemap:
   m_GameObject: {fileID: 1460799303}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 11, y: 13, z: 0}
     second:
       serializedVersion: 2
@@ -22081,7 +22056,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 1
@@ -22094,7 +22069,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
@@ -22104,7 +22079,7 @@ Tilemap:
     m_Data: {fileID: 6575621594449455519, guid: bd54220532bc2d04498133b53baab0a7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data:
       e00: 1
       e01: 0
@@ -22162,7 +22137,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -23503,7 +23478,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -23518,16 +23493,6 @@ Tilemap:
   m_GameObject: {fileID: 1563804546}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -7, y: 13, z: 0}
     second:
       serializedVersion: 2
@@ -23544,7 +23509,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 1
@@ -23557,7 +23522,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
@@ -23567,7 +23532,7 @@ Tilemap:
     m_Data: {fileID: 6575621594449455519, guid: bd54220532bc2d04498133b53baab0a7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data:
       e00: 1
       e01: 0
@@ -23625,7 +23590,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -26051,11 +26016,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone2
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone2
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &1688322276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26347,11 +26315,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone3
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone3
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &1744744880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26866,11 +26837,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemyID: Stone5
-  basicAttack:
-    attackName: 
-    damage: 0
+  unitName: 
   health: 100
+  attackStat: 0
+  enemyID: Stone5
+  basicAttack: {fileID: 0}
+  weakness: 
+  resistance: 
+  immune: 
 --- !u!61 &1801476849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29801,7 +29775,7 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 7.0625, y: 4.5625, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -29816,16 +29790,6 @@ Tilemap:
   m_GameObject: {fileID: 2119026046}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 24, y: -18, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -7, y: 13, z: 0}
     second:
       serializedVersion: 2
@@ -29842,7 +29806,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: a720274e357393640938b3c08a41d8ed, type: 2}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 9596c29a4b7771741817a49e2ed94b0e, type: 2}
   - serializedVersion: 2
     m_RefCount: 1
@@ -29855,7 +29819,7 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: -642498651, guid: f2c3f380b22d91a45827df99ce4aeb27, type: 3}
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data: {fileID: -2883895470289388798, guid: 582f9a1be97373947b502a775771bfa3, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
@@ -29865,7 +29829,7 @@ Tilemap:
     m_Data: {fileID: 6575621594449455519, guid: bd54220532bc2d04498133b53baab0a7, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 1
+    m_RefCount: 0
     m_Data:
       e00: 1
       e01: 0
@@ -29923,7 +29887,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 2
+    m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
