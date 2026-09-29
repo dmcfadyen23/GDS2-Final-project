@@ -8,6 +8,7 @@ public class AttackSO : ScriptableObject
     public string attackName = null;
     public int basePower = 0;
     public string gestureName;
+    public Color colour;
     protected UIManager uiManager;
 
     public enum TargetingType
@@ -17,7 +18,7 @@ public class AttackSO : ScriptableObject
 
     public TargetingType targetingType;
 
-    public void Attack(AttackContext context)
+    public virtual void Attack(AttackContext context)
     {
         uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;

@@ -10,14 +10,14 @@ public class Player : Entity
 
     private int playerLevel;
 
-    public void UseAttack(string gestureName, Enemy targetEnemy)
+    public void UseAttack(string gestureName, Color color, Enemy targetEnemy)
     {
         attackContext.target = targetEnemy;
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
         foreach (AttackSO attack in possibleAttacks)
         {
-            if (attack.gestureName == gestureName)
+            if (attack.gestureName == gestureName && attack.colour == color)
             {
                 attack.Attack(attackContext);
             }

@@ -9,33 +9,20 @@ namespace Attacks.AttackDB
         public AttackHeal()
         {
             attackName = "Heal";
-            basePower = -50;
+            basePower = 50;
             gestureName = "Heart";
             targetingType = TargetingType.SINGLE_TARGET;
         }
         
-        public new void Attack(AttackContext context)
+        public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            float damageDealt = basePower*(target.attackStat/100);
-            if (target is Enemy)
-            {
-                Enemy enemyTarget = (Enemy)target;
-                if (enemyTarget.weakness == attackName)
-                {
-                    damageDealt *= 2;
-                }
+            float damageHealed = basePower*(target.attackStat/100);
 
-                if (enemyTarget.resistance == attackName)
-                {
-                    damageDealt *= 0.5f;
-                }
-            }
-
-            target.health += damageDealt;
+            target.health += damageHealed;
             context.animator.Play("AttackAnim");
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " healed self using" + attackName + " for " + damageDealt + " health";
+            uiManager.battleLogText.text = context.sourceUnit.unitName + " healed self using" + attackName + " for " + damageHealed + " health";
             if (target as Enemy)
             {
                 uiManager.UpdateEnemyHealthBar(target.health);

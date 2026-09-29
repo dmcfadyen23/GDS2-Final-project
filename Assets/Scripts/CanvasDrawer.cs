@@ -19,11 +19,9 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
         Color.red, Color.blue, Color.green
     };
 
-    private int colourIndex = 0;
-    public void ToggleBrushColour()
+    public Color GetCurrentColour()
     {
-        brushColor = colours[++colourIndex];
-        if (colourIndex >= 2) colourIndex = -1;
+        return brushColor;
     }
 
     public void ChooseCanvasColour(int colour)
