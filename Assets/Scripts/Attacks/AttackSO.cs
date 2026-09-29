@@ -39,8 +39,8 @@ public class AttackSO : ScriptableObject
         }
 
         // random number for accuracy check
-        Random AccuracyCheck = new Random();
-        int checkNum = AccuracyCheck.Next(101);
+        Random accuracyCheck = new Random();
+        int checkNum = accuracyCheck.Next(101);
         // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
         if (checkNum <= context.sourceUnit.accuracy)
         {
@@ -60,8 +60,9 @@ public class AttackSO : ScriptableObject
         {
             uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and missed " + context.target.unitName;
         }
-        
-        
+
+        context.sourceUnit.accuracy = 100;
+
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

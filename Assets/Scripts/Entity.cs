@@ -5,7 +5,7 @@ public class Entity : MonoBehaviour
 {
     public string unitName;
     public float health = 100.0f;
-    public float accuracy;
+    public int accuracy = 100;
     public float attackStat;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
