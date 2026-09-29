@@ -23,6 +23,7 @@ public class DrawCheck : MonoBehaviour
             string gestureShape = PointCloudRecognizer.Classify(candidate, trainingSet);
             Debug.Log("shape is " + gestureShape);
             Color currentColour = FindAnyObjectByType<CanvasDrawer>().GetCurrentColour();
+            Debug.Log("colour is " + currentColour);
             // use attack associated with shape, later colour will be taken into account as well
             Enemy enemy = FindAnyObjectByType<Enemy>();
             Player player = FindAnyObjectByType<Player>();

@@ -15,4 +15,5 @@ MonoBehaviour:
   attackName: Wind Blast
   basePower: 10
   gestureName: Spiral
+  colour: {r: 1, g: 0, b: 0, a: 1}
   targetingType: 2
