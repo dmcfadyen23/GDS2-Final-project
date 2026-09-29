@@ -1,6 +1,7 @@
 using System;
 using Attacks;
 using UnityEngine;
+using Random = System.Random;
 
 [CreateAssetMenu(fileName = "AttackSO", menuName = "Scriptable Objects/AttackSO")]
 public class AttackSO : ScriptableObject
@@ -37,17 +38,29 @@ public class AttackSO : ScriptableObject
             }
         }
 
-        target.health -= damageDealt;
-        context.animator.Play("AttackAnim");
-        uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
-        if (target as Enemy)
+        // random number for accuracy check
+        Random AccuracyCheck = new Random();
+        int checkNum = AccuracyCheck.Next(101);
+        // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
+        if (checkNum <= context.sourceUnit.accuracy)
         {
-            uiManager.UpdateEnemyHealthBar(target.health);
+            target.health -= damageDealt;
+            context.animator.Play("AttackAnim");
+            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
+            if (target as Enemy)
+            {
+                uiManager.UpdateEnemyHealthBar(target.health);
+            }
+            else
+            {
+                uiManager.UpdatePlayerHealthBar(target.health);
+            }
         }
         else
         {
-            uiManager.UpdatePlayerHealthBar(target.health);
+            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and missed " + context.target.unitName;
         }
+        
         
     }
     
