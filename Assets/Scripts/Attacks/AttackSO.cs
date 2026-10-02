@@ -24,9 +24,17 @@ public class AttackSO : ScriptableObject
         uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;
         float damageDealt = basePower*(target.attackStat/100);
+        //checks for status/debuffs/buffs on enemy
+        
+        
+        // weakness 
         if (target is Enemy)
         {
             Enemy enemyTarget = (Enemy)target;
+            if (enemyTarget.status.Contains("Doused"))
+            {
+                enemyTarget.weakness = "Lightning Bolt";
+            }
             if (enemyTarget.weakness == attackName)
             {
                 damageDealt *= 2;
@@ -38,6 +46,8 @@ public class AttackSO : ScriptableObject
             }
         }
 
+        
+        
         // random number for accuracy check
         Random accuracyCheck = new Random();
         int checkNum = accuracyCheck.Next(101);
