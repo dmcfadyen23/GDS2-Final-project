@@ -21,6 +21,8 @@ public class AttackSO : ScriptableObject
 
     public virtual void Attack(AttackContext context)
     {
+        int randomNumCheck;
+        bool canAttack = true;
         uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;
         float damageDealt = basePower*(target.attackStat/100);
@@ -41,7 +43,7 @@ public class AttackSO : ScriptableObject
             }
         }
         
-        // self buff check
+        // self buff/debuff check
         foreach (var buff in context.sourceUnit.buff)
         {
             if (buff.name == "MagicCharge")
@@ -49,6 +51,19 @@ public class AttackSO : ScriptableObject
                 damageDealt *= 1.5f;
             }
         }
+        foreach (var debuff in context.sourceUnit.debuff)
+        {
+            if (debuff.name == "Paralyze")
+            {
+                Random moveCheck = new Random();
+                randomNumCheck = moveCheck.Next(101);
+                if (randomNumCheck <= 30)
+                {
+                    canAttack = false;
+                }
+            }
+        }
+        
         
         // weakness 
         if (target is Enemy)
@@ -69,30 +84,41 @@ public class AttackSO : ScriptableObject
             }
         }
 
-        
-        
-        // random number for accuracy check
-        Random accuracyCheck = new Random();
-        int checkNum = accuracyCheck.Next(101);
-        // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
-        if (checkNum <= context.sourceUnit.accuracy)
+
+        if (canAttack)
         {
-            target.health -= damageDealt;
-            context.animator.Play("AttackAnim");
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
-            if (target as Enemy)
+            // random number for accuracy check
+            Random accuracyCheck = new Random();
+            randomNumCheck = accuracyCheck.Next(101);
+            // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
+            if (randomNumCheck <= context.sourceUnit.accuracy)
             {
-                uiManager.UpdateEnemyHealthBar(target.health);
+                target.health -= damageDealt;
+                context.animator.Play("AttackAnim");
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
+                if (target as Enemy)
+                {
+                    uiManager.UpdateEnemyHealthBar(target.health);
+                }
+                else
+                {
+                    uiManager.UpdatePlayerHealthBar(target.health);
+                }
             }
             else
             {
-                uiManager.UpdatePlayerHealthBar(target.health);
+                // CHANGE TO MISSED ATTACK ANIM WHEN IMPLEMENTED
+                context.animator.Play("AttackAnim");
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and missed " + context.target.unitName;
             }
         }
         else
         {
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and missed " + context.target.unitName;
+            //CHANGE TO FAILED ATTACK ANIM WHEN IMPLEMENTED
+            context.animator.Play("AttackAnim");
+            uiManager.battleLogText.text = context.sourceUnit.unitName + " was unable to move this turn!";
         }
+        
         
         EndOfTurn(context);
     }
