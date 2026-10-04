@@ -18,9 +18,11 @@ namespace Attacks.AttackDB
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            target.buff.Add(("Shielded", 2));
+            target.buff.Add(("Shielded", 3));
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " shielded self using" + attackName + ", taking less damage for 2 turns";
+            EndOfTurn(context);
+
         }
     }
 }

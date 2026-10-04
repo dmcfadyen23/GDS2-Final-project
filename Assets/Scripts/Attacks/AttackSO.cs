@@ -32,21 +32,23 @@ public class AttackSO : ScriptableObject
                 damageDealt *= 0.5f;
             }
         }
-        
-        // self buff check
-        foreach (var buff in context.sourceUnit.buff)
+
+        foreach (var status in target.status)
         {
-            if (buff.name == "Regen")
+            if (status.name == "Protected")
             {
-                context.sourceUnit.health += 10;
+                damageDealt = 0;
             }
         }
+        
+        // self buff check
+        
         
         // weakness 
         if (target is Enemy)
         {
             Enemy enemyTarget = (Enemy)target;
-            if (enemyTarget.status.Contains("Doused"))
+            if (enemyTarget.debuff.Contains(("Doused", -1)))
             {
                 enemyTarget.weakness = "Lightning Bolt";
             }
@@ -85,9 +87,23 @@ public class AttackSO : ScriptableObject
         {
             uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and missed " + context.target.unitName;
         }
-
-        context.sourceUnit.accuracy = 100;
         
+        EndOfTurn(context);
+    }
+
+    public void EndOfTurn(AttackContext context)
+    {
+        foreach (var buff in context.sourceUnit.buff)
+        {
+            if (buff.name == "Regen")
+            {
+                context.sourceUnit.health += 10;
+            }
+        }
+
+        // reset accuracy
+        context.sourceUnit.accuracy = 100;
+
         // reduce buff and debuff durations
         for (int i = 0; i < context.sourceUnit.buff.Count;i++)
         {
@@ -115,6 +131,22 @@ public class AttackSO : ScriptableObject
             if (context.sourceUnit.debuff[i].duration == 0)
             {
                 context.sourceUnit.debuff.Remove(context.sourceUnit.debuff[i]);
+            }
+        }
+        
+        // status changes
+        for (int i = 0; i < context.sourceUnit.status.Count;i++)
+        {
+            // if status duration set to -1, infinite duration
+            if (context.sourceUnit.status[i].duration == -1)
+            {
+                continue;
+            }
+            context.sourceUnit.status[i] = (context.sourceUnit.status[i].name, context.sourceUnit.status[i].duration - 1);
+            // clear status if duration reaches 0
+            if (context.sourceUnit.status[i].duration == 0)
+            {
+                context.sourceUnit.status.Remove(context.sourceUnit.status[i]);
             }
         }
     }

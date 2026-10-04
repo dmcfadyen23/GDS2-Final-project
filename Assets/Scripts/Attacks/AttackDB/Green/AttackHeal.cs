@@ -9,16 +9,17 @@ namespace Attacks.AttackDB
         public AttackHeal()
         {
             attackName = "Heal";
-            basePower = 50;
+            basePower = 0;
             gestureName = "Heart";
             targetingType = TargetingType.SELF;
         }
-        
+
+        private int healAmount = 50;
         public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            float damageHealed = basePower*(target.attackStat/100);
+            float damageHealed = healAmount*(target.attackStat/100);
 
             target.health += damageHealed;
             context.animator.Play("AttackAnim");
@@ -31,7 +32,7 @@ namespace Attacks.AttackDB
             {
                 uiManager.UpdatePlayerHealthBar(target.health);
             }
-        
+            EndOfTurn(context);
         }
     }
 }

@@ -10,7 +10,7 @@ public class Entity : MonoBehaviour
     public float attackStat;
     public List<(string name, int duration)> buff;
     public List<(string name, int duration)> debuff;
-    public List<string> status;
+    public List<(string name, int duration)> status;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

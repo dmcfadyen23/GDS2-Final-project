@@ -9,8 +9,8 @@ namespace Attacks.AttackDB
         public AttackRegen()
         {
             attackName = "Regenerate";
-            basePower = 10;
-            gestureName = "Heart";
+            basePower = 0;
+            gestureName = "Spiral";
             targetingType = TargetingType.SELF;
         }
         
@@ -18,18 +18,11 @@ namespace Attacks.AttackDB
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            target.buff.Add(("Regen", 3));
+            target.buff.Add(("Regen", 4));
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " is now regenerating health each turn using" + attackName + " for " + 3 + " turns";
-            if (target as Enemy)
-            {
-                uiManager.UpdateEnemyHealthBar(target.health);
-            }
-            else
-            {
-                uiManager.UpdatePlayerHealthBar(target.health);
-            }
-        
+            EndOfTurn(context);
+
         }
     }
 }
