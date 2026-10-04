@@ -25,7 +25,22 @@ public class AttackSO : ScriptableObject
         Entity target = context.target;
         float damageDealt = basePower*(target.attackStat/100);
         //checks for status/debuffs/buffs on enemy
+        foreach (var buff in target.buff)
+        {
+            if (buff.name == "Shielded")
+            {
+                damageDealt *= 0.5f;
+            }
+        }
         
+        // self buff check
+        foreach (var buff in context.sourceUnit.buff)
+        {
+            if (buff.name == "Regen")
+            {
+                context.sourceUnit.health += 10;
+            }
+        }
         
         // weakness 
         if (target is Enemy)
@@ -72,7 +87,36 @@ public class AttackSO : ScriptableObject
         }
 
         context.sourceUnit.accuracy = 100;
-
+        
+        // reduce buff and debuff durations
+        for (int i = 0; i < context.sourceUnit.buff.Count;i++)
+        {
+            // if buff duration set to -1, infinite buff
+            if (context.sourceUnit.buff[i].duration == -1)
+            {
+                continue;
+            }
+            context.sourceUnit.buff[i] = (context.sourceUnit.buff[i].name, context.sourceUnit.buff[i].duration - 1);
+            // clear buff if duration reaches 0
+            if (context.sourceUnit.buff[i].duration == 0)
+            {
+                context.sourceUnit.buff.Remove(context.sourceUnit.buff[i]);
+            }
+        }
+        for (int i = 0; i < context.sourceUnit.debuff.Count;i++)
+        {
+            // if debuff duration set to -1, infinite duration
+            if (context.sourceUnit.debuff[i].duration == -1)
+            {
+                continue;
+            }
+            context.sourceUnit.debuff[i] = (context.sourceUnit.debuff[i].name, context.sourceUnit.debuff[i].duration - 1);
+            // clear debuff if duration reaches 0
+            if (context.sourceUnit.debuff[i].duration == 0)
+            {
+                context.sourceUnit.debuff.Remove(context.sourceUnit.debuff[i]);
+            }
+        }
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

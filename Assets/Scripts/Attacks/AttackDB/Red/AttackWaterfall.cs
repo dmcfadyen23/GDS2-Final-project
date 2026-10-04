@@ -17,7 +17,7 @@ namespace Attacks.AttackDB
         public override void Attack(AttackContext context)
         {
             base.Attack(context);
-            context.target.debuff.Add("Doused");
+            context.target.debuff.Add(("Doused", -1));
             uiManager.battleLogText.text = uiManager.battleLogText.text + "\n Enemy doused with water, weak to lightning!";
         }
     }

@@ -11,7 +11,7 @@ namespace Attacks.AttackDB
             attackName = "Heal";
             basePower = 50;
             gestureName = "Heart";
-            targetingType = TargetingType.SINGLE_TARGET;
+            targetingType = TargetingType.SELF;
         }
         
         public override void Attack(AttackContext context)

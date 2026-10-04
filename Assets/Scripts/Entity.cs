@@ -8,8 +8,8 @@ public class Entity : MonoBehaviour
     public float health = 100.0f;
     public int accuracy = 100;
     public float attackStat;
-    public List<string> buff;
-    public List<string> debuff;
+    public List<(string name, int duration)> buff;
+    public List<(string name, int duration)> debuff;
     public List<string> status;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
