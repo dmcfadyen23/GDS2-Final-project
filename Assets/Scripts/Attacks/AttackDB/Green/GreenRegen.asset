@@ -15,5 +15,5 @@ MonoBehaviour:
   attackName: Regenerate
   basePower: 0
   gestureName: Spiral
-  colour: {r: 0, g: 1, b: 0, a: 0}
+  colour: {r: 0, g: 1, b: 0, a: 1}
   targetingType: 3

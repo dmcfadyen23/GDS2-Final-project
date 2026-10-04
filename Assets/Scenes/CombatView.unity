@@ -808,6 +808,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 87f7690c1ab3df2449af9e023ecaaad4, type: 2}
   - {fileID: 11400000, guid: c43f999a6d296a94a972467ffa8b9f3c, type: 2}
   - {fileID: 11400000, guid: bd3383889a2958243b9e751c7850e2dd, type: 2}
+  - {fileID: 11400000, guid: 6622dfac78f729c49a2afcc1adebce9a, type: 2}
+  - {fileID: 11400000, guid: 0608e39cc7b48074585ff524ff9926fd, type: 2}
+  - {fileID: 11400000, guid: 6aeb4c9046450694997955acdbaa20d4, type: 2}
+  - {fileID: 11400000, guid: 7f9509fde05e6f4499daaae3392831c8, type: 2}
 --- !u!212 &509256347
 SpriteRenderer:
   serializedVersion: 3
