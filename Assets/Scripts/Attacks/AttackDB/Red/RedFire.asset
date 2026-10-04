@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
-  m_Name: AttackLightning
+  m_Name: RedFire
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Lightning Bolt
-  basePower: 50
-  gestureName: LightningBolt
+  attackName: Fireball
+  basePower: 30
+  gestureName: CircleWithCross
   colour: {r: 1, g: 0, b: 0, a: 1}
-  targetingType: 0
+  targetingType: 1
