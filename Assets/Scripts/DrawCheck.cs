@@ -44,11 +44,11 @@ public class DrawCheck : MonoBehaviour
         {
             Debug.Log("writing drawing to database");
             // name of shape and file here
-            string gestureName = "Shield";
+            string gestureName = "Spiral";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
             // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition
-            string filepath = Path.Combine(Application.dataPath, "StreamingAssets", "ShapeData", gestureName + ".txt");
+            string filepath = Path.Combine(Application.dataPath, "StreamingAssets", "ShapeData", gestureName + "1.txt");
             Debug.Log(filepath);
             using (StreamWriter writer = new StreamWriter(filepath, true))
             {
