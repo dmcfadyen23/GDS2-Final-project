@@ -138,6 +138,14 @@ public class AttackSO : ScriptableObject
             }
         }
 
+        foreach (var debuff in context.sourceUnit.debuff)
+        {
+            if (debuff.name == "Poison")
+            {
+                context.sourceUnit.health -= 20;
+            }
+        }
+
         // reset accuracy
         context.sourceUnit.accuracy = 100;
 
