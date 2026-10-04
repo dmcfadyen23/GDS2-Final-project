@@ -255,14 +255,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  attackStat: 0
+  unitName: Skeleton
+  health: 50
+  accuracy: 100
+  attackStat: 20
   enemyID: Skeleton1
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 9a81280c339298545822b311d9149d2e, type: 2}
   weakness: 
   resistance: 
-  immune: 
+  immune: Heart Attack
 --- !u!114 &8727752992759765313
 MonoBehaviour:
   m_ObjectHideFlags: 0
