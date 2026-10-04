@@ -42,7 +42,13 @@ public class AttackSO : ScriptableObject
         }
         
         // self buff check
-        
+        foreach (var buff in context.sourceUnit.buff)
+        {
+            if (buff.name == "MagicCharge")
+            {
+                damageDealt *= 1.5f;
+            }
+        }
         
         // weakness 
         if (target is Enemy)
