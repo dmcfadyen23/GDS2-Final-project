@@ -62,6 +62,11 @@ public class AttackSO : ScriptableObject
                     canAttack = false;
                 }
             }
+
+            if (debuff.name == "Charmed")
+            {
+                damageDealt *= 0.5f;
+            }
         }
         
         
