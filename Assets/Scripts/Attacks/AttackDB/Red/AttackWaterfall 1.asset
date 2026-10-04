@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AttackWaterfall 1
   m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackWaterfall
   attackName: Waterfall
-  basePower: 40
+  basePower: 30
   gestureName: Teardrop
-  colour: {r: 0, g: 0, b: 0, a: 0}
-  targetingType: 0
+  colour: {r: 1, g: 0, b: 0, a: 1}
+  targetingType: 1
