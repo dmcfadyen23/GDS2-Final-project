@@ -504,6 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
   health: 100
+  accuracy: 100
   attackStat: 0
   enemyID: BlueSlime2
   basicAttack: {fileID: 0}
@@ -2988,6 +2989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
   health: 100
+  accuracy: 100
   attackStat: 0
   enemyID: BlackSlimeBoss
   basicAttack: {fileID: 0}
@@ -4602,6 +4604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
   health: 100
+  accuracy: 100
   attackStat: 0
   enemyID: BlueSlime2
   basicAttack: {fileID: 0}
@@ -6306,6 +6309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
   health: 100
+  accuracy: 100
   attackStat: 0
   enemyID: BlueSlime2
   basicAttack: {fileID: 0}
@@ -9090,7 +9094,7 @@ Transform:
   m_GameObject: {fileID: 788570974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0077572, y: 0.1097877, z: -18.539244}
+  m_LocalPosition: {x: 3.3077574, y: 100.809784, z: -18.539244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12327,7 +12331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7, y: 0.3}
+  m_AnchoredPosition: {x: 3, y: 101}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &874976540
@@ -26555,6 +26559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
   health: 100
+  accuracy: 100
   attackStat: 0
   enemyID: BlueSlime2
   basicAttack: {fileID: 0}
@@ -31292,7 +31297,7 @@ Transform:
   m_GameObject: {fileID: 1950645294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 4, z: 0}
+  m_LocalPosition: {x: 4, y: 102.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
