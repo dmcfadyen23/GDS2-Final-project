@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private Vector3 playerPosition;
 
     private string enemyID;
+    private string enemyName;
 
     private string currentFloor;
 
@@ -32,11 +33,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void StartCombat(Vector3 position, string enemy)
+    public void StartCombat(Vector3 position, Enemy enemy)
     {
         playerPosition = position;
 
-        enemyID = enemy;
+        enemyID = enemy.GetEnemyID();
+        enemyName = enemy.unitName;
 
         currentFloor = SceneManager.GetActiveScene().name;
 
@@ -60,6 +62,10 @@ public class GameManager : MonoBehaviour
         return enemyID;
     }
 
+    public string GetEnemyName()
+    {
+        return enemyName;
+    }
 
     public string GetCurrentFloor()
     {

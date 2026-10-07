@@ -13,10 +13,10 @@ public class EnemyEncounter : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
             return;
-
+        
         GameManager.Instance.StartCombat(
             other.transform.position,
-            enemy.GetEnemyID()
+            enemy
         );
     }
 }

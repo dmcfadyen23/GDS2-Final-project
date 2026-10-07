@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/BasicMobOverworld 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 1/BasicMobOverworld 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/AdvMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/AdvMob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/BasicMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/BasicMob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/Boss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/Boss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/AdvMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/AdvMob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/BasicMob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/BasicMob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/Boss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/Boss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/BlueSlime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/BlueSlime.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/RedSlime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/RedSlime.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/FinalBoss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/FinalBoss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/LightningMage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/LightningMage.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/PoisonMage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/PoisonMage.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/WaterMage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/WaterMage.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/WindMage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 4/WindMage.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyEncounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyEncounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,25 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;attacks&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Sprites",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\dmcfa\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\dmcfa\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Sprint3 Windows Build\GDS2 Mystic Markings.exe" />
@@ -112,6 +144,7 @@
       <workItem from="1790672631366" duration="4658000" />
       <workItem from="1790938132170" duration="2777000" />
       <workItem from="1791109612935" duration="7370000" />
+      <workItem from="1791372992818" duration="3785000" />
     </task>
     <servers />
   </component>
