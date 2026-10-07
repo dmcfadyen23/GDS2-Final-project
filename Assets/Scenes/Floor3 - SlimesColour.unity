@@ -253,6 +253,10 @@ PrefabInstance:
       propertyPath: nextFloor
       value: 
       objectReference: {fileID: 102900000, guid: d0081492b1e25d24683846b581cf6b3a, type: 3}
+    - target: {fileID: 3315376852843123655, guid: 83551d7e7131eca48bf5b84c725d8755, type: 3}
+      propertyPath: sceneIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6450032773977162074, guid: 83551d7e7131eca48bf5b84c725d8755, type: 3}
       propertyPath: m_Name
       value: Exit

@@ -8,7 +8,7 @@ using UnityEditor;
 public class FloorExit : MonoBehaviour
 {
 #if UNITY_EDITOR
-    [SerializeField] private SceneAsset nextFloor;
+    [SerializeField] private int sceneIndex;
 #endif
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,21 +21,9 @@ public class FloorExit : MonoBehaviour
 
     private void LoadNextFloor()
     {
-#if UNITY_EDITOR
-        if (nextFloor == null)
-        {
-            Debug.LogError("No next floor has been assigned!");
-            return;
-        }
+        SceneManager.LoadScene(sceneIndex);
 
-        string scenePath = AssetDatabase.GetAssetPath(nextFloor);
-        string sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePath);
-
-        Debug.Log("Loading next floor: " + sceneName);
-
-        SceneManager.LoadScene(sceneName);
-#else
         Debug.LogError("Next floor is not configured for this build.");
-#endif
+
     }
 }
