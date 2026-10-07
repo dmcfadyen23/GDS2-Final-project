@@ -7,9 +7,7 @@ using UnityEditor;
 
 public class FloorExit : MonoBehaviour
 {
-#if UNITY_EDITOR
     [SerializeField] private int sceneIndex;
-#endif
 
     private void OnTriggerEnter2D(Collider2D other)
     {
