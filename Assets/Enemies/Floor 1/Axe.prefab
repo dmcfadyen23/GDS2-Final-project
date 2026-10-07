@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5139949598855610199
+--- !u!1 &8079209806485979753
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3239299664037222805}
-  - component: {fileID: 2515786694105138214}
-  - component: {fileID: 5106892431370210660}
-  - component: {fileID: 3531751157300204869}
-  - component: {fileID: 1264342625617489747}
-  - component: {fileID: 8727752992759765313}
-  - component: {fileID: 4309816971147510190}
+  - component: {fileID: 814038706989361309}
+  - component: {fileID: 1434122052208049719}
+  - component: {fileID: 1554314947476773658}
+  - component: {fileID: 149001525889679850}
+  - component: {fileID: 2916994225102030548}
+  - component: {fileID: 9181711246951860653}
+  - component: {fileID: 701054188385056468}
   m_Layer: 6
-  m_Name: BasicMobOverworld 1
+  m_Name: Axe
   m_TagString: Interactables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3239299664037222805
+--- !u!4 &814038706989361309
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 6.499057, y: 17.241833, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 2.4027395, y: 8.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!1839735485 &2515786694105138214
+--- !u!1839735485 &1434122052208049719
 Tilemap:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_Enabled: 1
   m_Tiles:
   - first: {x: 0, y: -3, z: 0}
@@ -63,14 +63,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - serializedVersion: 2
     m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: a90345322d07ae849a5a553d518fe693, type: 2}
+    m_Data: {fileID: 11400000, guid: 13e04ea083525f243bf102b041629162, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
     m_RefCount: 0
     m_Data: {fileID: 0}
   - serializedVersion: 2
     m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 227fcd9c3cd22444ab533474abe9d948, type: 3}
+    m_Data: {fileID: 4041998074741615924, guid: f0b8e35cf28425c459b4f1c387139db5, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 0
@@ -141,14 +141,14 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!483693784 &5106892431370210660
+--- !u!483693784 &1554314947476773658
 TilemapRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -191,19 +191,19 @@ TilemapRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.9348501, y: 0.7624999, z: 0}
+  m_ChunkCullingBounds: {x: 0.42924953, y: 0.7624999, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
---- !u!61 &3531751157300204869
+--- !u!61 &149001525889679850
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -243,47 +243,47 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &1264342625617489747
+--- !u!114 &2916994225102030548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: Skeleton
-  health: 50
+  unitName: Axe
+  health: 100
   accuracy: 100
-  attackStat: 20
-  enemyID: Skeleton1
-  basicAttack: {fileID: 11400000, guid: 9a81280c339298545822b311d9149d2e, type: 2}
+  attackStat: 50
+  enemyID: Axe1
+  basicAttack: {fileID: 11400000, guid: 94142c58ce2210941bdd50d37256adc8, type: 2}
   weakness: 
   resistance: 
-  immune: Heart Attack
---- !u!114 &8727752992759765313
+  immune: 
+--- !u!114 &9181711246951860653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc17795af60ebdb4286578c0a0719321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEncounter
---- !u!50 &4309816971147510190
+--- !u!50 &701054188385056468
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5139949598855610199}
+  m_GameObject: {fileID: 8079209806485979753}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0

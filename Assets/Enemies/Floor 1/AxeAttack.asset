@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
-  m_Name: TestEnemyAttack
+  m_Name: AxeAttack
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Skull Blast
-  basePower: 20
+  attackName: Axe Sweep
+  basePower: 25
   gestureName: 
+  colour: {r: 0, g: 0, b: 0, a: 0}
   targetingType: 0
