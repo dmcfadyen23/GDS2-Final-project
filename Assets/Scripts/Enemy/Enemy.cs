@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Enemy : Entity //Add enemy stuff here
 {
-    [SerializeField] private string enemyID;
-    [SerializeField] private AttackSO basicAttack;
+    [SerializeField] public string enemyID;
+    [SerializeField] public AttackSO basicAttack;
     public string weakness;
     public string resistance;
     public string immune;

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     private Vector3 playerPosition;
 
+    private Enemy enemy;
     private string enemyID;
     private string enemyName;
 
@@ -33,10 +34,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void StartCombat(Vector3 position, Enemy enemy)
+    public void StartCombat(Vector3 position, Enemy tempEnemy)
     {
         playerPosition = position;
 
+        enemy = tempEnemy;
         enemyID = enemy.GetEnemyID();
         enemyName = enemy.unitName;
 
@@ -56,7 +58,10 @@ public class GameManager : MonoBehaviour
         return playerPosition;
     }
 
-
+    public Enemy GetEnemy()
+    {
+        return enemy;
+    }
     public string GetEnemyID()
     {
         return enemyID;

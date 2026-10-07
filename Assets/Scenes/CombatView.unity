@@ -4505,7 +4505,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1809823404}
   - component: {fileID: 1809823403}
-  - component: {fileID: 1809823402}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -4513,27 +4512,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1809823402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809823401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: Skeleton
-  health: 100
-  accuracy: 100
-  attackStat: 100
-  enemyID: Skeleton
-  basicAttack: {fileID: 11400000, guid: 9a81280c339298545822b311d9149d2e, type: 2}
-  weakness: Lightning Bolt
-  resistance: Fireball
-  immune: Heart Attack
 --- !u!212 &1809823403
 SpriteRenderer:
   serializedVersion: 3

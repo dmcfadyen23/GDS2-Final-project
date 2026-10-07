@@ -261,9 +261,9 @@ MonoBehaviour:
   attackStat: 50
   enemyID: Axe1
   basicAttack: {fileID: 11400000, guid: 94142c58ce2210941bdd50d37256adc8, type: 2}
-  weakness: 
-  resistance: 
-  immune: 
+  weakness: Fireball
+  resistance: LightningBolt
+  immune: Waterfall
 --- !u!114 &9181711246951860653
 MonoBehaviour:
   m_ObjectHideFlags: 0
