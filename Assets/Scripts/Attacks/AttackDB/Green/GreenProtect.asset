@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackProtect
   attackName: Protect
   basePower: 0
-  gestureName: CircleWithCross
+  gestureName: Star
   colour: {r: 0, g: 1, b: 0, a: 1}
   targetingType: 3
