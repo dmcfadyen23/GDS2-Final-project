@@ -80,11 +80,7 @@ public class AttackSO : ScriptableObject
         if (target is Enemy)
         {
             Enemy enemyTarget = (Enemy)target;
-            if (enemyTarget.debuff.Contains(("Doused", -1)))
-            {
-                enemyTarget.weakness = "Lightning Bolt";
-            }
-            if (enemyTarget.weakness == attackName)
+            if (enemyTarget.weakness.Contains(attackName))
             {
                 damageDealt *= 2;
             }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Attacks;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ public class Enemy : Entity //Add enemy stuff here
 {
     [SerializeField] public string enemyID;
     [SerializeField] public AttackSO basicAttack;
-    public string weakness;
+    public List<string> weakness;
     public string resistance;
     public string immune;
     private AttackContext attackContext = new AttackContext();
@@ -24,7 +25,7 @@ public class Enemy : Entity //Add enemy stuff here
     public override void TakeDamage(AttackSO attack)
     {
         float damageTaken = attack.GetDamageDealt();
-        if (attack.attackName == weakness)
+        if (weakness.Contains(attack.attackName))
         {
             damageTaken *= 2;
         }
