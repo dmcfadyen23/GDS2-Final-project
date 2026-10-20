@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Attacks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,12 @@ public class Entity : MonoBehaviour
     public List<(string name, int duration)> buff = new List<(string name, int duration)>();
     public List<(string name, int duration)> debuff = new List<(string name, int duration)>();
     public List<(string name, int duration)> status = new List<(string name, int duration)>();
-    
+
+
+    public void TakeDamage(AttackSO attack)
+    {
+        health -= attack.GetDamageDealt();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

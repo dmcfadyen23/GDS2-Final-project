@@ -8,6 +8,7 @@ public class AttackSO : ScriptableObject
 {
     public string attackName = null;
     public int basePower = 0;
+    private float damageDealt;
     public string gestureName;
     public Color colour;
     protected UIManager uiManager;
@@ -19,13 +20,18 @@ public class AttackSO : ScriptableObject
 
     public TargetingType targetingType;
 
+    public float GetDamageDealt()
+    {
+        return damageDealt;
+    }
+    
     public virtual void Attack(AttackContext context)
     {
         int randomNumCheck;
         bool canAttack = true;
         uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;
-        float damageDealt = basePower*(target.attackStat/100);
+        damageDealt = basePower*(target.attackStat/100);
         //checks for status/debuffs/buffs on enemy
         foreach (var buff in target.buff)
         {
@@ -124,7 +130,7 @@ public class AttackSO : ScriptableObject
             uiManager.battleLogText.text = context.sourceUnit.unitName + " was unable to move this turn!";
         }
         
-        
+        // context.target.TakeDamage(this);
         EndOfTurn(context);
     }
 
