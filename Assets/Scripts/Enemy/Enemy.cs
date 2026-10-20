@@ -21,6 +21,25 @@ public class Enemy : Entity //Add enemy stuff here
         return basicAttack;
     }
 
+    public override void TakeDamage(AttackSO attack)
+    {
+        float damageTaken = attack.GetDamageDealt();
+        if (attack.attackName == weakness)
+        {
+            damageTaken *= 2;
+        }
+        else if (attack.attackName == resistance)
+        {
+            damageTaken *= 0.5f;
+        }
+        else if (attack.attackName == immune)
+        {
+            damageTaken = 0;
+        }
+
+        health -= damageTaken;
+    }
+
     public void UseAttack(Player targetPlayer)
     {
         attackContext.target = targetPlayer;

@@ -130,7 +130,7 @@ public class AttackSO : ScriptableObject
             uiManager.battleLogText.text = context.sourceUnit.unitName + " was unable to move this turn!";
         }
         
-        // context.target.TakeDamage(this);
+        context.target.TakeDamage(this);
         EndOfTurn(context);
     }
 
