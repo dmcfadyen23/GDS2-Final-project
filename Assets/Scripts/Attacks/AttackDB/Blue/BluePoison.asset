@@ -16,4 +16,4 @@ MonoBehaviour:
   basePower: 0
   gestureName: Spiral
   colour: {r: 0, g: 0, b: 1, a: 1}
-  targetingType: 2
+  targetingType: 1

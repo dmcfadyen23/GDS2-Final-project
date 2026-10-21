@@ -15,7 +15,7 @@ public class AttackSO : ScriptableObject
 
     public enum TargetingType
     {
-        SINGLE_TARGET, BLAST, AOE, SELF,
+        SINGLE_TARGET, AOE, SELF,
     }
 
     public TargetingType targetingType;

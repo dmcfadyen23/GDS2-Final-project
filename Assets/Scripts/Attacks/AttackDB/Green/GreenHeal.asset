@@ -16,4 +16,4 @@ MonoBehaviour:
   basePower: 50
   gestureName: Heart
   colour: {r: 0, g: 1, b: 0, a: 1}
-  targetingType: 3
+  targetingType: 2
