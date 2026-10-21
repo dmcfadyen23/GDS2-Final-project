@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatView.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackHeal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrawCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-    </list>
+    <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +113,7 @@
       <workItem from="1791372992818" duration="4390000" />
       <workItem from="1791877364979" duration="3488000" />
       <workItem from="1792491629720" duration="1256000" />
-      <workItem from="1792569273414" duration="4493000" />
+      <workItem from="1792569273414" duration="5263000" />
     </task>
     <servers />
   </component>
