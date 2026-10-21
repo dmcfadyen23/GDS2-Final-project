@@ -15,7 +15,7 @@ public class AttackSO : ScriptableObject
 
     public enum TargetingType
     {
-        SINGLE_TARGET, AOE, SELF,
+        SINGLE_TARGET, AOE, SELF
     }
 
     public TargetingType targetingType;
@@ -105,7 +105,8 @@ public class AttackSO : ScriptableObject
                 uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
                 if (target as Enemy)
                 {
-                    uiManager.UpdateEnemyHealthBar(target.health);
+                    Enemy enemyTarget = (Enemy)target;
+                    uiManager.UpdateEnemyHealthBar(target.health, enemyTarget.GetEnemyNum());
                 }
                 else
                 {

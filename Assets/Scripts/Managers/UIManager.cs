@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI battleLogText;
 
     [SerializeField] private Slider playerHealthBar;
-    [SerializeField] private Slider enemyHealthBar;
+    [SerializeField] public Slider[] enemyHealthBars = new Slider[3];
     
     public void GoToDrawing()
     {
@@ -51,9 +51,14 @@ public class UIManager : MonoBehaviour
         playerHealthBar.value = health;
     }
 
-    public void UpdateEnemyHealthBar(float health)
+    public void UpdateEnemyHealthBar(float health, int enemyIndex)
     {
-        enemyHealthBar.value = health;
+        if (health <= 0)
+        {
+            enemyHealthBars[enemyIndex].gameObject.SetActive(false);
+        }
+        enemyHealthBars[enemyIndex].value = health;
+        
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

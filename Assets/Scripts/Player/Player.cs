@@ -10,9 +10,8 @@ public class Player : Entity
 
     private int playerLevel;
 
-    public void UseAttack(string gestureName, Color color, Enemy targetEnemy)
+    public void UseAttack(string gestureName, Color color)
     {
-        attackContext.target = targetEnemy;
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
         foreach (AttackSO attack in possibleAttacks)
@@ -23,6 +22,20 @@ public class Player : Entity
             }
         }
     }
+
+    public void SelectTarget(int targetIndex)
+    {
+        CombatManager combatManager = FindAnyObjectByType<CombatManager>();
+        attackContext.target = combatManager.GetEnemy(targetIndex).GetComponent<Enemy>();
+    }
+
+    public override void TakeDamage(AttackSO attack)
+    {
+        base.TakeDamage(attack);
+        UIManager uiManager = FindAnyObjectByType<UIManager>();
+        uiManager.UpdatePlayerHealthBar(health);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -26,7 +26,8 @@ namespace Attacks.AttackDB
             uiManager.battleLogText.text = context.sourceUnit.unitName + " healed self using" + attackName + " for " + damageHealed + " health";
             if (target as Enemy)
             {
-                uiManager.UpdateEnemyHealthBar(target.health);
+                Enemy enemyTarget = (Enemy)target;
+                uiManager.UpdateEnemyHealthBar(target.health, enemyTarget.GetEnemyNum());
             }
             else
             {

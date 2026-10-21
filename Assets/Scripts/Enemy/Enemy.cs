@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : Entity //Add enemy stuff here
 {
+    // number of this enemy you will encounter when running into them
+    public int numEnemies;
+    
+    // which enemy in-combat if multiple enemies (set in combat manager)
+    private int enemyNum;
     [SerializeField] public string enemyID;
     [SerializeField] public AttackSO basicAttack;
     public List<string> weakness;
@@ -15,6 +20,16 @@ public class Enemy : Entity //Add enemy stuff here
     public string GetEnemyID()
     {
         return enemyID;
+    }
+
+    public int GetEnemyNum()
+    {
+        return enemyNum;
+    }
+
+    public void SetEnemyNum(int number)
+    {
+        enemyNum = number;
     }
 
     public AttackSO GetAttack()
@@ -39,6 +54,13 @@ public class Enemy : Entity //Add enemy stuff here
         }
 
         health -= damageTaken;
+        UIManager uiManager = FindAnyObjectByType<UIManager>();
+        uiManager.UpdateEnemyHealthBar(health, enemyNum);
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
 
     public void UseAttack(Player targetPlayer)
