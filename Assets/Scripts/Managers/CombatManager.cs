@@ -38,6 +38,11 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
         return enemies[index];
     }
 
+    public GameObject[] GetAllEnemies()
+    {
+        return enemies;
+    }
+
     public static void WinCombat()
     {
         GameManager.Instance.DefeatEnemy();

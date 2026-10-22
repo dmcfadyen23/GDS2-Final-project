@@ -15488,6 +15488,18 @@ PrefabInstance:
       propertyPath: enemyID
       value: Skeleton1
       objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: numEnemies
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: weakness.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: 'weakness.Array.data[0]'
+      value: Lightning Bolt
+      objectReference: {fileID: 0}
     - target: {fileID: 2515786694105138214, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 1
