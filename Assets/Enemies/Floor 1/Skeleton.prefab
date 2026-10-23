@@ -259,9 +259,11 @@ MonoBehaviour:
   health: 30
   accuracy: 100
   attackStat: 20
+  numEnemies: 1
   enemyID: Skeleton1
   basicAttack: {fileID: 11400000, guid: 9a81280c339298545822b311d9149d2e, type: 2}
-  weakness: LightningBolt
+  weakness:
+  - Lightning Bolt
   resistance: Fireball
   immune: Heart Attack
 --- !u!114 &8727752992759765313

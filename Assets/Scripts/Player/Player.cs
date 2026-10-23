@@ -45,6 +45,10 @@ public class Player : Entity
         base.TakeDamage(attack);
         UIManager uiManager = FindAnyObjectByType<UIManager>();
         uiManager.UpdatePlayerHealthBar(health);
+        if (health <= 0)
+        {
+            CombatManager.LoseCombat();
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

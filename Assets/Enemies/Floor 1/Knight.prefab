@@ -256,9 +256,11 @@ MonoBehaviour:
   health: 200
   accuracy: 100
   attackStat: 100
+  numEnemies: 1
   enemyID: TutorialBoss
   basicAttack: {fileID: 11400000, guid: 70a3436fbcec4094090e2d9cacbd3143, type: 2}
-  weakness: Heart Attack
+  weakness:
+  - Heart Attack
   resistance: Waterfall
   immune: LightningBolt
 --- !u!114 &5560309093169758267

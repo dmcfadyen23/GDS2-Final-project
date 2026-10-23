@@ -1201,7 +1201,7 @@ Animator:
   m_GameObject: {fileID: 460845631}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fabd222e4938d6447b47d44ad0d2b789, type: 2}
+  m_Controller: {fileID: 9100000, guid: c0fbf50ec6a91cf4085cc3556c7a2949, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3497,7 +3497,7 @@ Animator:
   m_GameObject: {fileID: 1028232077}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fabd222e4938d6447b47d44ad0d2b789, type: 2}
+  m_Controller: {fileID: 9100000, guid: a1a3a5970bddf6f469ee8d172288a548, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7762,6 +7762,10 @@ MonoBehaviour:
   battleLogText: {fileID: 657432518}
   targetReticle: {fileID: 186244090}
   targetSelection: {fileID: 793081487}
+  enemyTargetSelection:
+  - {fileID: 1680012021}
+  - {fileID: 523863133}
+  - {fileID: 1244897372}
   playerHealthBar: {fileID: 676069254}
   enemyHealthBars:
   - {fileID: 709273982}

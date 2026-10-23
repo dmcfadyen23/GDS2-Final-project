@@ -59,7 +59,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyTestEffect
+  m_Name: EnemyTestEffect1
   serializedVersion: 6
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -112,7 +112,7 @@ AnimatorStateMachine:
     m_Position: {x: 260, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -928369993936961620}
-    m_Position: {x: 260, y: 150, z: 0}
+    m_Position: {x: 260, y: 170, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

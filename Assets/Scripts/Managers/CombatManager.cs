@@ -18,6 +18,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
             enemies[i].SetActive(true);
             uiManager.enemyHealthBars[i].gameObject.SetActive(true);
             Enemy enemyScene = enemies[i].AddComponent<Enemy>();
+            enemyScene.SetEnemyNum(i);
             enemyScene.unitName = enemyEncountered.unitName;
             enemyScene.health = enemyEncountered.health;
             enemyScene.attackStat = enemyEncountered.attackStat;
@@ -43,6 +44,20 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
         return enemies;
     }
 
+    public GameObject[] GetAllActiveEnemies()
+    {
+        GameObject[] activeEnemies = new GameObject[3];
+        for (int i = 0; i < 3; i++)
+        {
+            if (enemies[i].activeSelf)
+            {
+                activeEnemies[i] = enemies[i];
+            }
+        }
+
+        return activeEnemies;
+    }
+    
     public static void WinCombat()
     {
         GameManager.Instance.DefeatEnemy();

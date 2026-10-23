@@ -59,7 +59,24 @@ public class Enemy : Entity //Add enemy stuff here
         if (health <= 0)
         {
             gameObject.SetActive(false);
+            // check if all enemies dead
+            bool allDead = true;
+            CombatManager combatManager = FindAnyObjectByType<CombatManager>();
+            GameObject[] enemies = combatManager.GetAllEnemies();
+            foreach (var VARIABLE in enemies)
+            {
+                if (VARIABLE.activeSelf)
+                {
+                    allDead = false;
+                }
+            }
+
+            if (allDead)
+            {
+                CombatManager.WinCombat();
+            }
         }
+
         
     }
 
