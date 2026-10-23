@@ -19,7 +19,7 @@ public class EndTurn : MonoBehaviour
     //unit num, 0 = player, 1-3 is enemy. i.e. end of player's turn calls EndOfTurn(0)
     public void EndOfTurn(int unitNum)
     {
-        
+        Debug.Log(gameObject.name + "end turn");
         UIManager uiManager = FindAnyObjectByType<UIManager>();
         uiManager.WaitForEnemy();
         CombatManager combatManager = FindAnyObjectByType<CombatManager>();
@@ -32,6 +32,7 @@ public class EndTurn : MonoBehaviour
             {
                 Enemy enemy = activeEnemies[i].GetComponent<Enemy>();
                 enemy.UseAttack(player);
+                Debug.Log(activeEnemies[i].name + "use attack");
                 return;
             }
         }

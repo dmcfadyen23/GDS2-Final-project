@@ -100,7 +100,8 @@ public class AttackSO : ScriptableObject
             // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
             if (randomNumCheck <= context.sourceUnit.accuracy)
             {
-                target.health -= damageDealt;
+                // target.health -= damageDealt;
+                target.TakeDamage(this);
                 context.animator.Play("AttackAnim");
                 uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
                 if (target as Enemy)
@@ -127,7 +128,7 @@ public class AttackSO : ScriptableObject
             uiManager.battleLogText.text = context.sourceUnit.unitName + " was unable to move this turn!";
         }
         
-        context.target.TakeDamage(this);
+        
         EndOfTurn(context);
     }
 
