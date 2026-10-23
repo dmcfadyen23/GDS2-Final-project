@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackCharm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackCharm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackMagicCharge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackMagicCharge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackParalyze.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackParalyze.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackPoison.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Blue/AttackPoison.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackProtect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackProtect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackRegen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackRegen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackShield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackShield.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttackEffect3.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +128,7 @@
       <workItem from="1792491629720" duration="1256000" />
       <workItem from="1792569273414" duration="5354000" />
       <workItem from="1792665758523" duration="2293000" />
-      <workItem from="1792735576365" duration="10888000" />
+      <workItem from="1792735576365" duration="15028000" />
     </task>
     <servers />
   </component>

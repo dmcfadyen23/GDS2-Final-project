@@ -18,7 +18,7 @@ namespace Attacks.AttackDB
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.target;
-            target.status.Add(("Paralyze", -1));
+            target.statuses.Add(("Paralyze", -1));
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", the enemy may be unable to move!";
             

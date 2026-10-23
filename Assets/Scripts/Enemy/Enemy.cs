@@ -37,7 +37,7 @@ public class Enemy : Entity //Add enemy stuff here
         return basicAttack;
     }
 
-    public override void TakeDamage(AttackSO attack)
+    public override void TakeDamage(AttackSO attack, AttackContext attackContext)
     {
         float damageTaken = attack.GetDamageDealt();
         if (weakness.Contains(attack.attackName))
@@ -52,6 +52,24 @@ public class Enemy : Entity //Add enemy stuff here
         {
             damageTaken = 0;
         }
+        
+        foreach (var buff in buffs)
+        {
+            if (buff.name == "Shielded")
+            {
+                damageTaken *= 0.5f;
+            }
+        }
+
+        foreach (var status in attackContext.target.statuses)
+        {
+            if (status.name == "Protected")
+            {
+                damageTaken = 0;
+            }
+        }
+        
+        
 
         health -= damageTaken;
         UIManager uiManager = FindAnyObjectByType<UIManager>();
