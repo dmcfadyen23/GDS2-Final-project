@@ -14,7 +14,7 @@ public class Entity : MonoBehaviour
     public List<(string name, int duration)> statuses = new List<(string name, int duration)>();
 
 
-    public virtual void TakeDamage(AttackSO attack, AttackContext attackContext)
+    public virtual void TakeDamage(AttackSO attack, AttackContext context)
     {
         health -= attack.GetDamageDealt();
     }

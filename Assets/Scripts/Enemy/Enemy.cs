@@ -37,7 +37,7 @@ public class Enemy : Entity //Add enemy stuff here
         return basicAttack;
     }
 
-    public override void TakeDamage(AttackSO attack, AttackContext attackContext)
+    public override void TakeDamage(AttackSO attack, AttackContext context)
     {
         float damageTaken = attack.GetDamageDealt();
         if (weakness.Contains(attack.attackName))
@@ -61,7 +61,7 @@ public class Enemy : Entity //Add enemy stuff here
             }
         }
 
-        foreach (var status in attackContext.target.statuses)
+        foreach (var status in context.target.statuses)
         {
             if (status.name == "Protected")
             {

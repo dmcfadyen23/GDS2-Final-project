@@ -40,9 +40,9 @@ public class Player : Entity
         
     }
 
-    public override void TakeDamage(AttackSO attack, AttackContext attackContext)
+    public override void TakeDamage(AttackSO attack, AttackContext context)
     {
-        base.TakeDamage(attack, attackContext);
+        base.TakeDamage(attack, context);
         UIManager uiManager = FindAnyObjectByType<UIManager>();
         uiManager.UpdatePlayerHealthBar(health);
         if (health <= 0)
