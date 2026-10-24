@@ -29,6 +29,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
             enemyScene.weakness = enemyEncountered.weakness;
             SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+            uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
         }
 
         Debug.Log("Starting combat against: " + enemyID);
