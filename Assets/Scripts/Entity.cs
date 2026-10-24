@@ -14,9 +14,10 @@ public class Entity : MonoBehaviour
     public List<(string name, int duration)> statuses = new List<(string name, int duration)>();
 
 
-    public virtual void TakeDamage(AttackSO attack, AttackContext context)
+    public virtual float TakeDamage(AttackSO attack, AttackContext context)
     {
         health -= attack.GetDamageDealt();
+        return attack.GetDamageDealt();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

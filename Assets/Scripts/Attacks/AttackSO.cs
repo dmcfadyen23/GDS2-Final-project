@@ -29,9 +29,11 @@ public class AttackSO : ScriptableObject
     {
         int randomNumCheck;
         bool canAttack = true;
+        string effectiveness = "";
         uiManager = FindAnyObjectByType<UIManager>();
         Entity target = context.target;
         damageDealt = basePower*(context.sourceUnit.attackStat/100);
+        float actualDamageDealt = 0;
         
         // self buff/debuff check
         foreach (var buff in context.sourceUnit.buffs)
@@ -66,23 +68,33 @@ public class AttackSO : ScriptableObject
             // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
             if (randomNumCheck <= context.sourceUnit.accuracy)
             {
-                // target.health -= damageDealt;
                 switch (targetingType)
                 {
                     case TargetingType.SINGLE_TARGET:
-                        target.TakeDamage(this, context);
-                        context.animator.Play("AttackAnim");
-                        uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
-                        // if (target as Enemy)
-                        // {
-                        //     Enemy enemyTarget = (Enemy)target;
-                        //     uiManager.UpdateEnemyHealthBar(target.health, enemyTarget.GetEnemyNum());
-                        // }
-                        // else
-                        // {
-                        //     uiManager.UpdatePlayerHealthBar(target.health);
-                        // }
+                        actualDamageDealt = target.TakeDamage(this, context);
+                        if (target is Enemy)
+                        {
+                            Enemy enemyTarget = (Enemy)target;
+                            if (enemyTarget.weakness.Contains(attackName))
+                            {
+                                effectiveness = "Good";
+                            }
+                            else if (enemyTarget.resistance == attackName)
+                            {
+                                effectiveness = "Bad";
+                            }
+                        }
 
+                        context.animator.Play("AttackAnim");
+                        uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + actualDamageDealt + " damage to " + context.target.unitName;
+                        if (effectiveness == "Good")
+                        {
+                            uiManager.battleLogText.text += "The attack was super effective!";
+                        }
+                        else if (effectiveness == "Bad")
+                        {
+                            uiManager.battleLogText.text += "The attack was not very effective...";
+                        }
                         break;
                     case TargetingType.AOE:
                         Enemy[] enemies = FindObjectsByType<Enemy>();
@@ -92,19 +104,39 @@ public class AttackSO : ScriptableObject
                         {
                             if (enemy.gameObject.activeSelf)
                             {
-                                enemy.TakeDamage(this, context);
+                                actualDamageDealt = enemy.TakeDamage(this, context);
+                                if (enemy.weakness.Contains(attackName))
+                                {
+                                    effectiveness = "Good";
+                                }
+                                else if (enemy.resistance == attackName)
+                                {
+                                    effectiveness = "Bad";
+                                }
                                 activeEnemies++;
                             }
                         }
 
+                        
+
                         if (activeEnemies > 1)
                         {
-                            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to all enemies";
+                            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + actualDamageDealt + " damage to all enemies. ";
                         }
                         else
                         {
-                            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + damageDealt + " damage to " + context.target.unitName;
+                            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + " and did " + actualDamageDealt + " damage to " + context.target.unitName + ". ";
                         }
+
+                        if (effectiveness == "Good")
+                        {
+                            uiManager.battleLogText.text += "The attack was super effective!";
+                        }
+                        else if (effectiveness == "Bad")
+                        {
+                            uiManager.battleLogText.text += "The attack was not very effective...";
+                        }
+                        
                         break;
                 }
                 
@@ -122,28 +154,6 @@ public class AttackSO : ScriptableObject
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " was unable to move this turn!";
         }
-        
-        
-        
-        
-        // weakness 
-        if (target is Enemy)
-        {
-            Enemy enemyTarget = (Enemy)target;
-            if (enemyTarget.weakness.Contains(attackName))
-            {
-                damageDealt *= 2;
-            }
-
-            if (enemyTarget.resistance == attackName)
-            {
-                damageDealt *= 0.5f;
-            }
-        }
-
-
-        
-        
         
         EndOfTurn(context);
     }

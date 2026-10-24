@@ -37,7 +37,7 @@ public class Enemy : Entity //Add enemy stuff here
         return basicAttack;
     }
 
-    public override void TakeDamage(AttackSO attack, AttackContext context)
+    public override float TakeDamage(AttackSO attack, AttackContext context)
     {
         float damageTaken = attack.GetDamageDealt();
         if (weakness.Contains(attack.attackName))
@@ -95,7 +95,8 @@ public class Enemy : Entity //Add enemy stuff here
             }
         }
 
-        
+        return damageTaken;
+
     }
 
     public void UseAttack(Player targetPlayer)

@@ -40,15 +40,16 @@ public class Player : Entity
         
     }
 
-    public override void TakeDamage(AttackSO attack, AttackContext context)
+    public override float TakeDamage(AttackSO attack, AttackContext context)
     {
-        base.TakeDamage(attack, context);
+        float damageDealt = base.TakeDamage(attack, context);
         UIManager uiManager = FindAnyObjectByType<UIManager>();
         uiManager.UpdatePlayerHealthBar(health);
         if (health <= 0)
         {
             CombatManager.LoseCombat();
         }
+        return damageDealt;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
