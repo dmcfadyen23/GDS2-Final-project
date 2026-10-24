@@ -12,6 +12,9 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] private Color brushColor = Color.red;
     [SerializeField] private int brushRadius = 5;
 
+    [Header("Brush Sound")]
+    [SerializeField] private AudioSource brushAudioSource;
+    [SerializeField] private AudioClip brushSound;
     private int strokeNumber = -1;
 
     private Color[] colours = new Color[]
@@ -53,6 +56,23 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
         
         drawingTexture.SetPixels(clearColors);
         drawingTexture.Apply();
+        StopBrushSound();
+    }
+
+    private void StartBrushSound()
+    {
+        if (brushAudioSource == null || brushSound == null)
+            return;
+
+        brushAudioSource.clip = brushSound;
+        brushAudioSource.loop = true;
+        brushAudioSource.Play();
+    }
+
+    private void StopBrushSound()
+    {
+        if (brushAudioSource != null)
+            brushAudioSource.Stop();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -60,6 +80,7 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
         // Capture initial tap position
         TryDraw(eventData.position, out lastPosition);
         strokeNumber++;
+        StartBrushSound();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -70,6 +91,11 @@ public class CanvasDrawer : MonoBehaviour, IPointerDownHandler, IDragHandler
             DrawLine(lastPosition, currentPixelPos);
             lastPosition = currentPixelPos;
         }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        StopBrushSound();
     }
 
     private bool TryDraw(Vector2 screenPos, out Vector2 pixelPos)

@@ -9062,6 +9062,7 @@ GameObject:
   - component: {fileID: 788570975}
   - component: {fileID: 788570978}
   - component: {fileID: 788570979}
+  - component: {fileID: 788570980}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9219,6 +9220,103 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!82 &788570980
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788570974}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.216
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &817316676
 GameObject:
   m_ObjectHideFlags: 0
@@ -15643,11 +15741,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   doors:
   - {fileID: 2138687813}
+  - {fileID: 697719582}
   enemies:
   - {fileID: 1688322275}
   - {fileID: 492462285}
-  audioSource: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 788570980}
+  doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &1001340576
 GameObject:
   m_ObjectHideFlags: 0
@@ -20768,8 +20867,8 @@ MonoBehaviour:
   - {fileID: 606149304}
   - {fileID: 1220848616}
   - {fileID: 1801476848}
-  audioSource: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 788570980}
+  doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!61 &1366732584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25731,8 +25830,8 @@ MonoBehaviour:
   - {fileID: 0}
   enemies:
   - {fileID: 0}
-  audioSource: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 788570980}
+  doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!114 &1765690618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26392,11 +26491,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   doors:
   - {fileID: 1221753228}
+  - {fileID: 697719582}
   enemies:
   - {fileID: 1744744879}
   - {fileID: 489983613}
-  audioSource: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 788570980}
+  doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &1939474277
 GameObject:
   m_ObjectHideFlags: 0
@@ -26509,6 +26609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 6
+  walkingAudioSource: {fileID: 0}
+  walkingSound: {fileID: 0}
 --- !u!114 &1939474281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28574,8 +28676,8 @@ MonoBehaviour:
   - {fileID: 1203271225}
   enemies:
   - {fileID: 133548592}
-  audioSource: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  audioSource: {fileID: 788570980}
+  doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!114 &2083741431
 MonoBehaviour:
   m_ObjectHideFlags: 0

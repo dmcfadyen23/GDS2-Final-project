@@ -32,7 +32,7 @@ public class TutorialUI : MonoBehaviour
 
         if (paintsCollected >= 3)
         {
-            ShowMessage("Read the scrolls on the walls");
+            ShowMessage("Read the scrolls on the walls from the left");
         }
         else
         {
