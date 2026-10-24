@@ -17,11 +17,27 @@ namespace Attacks.AttackDB
         public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
-            Entity target = context.target;
-            target.debuff.Add(("Charmed", 3));
-            context.animator.Play("AttackAnim");
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", reducing the enemy's damage!";
+            Enemy[] enemies = FindObjectsByType<Enemy>();
+            int activeEnemies = 0;
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeSelf)
+                {
+                    enemy.debuffs.Add(("Charmed", 3));
+                    activeEnemies++;
+                }
+            }
+
+            if (activeEnemies > 1)
+            {
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", reducing all enemies' damage!";
+            }
+            else
+            {
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", reducing the enemy's damage!";
+            }
             
+            context.animator.Play("AttackAnim");
             EndOfTurn(context);
         }
     }

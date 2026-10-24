@@ -17,10 +17,25 @@ namespace Attacks.AttackDB
         public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
-            Entity target = context.target;
-            target.debuff.Add(("Poison", 3));
+            Enemy[] enemies = FindObjectsByType<Enemy>();
+            int activeEnemies = 0;
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeSelf)
+                {
+                    enemy.debuffs.Add(("Poison", 3));
+                    activeEnemies++;
+                }
+            }
+            if (activeEnemies > 1)
+            {
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", making all enemies take damage each turn!";
+            }
+            else
+            {
+                uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", making the enemy take damage each turn!";
+            }
             context.animator.Play("AttackAnim");
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", making the enemy take damage each turn!";
             
             EndOfTurn(context);
         }

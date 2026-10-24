@@ -19,7 +19,7 @@ namespace Attacks.AttackDB
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
             bool alreadyProtected = false;
-            foreach (var status in target.status)
+            foreach (var status in target.statuses)
             {
                 if (status.name == "Protected")
                 {
@@ -29,7 +29,7 @@ namespace Attacks.AttackDB
 
             if (!alreadyProtected)
             {
-                target.status.Add(("Protected", 2));
+                target.statuses.Add(("Protected", 2));
                 context.animator.Play("AttackAnim");
                 uiManager.battleLogText.text = context.sourceUnit.unitName + " protected self using" + attackName + " for this turn";
             }

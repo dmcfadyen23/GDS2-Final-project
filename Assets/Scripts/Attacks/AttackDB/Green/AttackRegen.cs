@@ -18,7 +18,7 @@ namespace Attacks.AttackDB
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            target.buff.Add(("Regen", 4));
+            target.buffs.Add(("Regen", 4));
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " is now regenerating health each turn using" + attackName + " for " + 3 + " turns";
             EndOfTurn(context);

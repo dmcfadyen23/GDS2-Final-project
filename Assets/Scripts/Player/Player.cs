@@ -10,9 +10,13 @@ public class Player : Entity
 
     private int playerLevel;
 
-    public void UseAttack(string gestureName, Color color, Enemy targetEnemy)
+    public void UseAttack(string gestureName, Color color)
     {
-        attackContext.target = targetEnemy;
+        if (attackContext.target == null)
+        {
+            CombatManager combatManager = FindAnyObjectByType<CombatManager>();
+            attackContext.target = combatManager.GetEnemy(0).GetComponent<Enemy>();
+        }
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
         foreach (AttackSO attack in possibleAttacks)
@@ -23,6 +27,30 @@ public class Player : Entity
             }
         }
     }
+
+    public void SelectTarget(int targetIndex)
+    {
+        CombatManager combatManager = FindAnyObjectByType<CombatManager>();
+        UIManager uiManager = FindAnyObjectByType<UIManager>();
+        attackContext.target = combatManager.GetEnemy(targetIndex).GetComponent<Enemy>();
+        Debug.Log(attackContext.target);    
+        Vector3 targetPosition = combatManager.GetEnemy(targetIndex).transform.position;
+        targetPosition.z = -1;
+        uiManager.targetReticle.transform.position = targetPosition;
+        
+    }
+
+    public override void TakeDamage(AttackSO attack, AttackContext context)
+    {
+        base.TakeDamage(attack, context);
+        UIManager uiManager = FindAnyObjectByType<UIManager>();
+        uiManager.UpdatePlayerHealthBar(health);
+        if (health <= 0)
+        {
+            CombatManager.LoseCombat();
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

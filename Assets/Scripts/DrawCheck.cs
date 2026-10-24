@@ -24,10 +24,8 @@ public class DrawCheck : MonoBehaviour
             Debug.Log("shape is " + gestureShape);
             Color currentColour = FindAnyObjectByType<CanvasDrawer>().GetCurrentColour();
             Debug.Log("colour is " + currentColour);
-            // use attack associated with shape, later colour will be taken into account as well
-            Enemy enemy = FindAnyObjectByType<Enemy>();
             Player player = FindAnyObjectByType<Player>();
-            player.UseAttack(gestureShape, currentColour, enemy);
+            player.UseAttack(gestureShape, currentColour);
             uiManager.WaitForEnemy();
             
         }
@@ -44,7 +42,7 @@ public class DrawCheck : MonoBehaviour
         {
             Debug.Log("writing drawing to database");
             // name of shape and file here
-            string gestureName = "Spiral";
+            string gestureName = "Star";
             int currentStroke = 0;
             Gesture candidate = new Gesture(CandidatePoints.ToArray(), gestureName);
             // can add numbers before .txt (e.g. "1.txt" or "2.txt") to create a larger training set for better shape recognition

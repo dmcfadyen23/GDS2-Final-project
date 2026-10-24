@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.AttackPoison
   attackName: Poison
   basePower: 0
-  gestureName: CircleWithCross
+  gestureName: Spiral
   colour: {r: 0, g: 0, b: 1, a: 1}
-  targetingType: 2
+  targetingType: 1

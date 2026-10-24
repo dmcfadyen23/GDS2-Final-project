@@ -18,7 +18,7 @@ namespace Attacks.AttackDB
         {
             uiManager = FindAnyObjectByType<UIManager>();
             Entity target = context.sourceUnit;
-            target.buff.Add(("MagicCharge", 4));
+            target.buffs.Add(("MagicCharge", 4));
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = context.sourceUnit.unitName + " used " + attackName + ", buffing their offensive power!";
             

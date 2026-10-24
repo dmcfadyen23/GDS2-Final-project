@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private Enemy enemy;
     private string enemyID;
     private string enemyName;
+    private int numEnemies;
 
     private string currentFloor;
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         enemy = tempEnemy;
         enemyID = enemy.GetEnemyID();
         enemyName = enemy.unitName;
+        numEnemies = enemy.numEnemies;
 
         currentFloor = SceneManager.GetActiveScene().name;
 
@@ -70,6 +72,11 @@ public class GameManager : MonoBehaviour
     public string GetEnemyName()
     {
         return enemyName;
+    }
+
+    public int GetNumEnemies()
+    {
+        return numEnemies;
     }
 
     public string GetCurrentFloor()
