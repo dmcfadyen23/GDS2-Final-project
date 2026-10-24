@@ -17,19 +17,41 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
         {
             enemies[i].SetActive(true);
             uiManager.enemyHealthBars[i].gameObject.SetActive(true);
-            Enemy enemyScene = enemies[i].AddComponent<Enemy>();
-            enemyScene.SetEnemyNum(i);
-            enemyScene.unitName = enemyEncountered.unitName;
-            enemyScene.health = enemyEncountered.health;
-            enemyScene.attackStat = enemyEncountered.attackStat;
-            enemyScene.enemyID = enemyEncountered.enemyID;
-            enemyScene.basicAttack = enemyEncountered.basicAttack;
-            enemyScene.immune = enemyEncountered.immune;
-            enemyScene.resistance = enemyEncountered.resistance;
-            enemyScene.weakness = enemyEncountered.weakness;
-            SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-            uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            
+            // if enemy is special enemy
+            if (enemyEncountered is Knight)
+            {
+                Knight enemyScene = enemies[i].AddComponent<Knight>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            }
+            else
+            {
+                Enemy enemyScene = enemies[i].AddComponent<Enemy>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            }
+            
         }
 
         Debug.Log("Starting combat against: " + enemyID);

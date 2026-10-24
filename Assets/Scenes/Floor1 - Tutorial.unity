@@ -340,17 +340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142426522522434501, guid: cdc16132639a19642939b8337e94475b, type: 3}
   m_PrefabInstance: {fileID: 2515466117824804781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &133548592 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1326375822237609550, guid: cdc16132639a19642939b8337e94475b, type: 3}
-  m_PrefabInstance: {fileID: 2515466117824804781}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2515466117824804782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1 &137539981
 GameObject:
   m_ObjectHideFlags: 0
@@ -15063,7 +15052,7 @@ MonoBehaviour:
   - {fileID: 1473489923}
   - {fileID: 1290140718}
   enemies:
-  - {fileID: 133548592}
+  - {fileID: 0}
   audioSource: {fileID: 0}
   doorOpenSound: {fileID: 0}
 --- !u!114 &2083741431
@@ -15657,7 +15646,8 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.7624999
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1326375822237609550, guid: cdc16132639a19642939b8337e94475b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
