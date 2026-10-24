@@ -8,13 +8,13 @@ public class Enemy : Entity //Add enemy stuff here
     public int numEnemies;
     
     // which enemy in-combat if multiple enemies (set in combat manager)
-    private int enemyNum;
+    protected int enemyNum;
     [SerializeField] public string enemyID;
     [SerializeField] public AttackSO basicAttack;
     public List<string> weakness;
     public string resistance;
     public string immune;
-    private AttackContext attackContext = new AttackContext();
+    protected AttackContext attackContext = new AttackContext();
     
 
     public string GetEnemyID()
@@ -99,7 +99,7 @@ public class Enemy : Entity //Add enemy stuff here
 
     }
 
-    public void UseAttack(Player targetPlayer)
+    public virtual void UseAttack(Player targetPlayer)
     {
         attackContext.target = targetPlayer;
         attackContext.sourceUnit = this;
