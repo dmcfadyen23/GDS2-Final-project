@@ -3769,16 +3769,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: Fish
+  health: 75
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 45
+  numEnemies: 1
   enemyID: HeFish3
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 373d6d24336b56649a98fe4309eb93e8, type: 2}
+  weakness:
+  - Fireball
+  resistance: Wind Slash
+  immune: Waterfall
 --- !u!61 &489983614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3813,7 +3814,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49849117, y: -2.4991322}
+  m_Offset: {x: 0.16404533, y: -2.5194016}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3823,7 +3824,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.68228006, y: 0.564687}
+  m_Size: {x: 2.060608, y: 1.9632797}
   m_EdgeRadius: 0
 --- !u!483693784 &489983615
 TilemapRenderer:
@@ -4148,16 +4149,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
-  attackStat: 0
+  unitName: Mermaid
+  health: 125
+  accuracy: 60
+  attackStat: 85
   numEnemies: 0
   enemyID: SheFish3
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 453eb480fe896d141a8c2d473adc44d2, type: 2}
+  weakness:
+  - Wind Blast
+  - Lightning
+  resistance: Fireball
+  immune: Waterfall
 --- !u!61 &492462286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25363,16 +25366,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  unitName: Mermaid
+  health: 125
+  accuracy: 60
+  attackStat: 85
+  numEnemies: 2
   enemyID: SheFish2
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 453eb480fe896d141a8c2d473adc44d2, type: 2}
+  weakness:
+  - Wind Blast
+  - Lightning
+  resistance: Fireball
+  immune: Waterfall
 --- !u!61 &1688322276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25664,16 +25669,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: Fish
+  health: 75
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 45
+  numEnemies: 2
   enemyID: HeFish4
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 373d6d24336b56649a98fe4309eb93e8, type: 2}
+  weakness:
+  - Fireball
+  resistance: Wind Slash
+  immune: Waterfall
 --- !u!61 &1744744880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25708,7 +25714,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49849117, y: -2.4991322}
+  m_Offset: {x: 0.16797352, y: -2.4597893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25718,7 +25724,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 2.1610355, y: 2.2712097}
   m_EdgeRadius: 0
 --- !u!483693784 &1744744881
 TilemapRenderer:
@@ -26188,16 +26194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: Fish
+  health: 75
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 45
+  numEnemies: 1
   enemyID: HeFish1
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 373d6d24336b56649a98fe4309eb93e8, type: 2}
+  weakness:
+  - Fireball
+  resistance: Wind Slash
+  immune: Waterfall
 --- !u!61 &1801476849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26232,7 +26239,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49849117, y: -2.4991322}
+  m_Offset: {x: 0.12862611, y: -2.538477}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26242,7 +26249,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 2.2397301, y: 1.9564323}
   m_EdgeRadius: 0
 --- !u!483693784 &1801476850
 TilemapRenderer:
@@ -30330,13 +30337,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2311701390813557374, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_Size.x
+      value: 2.161035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311701390813557374, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.0193863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311701390813557374, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16797376
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311701390813557374, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.5227432
+      objectReference: {fileID: 0}
     - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: m_Name
       value: BasicMobOverworld
       objectReference: {fileID: 0}
     - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: health
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: immune
+      value: Waterfall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: enemyID
       value: HeFish2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: unitName
+      value: Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: attackStat
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: numEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: resistance
+      value: Wind Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: basicAttack
+      value: 
+      objectReference: {fileID: 11400000, guid: 373d6d24336b56649a98fe4309eb93e8, type: 2}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: weakness.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: 'weakness.Array.data[0]'
+      value: Fireball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30493,12 +30552,52 @@ PrefabInstance:
       value: AdvMobOverworld
       objectReference: {fileID: 0}
     - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: health
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: immune
       value: Waterfall
       objectReference: {fileID: 0}
     - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: enemyID
       value: SheFish1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: accuracy
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: unitName
+      value: Mermaid
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: attackStat
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: numEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: resistance
+      value: Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: basicAttack
+      value: 
+      objectReference: {fileID: 11400000, guid: 453eb480fe896d141a8c2d473adc44d2, type: 2}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: weakness.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: 'weakness.Array.data[0]'
+      value: Wind Blast
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: 'weakness.Array.data[1]'
+      value: Lightning
       objectReference: {fileID: 0}
     - target: {fileID: 6957947324070622055, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_LocalPosition.x
