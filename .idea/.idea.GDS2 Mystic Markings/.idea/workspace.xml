@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/BlueSlime.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/BlueSlime.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/RedSlime.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 3/RedSlime.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatViewMiniBosses.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatViewMiniBosses.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor2 - StoneMonsters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor2 - StoneMonsters.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor3 - SlimesColour.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor3 - SlimesColour.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackHeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Green/AttackHeal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor2/Chef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor2/Chef.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,7 @@
       <workItem from="1792665758523" duration="2293000" />
       <workItem from="1792735576365" duration="15270000" />
       <workItem from="1792825886480" duration="8769000" />
-      <workItem from="1792913184867" duration="15225000" />
+      <workItem from="1792913184867" duration="18704000" />
     </task>
     <servers />
   </component>

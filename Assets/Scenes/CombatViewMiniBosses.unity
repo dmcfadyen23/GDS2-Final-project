@@ -1425,6 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   unitName: Player
   health: 100
+  maxHealth: 100
   accuracy: 100
   attackStat: 100
   possibleAttacks:
@@ -7848,7 +7849,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6248741079362886434, guid: 03af05b93ade5fb49b3565b02e17385f, type: 3}
+  m_Sprite: {fileID: 3213079785493367381, guid: 3784a1893f2e5254cb3603b41de75d44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

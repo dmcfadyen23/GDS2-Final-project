@@ -63,6 +63,23 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
                 uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
             }
+            else if (enemyEncountered is RainbowSlime)
+            {
+                RainbowSlime chefEncounter = (RainbowSlime)enemyEncountered;
+                RainbowSlime enemyScene = enemies[i].AddComponent<RainbowSlime>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.attacks = chefEncounter.attacks;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            }
             //if enemy is regular enemy
             else
             {

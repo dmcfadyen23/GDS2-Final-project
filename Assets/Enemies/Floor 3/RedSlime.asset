@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedSlime
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: Blazing Edge
-  basePower: 50
+  basePower: 40
   gestureName: 
   colour: {r: 0.5568628, g: 0.04705883, b: 0.0627451, a: 0}
   attackSFX: {fileID: 8300000, guid: ad8860e193a4df24195943c417f0cdc1, type: 3}

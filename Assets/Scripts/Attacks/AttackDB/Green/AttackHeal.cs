@@ -13,8 +13,6 @@ namespace Attacks.AttackDB
             gestureName = "Heart";
             targetingType = TargetingType.SELF;
         }
-
-        private int healAmount = 50;
         public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
@@ -31,11 +29,11 @@ namespace Attacks.AttackDB
                     target = context.sourceUnit;
                     break;
             }
-            float damageHealed = healAmount*(target.attackStat/100);
-            if (target as Chef)
+            float damageHealed = basePower*(target.attackStat/100);
+            if (context.target as Chef)
             {
                 damageHealed = 0;
-                Chef enemyChef = (Chef)target;
+                Chef enemyChef = (Chef)context.target;
                 enemyChef.customDialogue.text = "Oh no you don't! Only the Chef's food can heal you here!";
             }
 
