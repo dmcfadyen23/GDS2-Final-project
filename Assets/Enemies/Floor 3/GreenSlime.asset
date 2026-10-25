@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
   m_Name: GreenSlime
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Dummy Stand
-  basePower: 0
+  attackName: Fountain
+  basePower: 30
   gestureName: 
-  colour: {r: 0, g: 0, b: 0, a: 0}
-  targetingType: 0
+  colour: {r: 0.5411765, g: 0.8941177, b: 0.5686275, a: 0}
+  attackSFX: {fileID: 0}
+  sfxVolume: 1
+  targetingType: 2

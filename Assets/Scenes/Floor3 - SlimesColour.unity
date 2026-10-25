@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
+  unitName: Slime
   health: 100
   accuracy: 100
   attackStat: 0
@@ -3110,16 +3110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: RedSlime
+  health: 75
+  accuracy: 50
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 2
   enemyID: RedSlime2
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 797915e6c5ea60d49ba12d9eaac050cb, type: 2}
+  weakness:
+  - Poison
+  resistance: Lightning
+  immune: HeartAttack
 --- !u!61 &311406709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4846,13 +4847,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: GreenSlime
+  health: 300
+  accuracy: 60
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: GreenSlime3
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 1f99a2795b83d00468b61882b59e9438, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -5188,10 +5189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
-  health: 100
+  health: 250
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 25
+  numEnemies: 1
   enemyID: BlueSlime1
   basicAttack: {fileID: 0}
   weakness: []
@@ -5566,13 +5567,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: GreenSlime
+  health: 300
+  accuracy: 60
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: GreenSlime2
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 1f99a2795b83d00468b61882b59e9438, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -9138,13 +9139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
+  unitName: Slime
   health: 100
   accuracy: 100
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: Slime1
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 147567a593a51b14bad1a0275d93d4c6, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -10546,16 +10547,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: RedSlime
+  health: 75
+  accuracy: 50
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 2
   enemyID: RedSlime4
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 797915e6c5ea60d49ba12d9eaac050cb, type: 2}
+  weakness:
+  - Poison
+  resistance: Lightning
+  immune: HeartAttack
 --- !u!61 &768815213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15613,13 +15615,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: BlueSlime
+  health: 250
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 10
+  numEnemies: 1
   enemyID: BlueSlime3
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 6c4f94ef677fe1a4c87869aa2365680d, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -16165,16 +16167,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: RedSlime
+  health: 75
+  accuracy: 50
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: RedSlime3
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 797915e6c5ea60d49ba12d9eaac050cb, type: 2}
+  weakness:
+  - Poison
+  resistance: Lightning
+  immune: HeartAttack
 --- !u!61 &971881560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21161,13 +21164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
+  unitName: Slime2
   health: 100
   accuracy: 100
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 2
   enemyID: Slime2
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 147567a593a51b14bad1a0275d93d4c6, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -22678,16 +22681,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: RedSlime
+  health: 75
+  accuracy: 50
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: RedSlime5
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 797915e6c5ea60d49ba12d9eaac050cb, type: 2}
+  weakness:
+  - Poison
+  resistance: Lightning
+  immune: HeartAttack
 --- !u!61 &1634836124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23965,13 +23969,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: GreenSlime
+  health: 300
+  accuracy: 60
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 2
   enemyID: GreenSlime1
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 1f99a2795b83d00468b61882b59e9438, type: 2}
   weakness: []
   resistance: 
   immune: 
@@ -24344,16 +24348,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
+  unitName: RedSlime
+  health: 75
+  accuracy: 50
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 1
   enemyID: RedSlime1
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 797915e6c5ea60d49ba12d9eaac050cb, type: 2}
+  weakness:
+  - Poison
+  resistance: Lightning
+  immune: HeartAttack
 --- !u!61 &1734910011
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24646,10 +24651,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   unitName: 
-  health: 100
+  health: 250
   accuracy: 100
-  attackStat: 0
-  numEnemies: 0
+  attackStat: 25
+  numEnemies: 2
   enemyID: BlueSlime2
   basicAttack: {fileID: 0}
   weakness: []
@@ -25138,13 +25143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
+  unitName: Slime3
   health: 100
   accuracy: 100
   attackStat: 0
-  numEnemies: 0
+  numEnemies: 3
   enemyID: Slime3
-  basicAttack: {fileID: 0}
+  basicAttack: {fileID: 11400000, guid: 147567a593a51b14bad1a0275d93d4c6, type: 2}
   weakness: []
   resistance: 
   immune: 

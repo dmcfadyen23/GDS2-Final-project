@@ -30418,6 +30418,10 @@ PrefabInstance:
       propertyPath: enemyID
       value: ChefBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+      propertyPath: unitName
+      value: Chef
+      objectReference: {fileID: 0}
     - target: {fileID: 7370774108637054083, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.97

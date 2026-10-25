@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
   m_Name: BlueSlime
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Dummy Stand
+  attackName: Grappling Submergment
   basePower: 0
   gestureName: 
-  colour: {r: 0, g: 0, b: 0, a: 0}
+  colour: {r: 0.3529412, g: 0.77647066, b: 0.8196079, a: 1}
+  attackSFX: {fileID: 0}
+  sfxVolume: 1
   targetingType: 0
