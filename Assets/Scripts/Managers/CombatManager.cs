@@ -8,6 +8,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip victorySound;
     [SerializeField] private AudioClip defeatSound;
+    [SerializeField] private AudioSource bgmAudioSource;
     private int numEnemies;
     private static CombatManager instance;
 
@@ -105,6 +106,11 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
 
     private System.Collections.IEnumerator PlayResultSoundAndReturn(AudioClip clip)
     {
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Stop();
+        }
+
         if (audioSource != null && clip != null)
         {
             audioSource.PlayOneShot(clip);

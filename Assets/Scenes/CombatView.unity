@@ -364,7 +364,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -788,6 +788,7 @@ MonoBehaviour:
   audioSource: {fileID: 64114609}
   victorySound: {fileID: 8300000, guid: 1a37fe4b6af2e2f48a964c52259ea13d, type: 3}
   defeatSound: {fileID: 8300000, guid: 55a35583d515a254fbcc9cb1a6636815, type: 3}
+  bgmAudioSource: {fileID: 2037748235}
 --- !u!4 &372651798
 Transform:
   m_ObjectHideFlags: 0
