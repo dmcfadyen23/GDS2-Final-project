@@ -16,4 +16,6 @@ MonoBehaviour:
   basePower: 0
   gestureName: Spiral
   colour: {r: 0, g: 1, b: 0, a: 1}
+  attackSFX: {fileID: 8300000, guid: 7bd56499bcb9e7942a1578ee22f9ba0c, type: 3}
+  sfxVolume: 0.502
   targetingType: 2

@@ -16,4 +16,6 @@ MonoBehaviour:
   basePower: 0
   gestureName: Shield
   colour: {r: 0, g: 1, b: 0, a: 1}
+  attackSFX: {fileID: 8300000, guid: 591eb111568748f4dad3f486c448bef7, type: 3}
+  sfxVolume: 1
   targetingType: 2

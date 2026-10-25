@@ -16,4 +16,6 @@ MonoBehaviour:
   basePower: 30
   gestureName: Teardrop
   colour: {r: 1, g: 0, b: 0, a: 1}
+  attackSFX: {fileID: 8300000, guid: 1f5038bb26b27b446987bc7bad4d0960, type: 3}
+  sfxVolume: 0.405
   targetingType: 0

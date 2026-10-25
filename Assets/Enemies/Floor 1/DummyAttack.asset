@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97ea71afbb46864d98f99f5f46aa508, type: 3}
   m_Name: DummyAttack
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Dummy Stand
+  attackName: Stand
   basePower: 0
   gestureName: 
   colour: {r: 0, g: 0, b: 0, a: 0}
