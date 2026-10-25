@@ -30493,6 +30493,10 @@ PrefabInstance:
       value: AdvMobOverworld
       objectReference: {fileID: 0}
     - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: immune
+      value: Waterfall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: enemyID
       value: SheFish1
       objectReference: {fileID: 0}
