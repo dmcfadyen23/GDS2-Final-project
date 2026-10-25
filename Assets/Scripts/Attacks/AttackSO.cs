@@ -12,6 +12,9 @@ public class AttackSO : ScriptableObject
     public string gestureName;
     public Color colour;
     protected UIManager uiManager;
+    public AudioClip attackSFX;
+    [Range(0f, 1f)]
+    public float sfxVolume = 1f;
 
     public enum TargetingType
     {
@@ -62,12 +65,15 @@ public class AttackSO : ScriptableObject
 
         if (canAttack)
         {
+            PlayAttackSFX();
             // random number for accuracy check
             Random accuracyCheck = new Random();
             randomNumCheck = accuracyCheck.Next(101);
             // if random num is lower than accuracy then hit. accuracy is a stat from 0-100. as percentage.
             if (randomNumCheck <= context.sourceUnit.accuracy)
             {
+                PlayAttackSFX();
+
                 switch (targetingType)
                 {
                     case TargetingType.SINGLE_TARGET:
@@ -225,7 +231,15 @@ public class AttackSO : ScriptableObject
             }
         }
     }
-    
+
+    private void PlayAttackSFX()
+    {
+        if (attackSFX != null)
+        {
+            AudioSource.PlayClipAtPoint(attackSFX, Vector3.zero, sfxVolume);
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

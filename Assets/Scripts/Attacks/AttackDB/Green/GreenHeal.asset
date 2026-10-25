@@ -16,4 +16,6 @@ MonoBehaviour:
   basePower: 50
   gestureName: Heart
   colour: {r: 0, g: 1, b: 0, a: 1}
+  attackSFX: {fileID: 8300000, guid: 9a348196f16ead84f91e8ae2e9d5c06b, type: 3}
+  sfxVolume: 1
   targetingType: 2

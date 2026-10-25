@@ -15,4 +15,7 @@ MonoBehaviour:
   attackName: Skull Blast
   basePower: 20
   gestureName: 
+  colour: {r: 0.8000001, g: 0.76470596, b: 0.70980394, a: 0}
+  attackSFX: {fileID: 8300000, guid: d65c27fce972d274583ba87cf52d627e, type: 3}
+  sfxVolume: 1
   targetingType: 0

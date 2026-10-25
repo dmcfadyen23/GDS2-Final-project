@@ -4,7 +4,18 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour //Add combat stuff here, all it has is grabbing which enemy player is fighting and return to overworld
 {
     [SerializeField] private GameObject[] enemies = new GameObject[3];
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip victorySound;
+    [SerializeField] private AudioClip defeatSound;
+    [SerializeField] private AudioSource bgmAudioSource;
     private int numEnemies;
+    private static CombatManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         UIManager uiManager = FindAnyObjectByType<UIManager>();
@@ -80,16 +91,53 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
 
         return activeEnemies;
     }
-    
+
     public static void WinCombat()
     {
         GameManager.Instance.DefeatEnemy();
 
-        GameManager.Instance.ReturnToOverworld();
+        if (instance != null)
+        {
+            instance.StartCoroutine(
+                instance.PlayResultSoundAndReturn(instance.victorySound)
+            );
+        }
+        else
+        {
+            GameManager.Instance.ReturnToOverworld();
+        }
     }
 
     public static void LoseCombat()
     {
+        if (instance != null)
+        {
+            instance.StartCoroutine(
+                instance.PlayResultSoundAndReturn(instance.defeatSound)
+            );
+        }
+        else
+        {
+            GameManager.Instance.ReturnToOverworld();
+        }
+    }
+
+    private System.Collections.IEnumerator PlayResultSoundAndReturn(AudioClip clip)
+    {
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Stop();
+        }
+
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+
+            // Waits for sfx to finish playing
+            yield return new WaitForSeconds(clip.length);
+        }
+
+        // Returns overworld after the sound 
         GameManager.Instance.ReturnToOverworld();
     }
 }

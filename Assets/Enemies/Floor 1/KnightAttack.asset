@@ -15,5 +15,7 @@ MonoBehaviour:
   attackName: Spear Stab
   basePower: 30
   gestureName: 
-  colour: {r: 0, g: 0, b: 0, a: 0}
+  colour: {r: 0.52156866, g: 0.5254902, b: 0.53333336, a: 0}
+  attackSFX: {fileID: 8300000, guid: 62e109429c45cc447acea304d8d39869, type: 3}
+  sfxVolume: 1
   targetingType: 0
