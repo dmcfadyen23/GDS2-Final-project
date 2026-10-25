@@ -81,6 +81,7 @@ public class UIManager : MonoBehaviour
         colourSelection.SetActive(false);
         targetReticle.SetActive(true);
         targetSelection.SetActive(true);
+        codexButton.SetActive(false);
         CombatManager combatManager = FindAnyObjectByType<CombatManager>();
         for (int i = 0; i < combatManager.GetAllEnemies().Length; i++)
         {
