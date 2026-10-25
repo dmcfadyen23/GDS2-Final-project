@@ -46,6 +46,23 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
                 uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
             }
+            else if (enemyEncountered is Chef)
+            {
+                Chef enemyScene = enemies[i].AddComponent<Chef>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            }
+            //if enemy is regular enemy
             else
             {
                 Enemy enemyScene = enemies[i].AddComponent<Enemy>();

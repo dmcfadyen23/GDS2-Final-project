@@ -18,12 +18,30 @@ namespace Attacks.AttackDB
         public override void Attack(AttackContext context)
         {
             uiManager = FindAnyObjectByType<UIManager>();
-            Entity target = context.sourceUnit;
+            Entity target;
+            switch (targetingType)
+            {
+                case TargetingType.SELF:
+                    target = context.sourceUnit;
+                    break;
+                case TargetingType.SINGLE_TARGET:
+                    target = context.target;
+                    break;
+                default:
+                    target = context.sourceUnit;
+                    break;
+            }
             float damageHealed = healAmount*(target.attackStat/100);
+            if (target as Chef)
+            {
+                damageHealed = 0;
+                Chef enemyChef = (Chef)target;
+                enemyChef.customDialogue.text = "Oh no you don't! Only the Chef's food can heal you here!";
+            }
 
             target.health += damageHealed;
             context.animator.Play("AttackAnim");
-            uiManager.battleLogText.text = context.sourceUnit.unitName + " healed self using" + attackName + " for " + damageHealed + " health";
+            uiManager.battleLogText.text = target.unitName + " was healed using " + attackName + " for " + damageHealed + " health";
             if (target as Enemy)
             {
                 Enemy enemyTarget = (Enemy)target;
