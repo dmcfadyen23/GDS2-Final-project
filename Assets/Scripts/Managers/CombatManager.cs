@@ -36,6 +36,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
                 enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
                 enemyScene.basicAttack = enemyEncountered.basicAttack;
@@ -44,7 +45,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.weakness = enemyEncountered.weakness;
                 SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
             }
             else if (enemyEncountered is Chef)
             {
@@ -53,6 +55,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
                 enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
                 enemyScene.attacks = chefEncounter.attacks;
@@ -61,7 +64,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.weakness = enemyEncountered.weakness;
                 SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
             }
             else if (enemyEncountered is RainbowSlime)
             {
@@ -70,6 +74,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
                 enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
                 enemyScene.attacks = chefEncounter.attacks;
@@ -78,7 +83,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.weakness = enemyEncountered.weakness;
                 SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
             }
             //if enemy is regular enemy
             else
@@ -87,6 +93,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
                 enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
                 enemyScene.basicAttack = enemyEncountered.basicAttack;
@@ -95,7 +102,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.weakness = enemyEncountered.weakness;
                 SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-                uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
             }
             
         }

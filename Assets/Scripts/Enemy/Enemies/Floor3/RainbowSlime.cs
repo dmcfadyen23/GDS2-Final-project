@@ -23,27 +23,26 @@ public class RainbowSlime : Enemy
         attackContext.target = targetPlayer;
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
+        Debug.Log(currentColour);
         switch (currentColour)
         {
             case SlimeColour.Red:
+                attackStat = 150;
                 attacks[0].Attack(attackContext);
                 currentColour = SlimeColour.Green;
-                health += 60;
-                if (health > maxHealth)
-                {
-                    health = maxHealth;
-                }
                 spriteRenderer.color = new Color32(199, 255, 0, 255);
                 break;
             case SlimeColour.Green:
+                attackStat = 100;
                 attacks[1].Attack(attackContext);
+                
                 currentColour = SlimeColour.Blue;
-                spriteRenderer.color = new Color32(0, 0, 0, 0);
+                spriteRenderer.color = new Color32(255, 255, 255, 255);
                 break;
             case SlimeColour.Blue:
                 attacks[2].Attack(attackContext);
                 currentColour = SlimeColour.Red;
-                attackStat = 150;
+                
                 spriteRenderer.color = new Color32(255, 0, 0,255);
                 break;
         }
