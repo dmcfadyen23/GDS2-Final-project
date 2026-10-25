@@ -16,6 +16,13 @@ public class Enemy : Entity //Add enemy stuff here
     public string immune;
     protected AttackContext attackContext = new AttackContext();
     
+    public enum EnemyType
+    {
+        ENEMY, MINIBOSS, BOSS
+    }
+
+    public EnemyType TypeOfEnemy;
+    
 
     public string GetEnemyID()
     {
@@ -117,7 +124,7 @@ public class Enemy : Entity //Add enemy stuff here
         return health;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         if (GameManager.Instance != null)
         {

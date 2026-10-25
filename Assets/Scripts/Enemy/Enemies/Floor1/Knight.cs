@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Knight : Enemy
 {
-    [SerializeField] private List<AttackSO> attacks;
+    // [SerializeField] private List<AttackSO> attacks;
     
     
     public override void UseAttack(Player targetPlayer)
@@ -18,13 +18,13 @@ public class Knight : Enemy
     public override float TakeDamage(AttackSO attack, AttackContext context)
     {
         float damageTaken = 0;
-        if (!weakness.Contains(attack.name))
+        if (weakness.Contains(attack.attackName))
         {
-            damageTaken = 10;
+            damageTaken = 100;
         }
         else
         {
-            damageTaken = 100;
+            damageTaken = 10;
         }
         health -= damageTaken;
         UIManager uiManager = FindAnyObjectByType<UIManager>();
@@ -53,9 +53,9 @@ public class Knight : Enemy
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame

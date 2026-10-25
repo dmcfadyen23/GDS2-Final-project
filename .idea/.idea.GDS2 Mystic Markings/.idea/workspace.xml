@@ -6,10 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 1/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 1/Skeleton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_018.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_026.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_033.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_047.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_059.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_067.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_082.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_096.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Intro Cutscene.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Intro Cutscene.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor1 - Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor1 - Tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor1/Knight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor1/Knight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +47,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/2d/c11121f5/Geometry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d980078efe4a41858c7e2d5193f50f431a00/cb/55eb6769/Gesture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GDS1/Final Project/GDS1 Project/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneSwitch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Scripts/Managers/CombatManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmcfa/Code files/GDS2/GDS2 Mystic Markings/Assets/Scripts/Managers/CombatManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/pdollar/$P/PDollarDemo/GestureIO.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -35,25 +59,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "special-enemies",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;special-enemies&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\dmcfa\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\dmcfa\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\dmcfa\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Sprint4 Windows Build\GDS2 Mystic Markings.exe" />
@@ -122,7 +146,8 @@
       <workItem from="1792569273414" duration="5354000" />
       <workItem from="1792665758523" duration="2293000" />
       <workItem from="1792735576365" duration="15270000" />
-      <workItem from="1792825886480" duration="8009000" />
+      <workItem from="1792825886480" duration="8769000" />
+      <workItem from="1792913184867" duration="7904000" />
     </task>
     <servers />
   </component>

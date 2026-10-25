@@ -98,6 +98,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
 
         if (instance != null)
         {
+            UIManager uiManager = FindAnyObjectByType<UIManager>();
+            uiManager.WaitForEnemy();
             instance.StartCoroutine(
                 instance.PlayResultSoundAndReturn(instance.victorySound)
             );
@@ -112,6 +114,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
     {
         if (instance != null)
         {
+            UIManager uiManager = FindAnyObjectByType<UIManager>();
+            uiManager.WaitForEnemy();
             instance.StartCoroutine(
                 instance.PlayResultSoundAndReturn(instance.defeatSound)
             );

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 416a85fd42bf2fa4697680b4fc82c4f4
+guid: 8fec9553397dc024c94726fbf476a0e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8597125954142692766
-    second: 16-bit SNES-inspired pixel art parallax backgrounds_018_0
+      213: 124698995374932993
+    second: 16-bit SNES-inspired pixel art parallax backgrounds_047_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16-bit SNES-inspired pixel art parallax backgrounds_018_0
+      name: 16-bit SNES-inspired pixel art parallax backgrounds_047_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9567f971802f4770800000000000000
-      internalID: 8597125954142692766
+      spriteID: 104cb2b53150bb100800000000000000
+      internalID: 124698995374932993
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      16-bit SNES-inspired pixel art parallax backgrounds_018_0: 8597125954142692766
+      16-bit SNES-inspired pixel art parallax backgrounds_047_0: 124698995374932993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
