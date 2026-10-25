@@ -1174,6 +1174,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1053662770}
   - {fileID: 1744940136}
+  - {fileID: 1732751765}
   enemies:
   - {fileID: 971881559}
   - {fileID: 768815212}
@@ -17373,6 +17374,7 @@ MonoBehaviour:
   doors:
   - {fileID: 2138687813}
   - {fileID: 1107494002}
+  - {fileID: 1732751765}
   enemies:
   - {fileID: 1688322275}
   - {fileID: 492462285}
@@ -20995,6 +20997,7 @@ Transform:
   m_Children:
   - {fileID: 973914929}
   - {fileID: 850481}
+  - {fileID: 1470589461}
   - {fileID: 1415044046}
   m_Father: {fileID: 1900837787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21939,6 +21942,84 @@ Transform:
   - {fileID: 1744940137}
   m_Father: {fileID: 237409155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1470589460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470589461}
+  - component: {fileID: 1470589462}
+  m_Layer: 0
+  m_Name: Door1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1470589461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470589460}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.52, y: 1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1165899470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1470589462
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470589460}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.4296317, y: 7.396267}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.485751, y: 1.1953506}
+  m_EdgeRadius: 0
 --- !u!1 &1473489923
 GameObject:
   m_ObjectHideFlags: 0
@@ -24248,7 +24329,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 6.45341, y: 22.493994}
+  m_Offset: {x: 6.5014925, y: 22.493994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -24258,7 +24339,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4674187, y: 1.1370125}
+  m_Size: {x: 3.092493, y: 1.1370125}
   m_EdgeRadius: 0
 --- !u!1 &1734910006
 GameObject:
@@ -25548,6 +25629,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1221753228}
   - {fileID: 2121416899}
+  - {fileID: 1732751765}
   enemies:
   - {fileID: 1744744879}
   - {fileID: 489983613}
@@ -25666,7 +25748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   doors:
   - {fileID: 850480}
-  - {fileID: 850480}
+  - {fileID: 1732751765}
+  - {fileID: 1470589460}
   enemies:
   - {fileID: 311406708}
   - {fileID: 1734910010}
