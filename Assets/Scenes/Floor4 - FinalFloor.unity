@@ -502,16 +502,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: WaterMage
+  health: 250
+  maxHealth: 250
   accuracy: 100
-  attackStat: 0
+  attackStat: 50
   numEnemies: 0
   enemyID: WaterMage
   basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  weakness:
+  - Lightning
+  resistance: Waterfall
+  immune: Wind Blast
+  TypeOfEnemy: 0
 --- !u!61 &51840850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2912,9 +2915,9 @@ GameObject:
   - component: {fileID: 133548595}
   - component: {fileID: 133548594}
   - component: {fileID: 133548593}
-  - component: {fileID: 133548592}
   - component: {fileID: 133548591}
   - component: {fileID: 133548590}
+  - component: {fileID: 133548596}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Interactables
@@ -2976,28 +2979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc17795af60ebdb4286578c0a0719321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEncounter
---- !u!114 &133548592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133548588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  accuracy: 100
-  attackStat: 0
-  numEnemies: 0
-  enemyID: FinalBoss
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
 --- !u!61 &133548593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3201,6 +3182,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &133548596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133548588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bac4faf0883e184f810ad380053668d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalBoss
+  unitName: FinalBoss
+  health: 500
+  maxHealth: 500
+  accuracy: 100
+  attackStat: 100
+  numEnemies: 0
+  enemyID: FinalBoss1
+  basicAttack: {fileID: 0}
+  weakness: []
+  resistance: Heart Attack
+  immune: 
+  TypeOfEnemy: 2
+  attacks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  customDialogue: {fileID: 0}
 --- !u!1 &216165779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,7 +3621,6 @@ MonoBehaviour:
   - {fileID: 0}
   enemies:
   - {fileID: 270385643}
-  - {fileID: 0}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &252653789
@@ -4243,16 +4253,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: Wind Mage
+  health: 150
+  maxHealth: 150
   accuracy: 100
-  attackStat: 0
+  attackStat: 100
   numEnemies: 0
   enemyID: WindMage
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
+  basicAttack: {fileID: 11400000, guid: 289cab2fb97a48645946f3cd952f3315, type: 2}
+  weakness:
+  - Lightning Bolt
+  resistance: Wind Blast
   immune: 
+  TypeOfEnemy: 0
 --- !u!61 &270385644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5707,16 +5720,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: PoisonMage
+  health: 200
+  maxHealth: 200
   accuracy: 100
-  attackStat: 0
+  attackStat: 80
   numEnemies: 0
   enemyID: PoisonMage
-  basicAttack: {fileID: 0}
-  weakness: []
-  resistance: 
-  immune: 
+  basicAttack: {fileID: 11400000, guid: 49676f680c5907245a23ad3789917c27, type: 2}
+  weakness:
+  - Fireball
+  resistance: Lightning Bolt
+  immune: Waterfall
+  TypeOfEnemy: 0
 --- !u!61 &444921905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10508,7 +10524,6 @@ MonoBehaviour:
   - {fileID: 0}
   enemies:
   - {fileID: 51840849}
-  - {fileID: 0}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &904579010
@@ -20412,16 +20427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
+  unitName: Lightning Mage
+  health: 150
+  maxHealth: 150
   accuracy: 100
-  attackStat: 0
+  attackStat: 100
   numEnemies: 0
   enemyID: LightningMage
-  basicAttack: {fileID: 0}
-  weakness: []
+  basicAttack: {fileID: 11400000, guid: 3059db1de89ab6a49b0ee3e17e496926, type: 2}
+  weakness:
+  - Fireball
   resistance: 
-  immune: 
+  immune: Lightning Bolt
+  TypeOfEnemy: 0
 --- !u!61 &1744744880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20967,7 +20985,6 @@ MonoBehaviour:
   - {fileID: 0}
   enemies:
   - {fileID: 1744744879}
-  - {fileID: 0}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &1929781829
@@ -25209,8 +25226,7 @@ MonoBehaviour:
   - {fileID: 1638342803}
   - {fileID: 0}
   enemies:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 444921904}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!1 &2050814541
@@ -26722,7 +26738,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1473489923}
   enemies:
-  - {fileID: 133548592}
+  - {fileID: 133548596}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!114 &2083741431

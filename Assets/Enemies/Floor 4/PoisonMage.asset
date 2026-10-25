@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e5dff7bdfb3714c8253c24bda35851, type: 3}
+  m_Name: PoisonMage
+  m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.BlueSlimeAttack
+  attackName: Disarming Slime
+  basePower: 20
+  gestureName: 
+  colour: {r: 0, g: 0, b: 0, a: 0}
+  attackSFX: {fileID: 8300000, guid: 2cb0aeec57b304e43bc318709de7efe2, type: 3}
+  sfxVolume: 1
+  targetingType: 0

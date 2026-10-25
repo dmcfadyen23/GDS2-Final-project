@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Enemy/FinalBossCharge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Enemy/FinalBossCharge.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 3/GreenSlime.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor3 - SlimesColour.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor3 - SlimesColour.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor3/RainbowSlime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor3/RainbowSlime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor4 - FinalFloor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor4 - FinalFloor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Red/RedWind.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackDB/Red/RedWind.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +125,7 @@
       <workItem from="1792665758523" duration="2293000" />
       <workItem from="1792735576365" duration="15270000" />
       <workItem from="1792825886480" duration="8769000" />
-      <workItem from="1792913184867" duration="21940000" />
+      <workItem from="1792913184867" duration="23321000" />
     </task>
     <servers />
   </component>

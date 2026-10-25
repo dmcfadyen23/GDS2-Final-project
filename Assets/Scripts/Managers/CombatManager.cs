@@ -69,7 +69,7 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
             }
             else if (enemyEncountered is RainbowSlime)
             {
-                RainbowSlime chefEncounter = (RainbowSlime)enemyEncountered;
+                RainbowSlime slimeEncounter = (RainbowSlime)enemyEncountered;
                 RainbowSlime enemyScene = enemies[i].AddComponent<RainbowSlime>();
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
@@ -77,7 +77,26 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
                 enemyScene.maxHealth = enemyEncountered.maxHealth;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
-                enemyScene.attacks = chefEncounter.attacks;
+                enemyScene.attacks = slimeEncounter.attacks;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            else if (enemyEncountered is FinalBoss)
+            {
+                FinalBoss bossEncounter = (FinalBoss)enemyEncountered;
+                FinalBoss enemyScene = enemies[i].AddComponent<FinalBoss>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.attacks = bossEncounter.attacks;
                 enemyScene.immune = enemyEncountered.immune;
                 enemyScene.resistance = enemyEncountered.resistance;
                 enemyScene.weakness = enemyEncountered.weakness;
