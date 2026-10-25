@@ -15,5 +15,7 @@ MonoBehaviour:
   attackName: Axe Sweep
   basePower: 25
   gestureName: 
-  colour: {r: 0, g: 0, b: 0, a: 0}
+  colour: {r: 0.56078434, g: 0.24313727, b: 0.83921576, a: 0}
+  attackSFX: {fileID: 8300000, guid: e40110171cb303243b62ecb8b7b25ba3, type: 3}
+  sfxVolume: 1
   targetingType: 0

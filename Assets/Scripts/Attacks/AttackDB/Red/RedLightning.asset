@@ -16,4 +16,6 @@ MonoBehaviour:
   basePower: 50
   gestureName: LightningBolt
   colour: {r: 1, g: 0, b: 0, a: 1}
+  attackSFX: {fileID: 8300000, guid: 8f82735f6dfdb1547bbc833a8b358cf0, type: 3}
+  sfxVolume: 1
   targetingType: 0
