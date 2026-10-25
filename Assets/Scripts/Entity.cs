@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
 {
     public string unitName;
     public float health = 100.0f;
+    public float maxHealth = 100.0f;
     public int accuracy = 100;
     public float attackStat;
     public List<(string name, int duration)> buffs = new List<(string name, int duration)>();

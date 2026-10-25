@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Chef : Enemy
 {
     // two attacks, one regular damage (30 damage) and one that heals player
-    [SerializeField] private List<AttackSO> attacks;
+    [SerializeField] public List<AttackSO> attacks;
     private bool healTurn;
     private enum OvenStatus
     {
@@ -17,7 +17,7 @@ public class Chef : Enemy
     private OvenStatus ovenStatus = OvenStatus.Fire;
     [SerializeField] public TextMeshProUGUI customDialogue;
     private SpriteRenderer enemyBg;
-    
+
     public override void UseAttack(Player targetPlayer)
     {
         attackContext.target = targetPlayer;
@@ -52,17 +52,17 @@ public class Chef : Enemy
             switch (ovenStatus)
             {
                 case OvenStatus.Fire:
-                    enemyBg.color = new Color(255, 140,48, 204);
+                    enemyBg.color = new Color32(255, 140,48, 204);
                     customDialogue.text += "Let's get this fire STARTED";
                     attackStat = 100;
                     break;
                 case OvenStatus.LargeFire:
-                    enemyBg.color = new Color(225, 107, 48, 180);
+                    enemyBg.color = new Color32(225, 107, 48, 178);
                     customDialogue.text += "Wow, this fire is ROARING!";
                     attackStat = 125;
                     break;
                 case OvenStatus.Explosion:
-                    enemyBg.color = new Color(243,54,37,216);
+                    enemyBg.color = new Color32(243,54,37,216);
                     customDialogue.text = "Uh oh! Looks like things got too hot to handle!";
                     break;
             }
@@ -81,17 +81,17 @@ public class Chef : Enemy
                 switch (ovenStatus)
                 {
                     case OvenStatus.Dull:
-                        enemyBg.color = new Color(38,133,213,140);
+                        enemyBg.color = new Color32(38,133,213,140);
                         customDialogue.text += "It's all gone!";
                         attackStat = 75;
                         break;
                     case OvenStatus.Fire:
-                        enemyBg.color = new Color(255, 140,48, 204);
+                        enemyBg.color = new Color32(255, 140,48, 204);
                         customDialogue.text += "The temperature isn't hot enough!";
                         attackStat = 100;
                         break;
                     case OvenStatus.LargeFire:
-                        enemyBg.color = new Color(225, 107, 48, 180);
+                        enemyBg.color = new Color32(225, 107, 48, 178);
                         customDialogue.text += "I was at the perfect temperature!";
                         attackStat = 125;
                         break;

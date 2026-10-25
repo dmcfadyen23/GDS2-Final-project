@@ -48,13 +48,14 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
             }
             else if (enemyEncountered is Chef)
             {
+                Chef chefEncounter = (Chef)enemyEncountered;
                 Chef enemyScene = enemies[i].AddComponent<Chef>();
                 enemyScene.SetEnemyNum(i);
                 enemyScene.unitName = enemyEncountered.unitName;
                 enemyScene.health = enemyEncountered.health;
                 enemyScene.attackStat = enemyEncountered.attackStat;
                 enemyScene.enemyID = enemyEncountered.enemyID;
-                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.attacks = chefEncounter.attacks;
                 enemyScene.immune = enemyEncountered.immune;
                 enemyScene.resistance = enemyEncountered.resistance;
                 enemyScene.weakness = enemyEncountered.weakness;

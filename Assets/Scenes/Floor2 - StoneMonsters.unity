@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicMobOverworld (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -236,6 +240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+--- !u!1 &69437742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5425492609106873575, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+  m_PrefabInstance: {fileID: 5052535363526596219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &77116599
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,17 +693,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7370774108637054083, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
   m_PrefabInstance: {fileID: 5052535363526596219}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &133548592 stripped
+--- !u!114 &133548598
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
-  m_PrefabInstance: {fileID: 5052535363526596219}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 69437742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
+  m_Script: {fileID: 11500000, guid: ac13b51ad240eec4dbb7a78a9cdf3ba1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Chef
+  unitName: Chef
+  health: 100
+  maxHealth: 100
+  accuracy: 100
+  attackStat: 100
+  numEnemies: 1
+  enemyID: Chef1
+  basicAttack: {fileID: 0}
+  weakness: []
+  resistance: 
+  immune: 
+  TypeOfEnemy: 1
+  attacks:
+  - {fileID: 11400000, guid: 9572e8ab10433f04c82f6793af01f077, type: 2}
+  - {fileID: 11400000, guid: f8ea0077e9a4d2743a9039f00d12249e, type: 2}
+  customDialogue: {fileID: 0}
 --- !u!1 &137403346
 GameObject:
   m_ObjectHideFlags: 0
@@ -7041,6 +7067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicMobOverworld
       objectReference: {fileID: 0}
+    - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: enemyID
       value: HeFish1
@@ -7751,6 +7781,10 @@ PrefabInstance:
     - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: m_Name
       value: BasicMobOverworld (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: health
@@ -18652,7 +18686,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765690615}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a43f2564bb984ce46b99d580cd3fe3a2, type: 3}
   m_Name: 
@@ -18670,7 +18704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765690615}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e1e977e6d82af3468c9195bf24f772f, type: 3}
   m_Name: 
@@ -18733,6 +18767,10 @@ PrefabInstance:
     - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_Name
       value: AdvMobOverworld
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6957947324070622055, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19295,6 +19333,10 @@ PrefabInstance:
     - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_Name
       value: AdvMobOverworld (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5955589093499614308, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: enemyID
@@ -20841,7 +20883,7 @@ MonoBehaviour:
   - {fileID: 1473489923}
   - {fileID: 1203271225}
   enemies:
-  - {fileID: 133548592}
+  - {fileID: 0}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!114 &2083741431
@@ -22290,6 +22332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicMobOverworld
       objectReference: {fileID: 0}
+    - target: {fileID: 5486673478879991454, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8234499779323940771, guid: 7e67da5ccb7e3894da49c74a74acce2a, type: 3}
       propertyPath: enemyID
       value: HeFish1
@@ -22318,6 +22364,18 @@ PrefabInstance:
     - target: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
       propertyPath: unitName
       value: Chef
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+      propertyPath: attackStat
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+      propertyPath: numEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+      propertyPath: TypeOfEnemy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7370774108637054083, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22359,10 +22417,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6460152213854038221, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5425492609106873575, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 133548598}
   m_SourcePrefab: {fileID: 100100000, guid: 2e7d4e609cf409e468242f09f1b7aaa9, type: 3}
 --- !u!1001 &6652965630068150965
 PrefabInstance:
@@ -22375,6 +22437,10 @@ PrefabInstance:
     - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_Name
       value: AdvMobOverworld
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265255949005784248, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6957947324070622055, guid: 401c3bb61e73d3846befcb0d5899a1aa, type: 3}
       propertyPath: m_LocalPosition.x

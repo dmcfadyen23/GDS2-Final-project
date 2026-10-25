@@ -40,6 +40,10 @@ namespace Attacks.AttackDB
             }
 
             target.health += damageHealed;
+            if (target.health > target.maxHealth)
+            {
+                target.health = target.maxHealth;
+            }
             context.animator.Play("AttackAnim");
             uiManager.battleLogText.text = target.unitName + " was healed using " + attackName + " for " + damageHealed + " health";
             if (target as Enemy)
