@@ -5,34 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7649c282-8ee7-417f-998d-ad048c4ee90a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS2 Mystic Markings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_001.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_018.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_026.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_033.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_047.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_059.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_067.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_082.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Backgrounds/Free_background/Free_background/16-bit SNES-inspired pixel art parallax backgrounds_096.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Intro Cutscene.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Intro Cutscene.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor1 - Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor1 - Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EndTurn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor1/Knight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemies/Floor1/Knight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/AdvMobOverworld.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 2/AdvMobOverworld.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/Floor 2/BasicMobOverworld.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/Floor 2/BasicMobOverworld.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor2 - StoneMonsters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor2 - StoneMonsters.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +122,7 @@
       <workItem from="1792665758523" duration="2293000" />
       <workItem from="1792735576365" duration="15270000" />
       <workItem from="1792825886480" duration="8769000" />
-      <workItem from="1792913184867" duration="7904000" />
+      <workItem from="1792913184867" duration="8517000" />
     </task>
     <servers />
   </component>
