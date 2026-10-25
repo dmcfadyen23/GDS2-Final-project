@@ -17,6 +17,10 @@ public class Entity : MonoBehaviour
 
     public virtual float TakeDamage(AttackSO attack, AttackContext context)
     {
+        if (statuses.Contains(("Protected", 1)))
+        {
+            return 0;
+        }
         health -= attack.GetDamageDealt();
         return attack.GetDamageDealt();
     }

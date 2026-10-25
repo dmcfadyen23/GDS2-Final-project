@@ -507,7 +507,7 @@ MonoBehaviour:
   maxHealth: 250
   accuracy: 100
   attackStat: 50
-  numEnemies: 0
+  numEnemies: 1
   enemyID: WaterMage
   basicAttack: {fileID: 0}
   weakness:
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   maxHealth: 500
   accuracy: 100
   attackStat: 100
-  numEnemies: 0
+  numEnemies: 1
   enemyID: FinalBoss1
   basicAttack: {fileID: 0}
   weakness: []
@@ -3207,10 +3207,10 @@ MonoBehaviour:
   immune: 
   TypeOfEnemy: 2
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1f3615667f318274aab94fc1dcc8bebf, type: 2}
+  - {fileID: 11400000, guid: 80c14ad3b66dcb54dbc5486f24c87656, type: 2}
+  - {fileID: 11400000, guid: 21d3e63cc6e274549aee69618eab8281, type: 2}
+  - {fileID: 11400000, guid: ca75ca6a36475f748abc848b0113e764, type: 2}
   customDialogue: {fileID: 0}
 --- !u!1 &216165779
 GameObject:
@@ -4253,12 +4253,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: Wind Mage
+  unitName: WindMage
   health: 150
   maxHealth: 150
   accuracy: 100
   attackStat: 100
-  numEnemies: 0
+  numEnemies: 1
   enemyID: WindMage
   basicAttack: {fileID: 11400000, guid: 289cab2fb97a48645946f3cd952f3315, type: 2}
   weakness:
@@ -5725,7 +5725,7 @@ MonoBehaviour:
   maxHealth: 200
   accuracy: 100
   attackStat: 80
-  numEnemies: 0
+  numEnemies: 1
   enemyID: PoisonMage
   basicAttack: {fileID: 11400000, guid: 49676f680c5907245a23ad3789917c27, type: 2}
   weakness:
@@ -20427,12 +20427,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: Lightning Mage
+  unitName: LightningMage
   health: 150
   maxHealth: 150
   accuracy: 100
   attackStat: 100
-  numEnemies: 0
+  numEnemies: 1
   enemyID: LightningMage
   basicAttack: {fileID: 11400000, guid: 3059db1de89ab6a49b0ee3e17e496926, type: 2}
   weakness:

@@ -21,7 +21,14 @@ public class FinalBoss : Enemy
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
         attacks[currentAttack].Attack(attackContext);
-        currentAttack++;
+        if (currentAttack < 3)
+        {
+            currentAttack++;
+        }
+        else
+        {
+            currentAttack = 0;
+        }
     }
 
     public override float TakeDamage(AttackSO attack, AttackContext context)
