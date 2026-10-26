@@ -714,6 +714,10 @@ PrefabInstance:
       value: Skeleton3
       objectReference: {fileID: 0}
     - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: numEnemies
       value: 2
       objectReference: {fileID: 0}
@@ -830,6 +834,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1950645296}
     m_Modifications:
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: enemyID
       value: Dummy
@@ -15976,6 +15984,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1366732582}
     m_Modifications:
     - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: resistance
       value: 
       objectReference: {fileID: 0}
@@ -16179,8 +16191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Knight
   unitName: Knight
-  health: 100
-  maxHealth: 100
+  health: 200
+  maxHealth: 200
   accuracy: 100
   attackStat: 100
   numEnemies: 1
