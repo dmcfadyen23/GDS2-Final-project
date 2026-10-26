@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToOverworld()
     {
+        restorePlayerPosition = true;
+        
         Debug.Log("Returning to: " + currentFloor);
 
         SceneManager.LoadScene(currentFloor);

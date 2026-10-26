@@ -21,6 +21,12 @@ public class TutorialPickup : MonoBehaviour
 
     private void Start()
     {
+        if (pickupType == PickupType.Brush && GameManager.Instance != null &&
+            GameManager.Instance.HasCollectedBrush())
+        {
+            collected = true;
+            gameObject.SetActive(false);
+        }
         // Paints check if they were already collected
         if (pickupType == PickupType.Paint)
         {
@@ -37,6 +43,8 @@ public class TutorialPickup : MonoBehaviour
     {
         if (collected)
             return;
+        if (Time.timeScale == 0f)
+            return;
 
         if (!other.CompareTag("Player"))
             return;
@@ -48,11 +56,12 @@ public class TutorialPickup : MonoBehaviour
 
         if (pickupType == PickupType.Brush)
         {
+            GameManager.GetOrCreate().CollectBrush();
             tutorialUI.ShowMessage("Pick up the three paints");
         }
         else if (pickupType == PickupType.Paint)
         {
-            GameManager.Instance.CollectPaint();
+            GameManager.GetOrCreate().CollectPaint(paintID);
 
             tutorialUI.CollectPaint();
         }
