@@ -7,6 +7,11 @@ public class PlayerPositionRestore : MonoBehaviour
         if (GameManager.Instance == null)
             return;
 
-        transform.position = GameManager.Instance.GetPlayerPosition();
+        if (GameManager.Instance.TryGetRestorePosition(gameObject.scene.name, out Vector3 position))
+        {
+            transform.position = position;
+            var body = GetComponent<Rigidbody2D>();
+            if (body != null) body.position = position;
+        }
     }
 }
