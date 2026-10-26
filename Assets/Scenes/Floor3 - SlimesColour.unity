@@ -4705,16 +4705,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
+      propertyPath: health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
       propertyPath: enemyID
       value: BlueSlime1
       objectReference: {fileID: 0}
     - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
       propertyPath: maxHealth
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
       propertyPath: numEnemies
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
+      propertyPath: weakness.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941103760526888180, guid: d4255216b92afc14ca1a905fcc46ab46, type: 3}
+      propertyPath: 'weakness.Array.data[0]'
+      value: Waterfall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22209,6 +22221,14 @@ PrefabInstance:
     - target: {fileID: 2772735366193677692, guid: ebbb79fadd9ad3f4b9f9708b1da66f15, type: 3}
       propertyPath: numEnemies
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772735366193677692, guid: ebbb79fadd9ad3f4b9f9708b1da66f15, type: 3}
+      propertyPath: weakness.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772735366193677692, guid: ebbb79fadd9ad3f4b9f9708b1da66f15, type: 3}
+      propertyPath: 'weakness.Array.data[0]'
+      value: Wind Blast
       objectReference: {fileID: 0}
     - target: {fileID: 6754875605162397252, guid: ebbb79fadd9ad3f4b9f9708b1da66f15, type: 3}
       propertyPath: m_LocalPosition.x
