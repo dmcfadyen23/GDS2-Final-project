@@ -1,4 +1,3 @@
-
 using System.IO;
 using UnityEngine;
 
@@ -20,7 +19,6 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
     private void Start()
     {
         UIManager uiManager = FindAnyObjectByType<UIManager>();
-
         string enemyID = GameManager.Instance.GetEnemyID();
         string enemyName = GameManager.Instance.GetEnemyName();
         numEnemies = GameManager.Instance.GetNumEnemies();
@@ -29,22 +27,104 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
         for (int i = 0; i < numEnemies; i++)
         {
             enemies[i].SetActive(true);
-
             uiManager.enemyHealthBars[i].gameObject.SetActive(true);
-
-            Enemy enemyScene = enemies[i].AddComponent<Enemy>();
-            enemyScene.SetEnemyNum(i);
-            enemyScene.unitName = enemyEncountered.unitName;
-            enemyScene.health = enemyEncountered.health;
-            enemyScene.attackStat = enemyEncountered.attackStat;
-            enemyScene.enemyID = enemyEncountered.enemyID;
-            enemyScene.basicAttack = enemyEncountered.basicAttack;
-            enemyScene.immune = enemyEncountered.immune;
-            enemyScene.resistance = enemyEncountered.resistance;
-            enemyScene.weakness = enemyEncountered.weakness;
-            SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
-            uiManager.enemyHealthBars[i].maxValue = enemyScene.health;
+            
+            // if enemy is special enemy
+            if (enemyEncountered is Knight)
+            {
+                Knight enemyScene = enemies[i].AddComponent<Knight>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            else if (enemyEncountered is Chef)
+            {
+                Chef chefEncounter = (Chef)enemyEncountered;
+                Chef enemyScene = enemies[i].AddComponent<Chef>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.attacks = chefEncounter.attacks;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            else if (enemyEncountered is RainbowSlime)
+            {
+                RainbowSlime slimeEncounter = (RainbowSlime)enemyEncountered;
+                RainbowSlime enemyScene = enemies[i].AddComponent<RainbowSlime>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.attacks = slimeEncounter.attacks;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            else if (enemyEncountered is FinalBoss)
+            {
+                FinalBoss bossEncounter = (FinalBoss)enemyEncountered;
+                FinalBoss enemyScene = enemies[i].AddComponent<FinalBoss>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.attacks = bossEncounter.attacks;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            //if enemy is regular enemy
+            else
+            {
+                Enemy enemyScene = enemies[i].AddComponent<Enemy>();
+                enemyScene.SetEnemyNum(i);
+                enemyScene.unitName = enemyEncountered.unitName;
+                enemyScene.health = enemyEncountered.health;
+                enemyScene.maxHealth = enemyEncountered.maxHealth;
+                enemyScene.attackStat = enemyEncountered.attackStat;
+                enemyScene.enemyID = enemyEncountered.enemyID;
+                enemyScene.basicAttack = enemyEncountered.basicAttack;
+                enemyScene.immune = enemyEncountered.immune;
+                enemyScene.resistance = enemyEncountered.resistance;
+                enemyScene.weakness = enemyEncountered.weakness;
+                SpriteRenderer spriteRenderer = enemyScene.GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = Resources.Load<Sprite>(spriteFilepath);
+                uiManager.enemyHealthBars[i].maxValue = enemyScene.maxHealth;
+                uiManager.enemyHealthBars[i].value = enemyScene.health;
+            }
+            
         }
 
         Debug.Log("Starting combat against: " + enemyID);
@@ -80,6 +160,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
 
         if (instance != null)
         {
+            UIManager uiManager = FindAnyObjectByType<UIManager>();
+            uiManager.WaitForEnemy();
             instance.StartCoroutine(
                 instance.PlayResultSoundAndReturn(instance.victorySound)
             );
@@ -94,6 +176,8 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
     {
         if (instance != null)
         {
+            UIManager uiManager = FindAnyObjectByType<UIManager>();
+            uiManager.WaitForEnemy();
             instance.StartCoroutine(
                 instance.PlayResultSoundAndReturn(instance.defeatSound)
             );

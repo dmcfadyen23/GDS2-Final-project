@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
 {
     public string unitName;
     public float health = 100.0f;
+    public float maxHealth = 100.0f;
     public int accuracy = 100;
     public float attackStat;
     public List<(string name, int duration)> buffs = new List<(string name, int duration)>();
@@ -16,6 +17,10 @@ public class Entity : MonoBehaviour
 
     public virtual float TakeDamage(AttackSO attack, AttackContext context)
     {
+        if (statuses.Contains(("Protected", 1)))
+        {
+            return 0;
+        }
         health -= attack.GetDamageDealt();
         return attack.GetDamageDealt();
     }

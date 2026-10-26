@@ -6,14 +6,28 @@ public class EndTurn : MonoBehaviour
 
     public void FinishTurn()
     {
-        UIManager uiManager = FindAnyObjectByType<UIManager>();
-        uiManager.GoToMain();
-        Player player = FindAnyObjectByType<Player>();
-        if (player.health <= 0)
+        GameObject[] enemyObjects = FindAnyObjectByType<CombatManager>().GetAllEnemies();
+        bool allEnemiesDead = true;
+        foreach (var enemyObject in enemyObjects)
         {
-            CombatManager.LoseCombat();
-            SceneManager.LoadScene("TutorialFloor");
+            if (enemyObject.activeSelf)
+            {
+                allEnemiesDead = false;
+            }
         }
+
+        if (!allEnemiesDead)
+        {
+            UIManager uiManager = FindAnyObjectByType<UIManager>();
+            uiManager.GoToMain();
+            Player player = FindAnyObjectByType<Player>();
+            if (player.health <= 0)
+            {
+                CombatManager.LoseCombat();
+                SceneManager.LoadScene("TutorialFloor");
+            }
+        }
+        
     }
 
     //unit num, 0 = player, 1-3 is enemy. i.e. end of player's turn calls EndOfTurn(0)

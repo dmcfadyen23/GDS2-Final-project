@@ -340,17 +340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7142426522522434501, guid: cdc16132639a19642939b8337e94475b, type: 3}
   m_PrefabInstance: {fileID: 2515466117824804781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &133548592 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1326375822237609550, guid: cdc16132639a19642939b8337e94475b, type: 3}
-  m_PrefabInstance: {fileID: 2515466117824804781}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1 &137539981
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +717,10 @@ PrefabInstance:
       propertyPath: numEnemies
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: resistance
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2515786694105138214, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 1
@@ -963,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5139949598855610199, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: m_Name
-      value: BasicMobOverworld
+      value: DummyEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5738,7 +5731,7 @@ Transform:
   m_GameObject: {fileID: 788570974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0077572, y: 0.1097877, z: -18.539244}
+  m_LocalPosition: {x: 1.0077572, y: 0.10978508, z: -18.539244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5926,7 +5919,7 @@ AudioSource:
   m_GameObject: {fileID: 788570974}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3461557099599474226, guid: eb114a6d9009e8c488a2a24d03bb28f1, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3f82e0830ab53fa49b615e45efa48fbe, type: 3}
   m_PlayOnAwake: 1
@@ -15500,7 +15493,7 @@ MonoBehaviour:
   - {fileID: 1473489923}
   - {fileID: 1290140718}
   enemies:
-  - {fileID: 133548592}
+  - {fileID: 2515466117824804783}
   audioSource: {fileID: 788570980}
   doorOpenSound: {fileID: 8300000, guid: 766c81122f5fcb14ab96ef0201bf8863, type: 3}
 --- !u!114 &2083741431
@@ -15851,6 +15844,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &365237122192224617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 592
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 140.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683395526994851140, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610393360461461149, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
+      propertyPath: m_Name
+      value: Pause Menu System
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bd890513abb6fa4bba25bac6216b573, type: 3}
 --- !u!1001 &1204685615007561648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15861,7 +15911,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3315376852843123655, guid: 83551d7e7131eca48bf5b84c725d8755, type: 3}
       propertyPath: sceneIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6450032773977162074, guid: 83551d7e7131eca48bf5b84c725d8755, type: 3}
       propertyPath: m_Name
@@ -15925,6 +15975,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1366732582}
     m_Modifications:
+    - target: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
+      propertyPath: resistance
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2515786694105138214, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 1
@@ -16098,11 +16152,45 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.7624999
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1326375822237609550, guid: cdc16132639a19642939b8337e94475b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6544049739791969525, guid: cdc16132639a19642939b8337e94475b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2515466117824804783}
   m_SourcePrefab: {fileID: 100100000, guid: cdc16132639a19642939b8337e94475b, type: 3}
+--- !u!1 &2515466117824804782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6544049739791969525, guid: cdc16132639a19642939b8337e94475b, type: 3}
+  m_PrefabInstance: {fileID: 2515466117824804781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2515466117824804783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515466117824804782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8100bb800585ef44929ae140a14a6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Knight
+  unitName: Knight
+  health: 100
+  maxHealth: 100
+  accuracy: 100
+  attackStat: 100
+  numEnemies: 1
+  enemyID: Knight1
+  basicAttack: {fileID: 11400000, guid: 70a3436fbcec4094090e2d9cacbd3143, type: 2}
+  weakness:
+  - Heart Attack
+  resistance: 
+  immune: 
+  TypeOfEnemy: 1
 --- !u!114 &4111332269468107079 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1264342625617489747, guid: 85ff30c02d118044880b2b5ef104445d, type: 3}
@@ -16170,6 +16258,14 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
       objectReference: {fileID: 1884342975}
+    - target: {fileID: 2916994225102030548, guid: 8249559d621353846a9e3b54182d7407, type: 3}
+      propertyPath: immune
+      value: Heart Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916994225102030548, guid: 8249559d621353846a9e3b54182d7407, type: 3}
+      propertyPath: resistance
+      value: Lightning Bolt
+      objectReference: {fileID: 0}
     - target: {fileID: 8079209806485979753, guid: 8249559d621353846a9e3b54182d7407, type: 3}
       propertyPath: m_Name
       value: AdvMobOverworld
@@ -16215,3 +16311,4 @@ SceneRoots:
   - {fileID: 6668510}
   - {fileID: 1792642635}
   - {fileID: 77265366}
+  - {fileID: 365237122192224617}

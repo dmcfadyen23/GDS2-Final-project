@@ -25,9 +25,11 @@ public class DrawCheck : MonoBehaviour
             Color currentColour = FindAnyObjectByType<CanvasDrawer>().GetCurrentColour();
             Debug.Log("colour is " + currentColour);
             Player player = FindAnyObjectByType<Player>();
-            player.UseAttack(gestureShape, currentColour);
-            uiManager.WaitForEnemy();
-            
+            bool success = player.UseAttack(gestureShape, currentColour);
+            if (success)
+            {
+                uiManager.WaitForEnemy();
+            }
         }
         else
         {

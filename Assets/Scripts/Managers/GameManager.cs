@@ -46,18 +46,27 @@ public class GameManager : MonoBehaviour
         playerPosition = position;
 
         enemy = tempEnemy;
-        enemyID = enemy.GetEnemyID();
-        enemyName = enemy.unitName;
-        numEnemies = enemy.numEnemies;
 
         currentFloor = SceneManager.GetActiveScene().name;
 
         tutorialStarted = true;
 
-        Debug.Log("Starting combat with: " + enemyID);
-        Debug.Log("Returning to scene: " + currentFloor);
+        Debug.Log("Starting combat with: " + GetEnemyID());
+        Debug.Log("Returning to scene: " + GetCurrentFloor());
 
-        SceneManager.LoadScene("CombatView");
+        switch (enemy.TypeOfEnemy)
+        {
+            case Enemy.EnemyType.ENEMY:
+                SceneManager.LoadScene("CombatView");
+                break;
+            case Enemy.EnemyType.MINIBOSS:
+                SceneManager.LoadScene("CombatViewMiniBosses");
+                break;
+            case Enemy.EnemyType.BOSS:
+                SceneManager.LoadScene("FinalBossCombatView");
+                break;
+        }
+        // SceneManager.LoadScene("CombatView");
     }
 
     public Vector3 GetPlayerPosition()
@@ -71,17 +80,17 @@ public class GameManager : MonoBehaviour
     }
     public string GetEnemyID()
     {
-        return enemyID;
+        return enemy.enemyID;
     }
 
     public string GetEnemyName()
     {
-        return enemyName;
+        return enemy.unitName;
     }
 
     public int GetNumEnemies()
     {
-        return numEnemies;
+        return enemy.numEnemies;
     }
 
     public string GetCurrentFloor()
@@ -91,6 +100,8 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToOverworld()
     {
+        restorePlayerPosition = true;
+        
         Debug.Log("Returning to: " + currentFloor);
 
         SceneManager.LoadScene(currentFloor);
@@ -98,11 +109,12 @@ public class GameManager : MonoBehaviour
 
     public void DefeatEnemy()
     {
-        if (!string.IsNullOrEmpty(enemyID))
+        if (!string.IsNullOrEmpty(GetEnemyID()))
         {
-            defeatedEnemies.Add(enemyID);
+            defeatedEnemies.Add(GetEnemyID());
+            
 
-            Debug.Log("Enemy defeated: " + enemyID);
+            Debug.Log("Enemy defeated: " + GetEnemyID());
         }
     }
 

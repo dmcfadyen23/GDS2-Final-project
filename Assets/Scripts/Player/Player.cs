@@ -10,22 +10,33 @@ public class Player : Entity
 
     private int playerLevel;
 
-    public void UseAttack(string gestureName, Color color)
+    public bool UseAttack(string gestureName, Color color)
     {
         if (attackContext.target == null)
         {
             CombatManager combatManager = FindAnyObjectByType<CombatManager>();
-            attackContext.target = combatManager.GetEnemy(0).GetComponent<Enemy>();
+            for (int i = 0; i < 3; i++)
+            {
+                if (combatManager.GetEnemy(i).activeSelf)
+                {
+                    attackContext.target = combatManager.GetEnemy(i).GetComponent<Enemy>();
+                }
+            }
         }
         attackContext.sourceUnit = this;
         attackContext.animator = GetComponentInChildren<Animator>();
+        bool successfulAttack = false;
         foreach (AttackSO attack in possibleAttacks)
         {
             if (attack.gestureName == gestureName && attack.colour == color)
             {
                 attack.Attack(attackContext);
+                successfulAttack = true;
             }
+            
         }
+
+        return successfulAttack;
     }
 
     public void SelectTarget(int targetIndex)

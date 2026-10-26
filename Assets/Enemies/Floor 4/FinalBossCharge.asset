@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c73f1034da846d9a64090ebfbbcb9d0, type: 3}
+  m_Name: FinalBossCharge
+  m_EditorClassIdentifier: Assembly-CSharp::Attacks.AttackDB.FinalBossCharge
+  attackName: Magic Charge
+  basePower: 0
+  gestureName: Spiral
+  colour: {r: 0, g: 0, b: 0, a: 0}
+  attackSFX: {fileID: 8300000, guid: 9f6f966f7de39bd4fbef2becfc92ca9b, type: 3}
+  sfxVolume: 1
+  targetingType: 2

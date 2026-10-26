@@ -7,11 +7,15 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject drawingCanvas;
-    [SerializeField]
-    private GameObject drawButton;
+    [SerializeField] private GameObject drawButton;
+    [SerializeField] private GameObject codexButton;
 
     [SerializeField] 
     private GameObject colourSelection;
+
+    [SerializeField] private GameObject codexColourSelect;
+    // 0 = red, 1 = green, 2 = blue
+    [SerializeField] private GameObject[] codexPages;
 
     public TextMeshProUGUI battleLogText;
     
@@ -32,6 +36,33 @@ public class UIManager : MonoBehaviour
         targetSelection.SetActive(false);
     }
 
+    public void GoToCodexSelection()
+    {
+        drawingCanvas.SetActive(false);
+        drawButton.SetActive(false);
+        colourSelection.SetActive(false);
+        targetReticle.SetActive(false);
+        targetSelection.SetActive(false);
+        codexButton.SetActive(false);
+        codexColourSelect.SetActive(true);
+        foreach (var VARIABLE in codexPages)
+        {
+            VARIABLE.SetActive(false);
+        }
+    }
+
+    public void ShowCodexPage(int page)
+    {
+        drawingCanvas.SetActive(false);
+        drawButton.SetActive(false);
+        colourSelection.SetActive(false);
+        targetReticle.SetActive(false);
+        targetSelection.SetActive(false);
+        codexButton.SetActive(false);
+        codexColourSelect.SetActive(false);
+        codexPages[page].SetActive(true);
+    }
+
     public void GoToMain()
     {
         drawingCanvas.SetActive(false);
@@ -39,6 +70,8 @@ public class UIManager : MonoBehaviour
         colourSelection.SetActive(false);
         targetReticle.SetActive(false);
         targetSelection.SetActive(false);
+        codexButton.SetActive(true);
+        codexColourSelect.SetActive(false);
     }
 
     public void GoToTargeting()
@@ -48,6 +81,7 @@ public class UIManager : MonoBehaviour
         colourSelection.SetActive(false);
         targetReticle.SetActive(true);
         targetSelection.SetActive(true);
+        codexButton.SetActive(false);
         CombatManager combatManager = FindAnyObjectByType<CombatManager>();
         for (int i = 0; i < combatManager.GetAllEnemies().Length; i++)
         {

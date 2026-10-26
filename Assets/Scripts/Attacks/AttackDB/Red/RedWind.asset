@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedWind
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: Wind Blast
-  basePower: 10
+  basePower: 30
   gestureName: Spiral
   colour: {r: 1, g: 0, b: 0, a: 1}
   attackSFX: {fileID: 8300000, guid: 1a6d4140d0078404e85a9508f191880a, type: 3}

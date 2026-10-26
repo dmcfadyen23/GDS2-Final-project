@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5486673478879991454}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.02, y: 15.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -228,7 +228,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.49849117, y: -2.4991322}
+  m_Offset: {x: 0.16797376, y: -2.5227432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -238,7 +238,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 2.161035, y: 2.0193863}
   m_EdgeRadius: 0
 --- !u!114 &8234499779323940771
 MonoBehaviour:
@@ -252,14 +252,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e174b47d0de6f41a7fc650776e049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  unitName: 
-  health: 100
-  attackStat: 0
-  enemyID: Stone1
-  basicAttack: {fileID: 0}
-  weakness: 
-  resistance: 
-  immune: 
+  unitName: Fish
+  health: 75
+  accuracy: 100
+  attackStat: 100
+  numEnemies: 1
+  enemyID: HeFish2
+  basicAttack: {fileID: 11400000, guid: 373d6d24336b56649a98fe4309eb93e8, type: 2}
+  weakness:
+  - Lightning
+  resistance: Fireball
+  immune: Waterfall
+  TypeOfEnemy: 0
 --- !u!114 &5742585667480218807
 MonoBehaviour:
   m_ObjectHideFlags: 0
