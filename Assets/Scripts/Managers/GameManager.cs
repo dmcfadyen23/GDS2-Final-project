@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     private int paintsCollected = 0;
 
     private HashSet<string> defeatedEnemies = new HashSet<string>();
+    private HashSet<int> collectedPaintIDs = new HashSet<int>();
+    private bool brushCollected;
+    private bool restorePlayerPosition;
 
 
     private void Awake()
@@ -33,10 +36,13 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void StartCombat(Vector3 position, Enemy tempEnemy)
     {
+        if (Time.timeScale == 0f) return;
+        restorePlayerPosition = false;
         playerPosition = position;
 
         enemy = tempEnemy;
@@ -62,7 +68,6 @@ public class GameManager : MonoBehaviour
         }
         // SceneManager.LoadScene("CombatView");
     }
-
 
     public Vector3 GetPlayerPosition()
     {
@@ -139,5 +144,90 @@ public class GameManager : MonoBehaviour
     public bool HasCollectedPaint(int paintID)
     {
         return paintID <= paintsCollected;
+    }
+
+    public static GameManager GetOrCreate()
+    {
+        if (Instance == null)
+        {
+            Instance = FindAnyObjectByType<GameManager>();
+            if (Instance == null)
+                Instance = new GameObject("GameManager").AddComponent<GameManager>();
+        }
+        return Instance;
+    }
+
+    public void ResetProgress()
+    {
+        playerPosition = Vector3.zero;
+        currentFloor = null;
+        enemy = null;
+        enemyID = null;
+        enemyName = null;
+        numEnemies = 0;
+        tutorialStarted = false;
+        paintsCollected = 0;
+        brushCollected = false;
+        restorePlayerPosition = false;
+        defeatedEnemies.Clear();
+        collectedPaintIDs.Clear();
+    }
+
+    public GameSaveData CaptureProgress(string scene, Vector3 position)
+    {
+        return new GameSaveData
+        {
+            scene = scene, position = position,
+            tutorialStarted = tutorialStarted, paintsCollected = paintsCollected,
+            brushCollected = brushCollected,
+            defeatedEnemies = new List<string>(defeatedEnemies),
+            collectedPaintIDs = new List<int>(collectedPaintIDs)
+        };
+    }
+
+    public void RestoreProgress(GameSaveData data)
+    {
+        ResetProgress();
+        currentFloor = data.scene;
+        playerPosition = data.position;
+        tutorialStarted = data.tutorialStarted;
+        paintsCollected = data.paintsCollected;
+        brushCollected = data.brushCollected;
+        defeatedEnemies = new HashSet<string>(data.defeatedEnemies);
+        collectedPaintIDs = new HashSet<int>(data.collectedPaintIDs);
+        restorePlayerPosition = true;
+    }
+
+    public bool TryGetRestorePosition(string scene, out Vector3 position)
+    {
+        position = playerPosition;
+        return restorePlayerPosition && currentFloor == scene;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (restorePlayerPosition && scene.name == currentFloor)
+            StartCoroutine(FinishPositionRestore());
+    }
+
+    private System.Collections.IEnumerator FinishPositionRestore()
+    {
+        yield return null;
+        restorePlayerPosition = false;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance != this) return;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        Instance = null;
+    }
+
+    public void CollectBrush() { brushCollected = true; }
+    public bool HasCollectedBrush() { return brushCollected; }
+
+    public void CollectPaint(int paintID)
+    {
+        if (collectedPaintIDs.Add(paintID)) CollectPaint();
     }
 }
