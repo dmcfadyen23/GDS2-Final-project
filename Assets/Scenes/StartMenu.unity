@@ -810,10 +810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75291cbd8be264f43ae4e28ad04963ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuAudio
-  mixer: {fileID: 0}
-  masterSlider: {fileID: 0}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
+  mixer: {fileID: 24100000, guid: eb114a6d9009e8c488a2a24d03bb28f1, type: 2}
+  masterSlider: {fileID: 991097292}
+  musicSlider: {fileID: 518128377}
+  sfxSlider: {fileID: 1625677632}
 --- !u!114 &344482119
 MonoBehaviour:
   m_ObjectHideFlags: 0
