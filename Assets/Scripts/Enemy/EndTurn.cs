@@ -23,7 +23,7 @@ public class EndTurn : MonoBehaviour
             Player player = FindAnyObjectByType<Player>();
             if (player.health <= 0)
             {
-                CombatManager.LoseCombat();
+                // CombatManager.LoseCombat();
                 SceneManager.LoadScene("TutorialFloor");
             }
         }
