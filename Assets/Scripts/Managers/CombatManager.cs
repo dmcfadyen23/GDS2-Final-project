@@ -187,4 +187,22 @@ public class CombatManager : MonoBehaviour //Add combat stuff here, all it has i
             GameManager.Instance.ReturnToOverworld();
         }
     }
+	private System.Collections.IEnumerator PlayResultSoundAndReturn(AudioClip clip)
+    {
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Stop();
+        }
+
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+
+            // Waits for sfx to finish playing
+            yield return new WaitForSeconds(clip.length);
+        }
+
+        // Returns overworld after the sound 
+        GameManager.Instance.ReturnToOverworld();
+    }
 }
