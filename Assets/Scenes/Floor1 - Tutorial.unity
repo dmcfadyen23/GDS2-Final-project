@@ -16200,8 +16200,8 @@ MonoBehaviour:
   basicAttack: {fileID: 11400000, guid: 70a3436fbcec4094090e2d9cacbd3143, type: 2}
   weakness:
   - Heart Attack
-  resistance: 
-  immune: 
+  resistance: Lightning Bolt
+  immune: Fireball
   TypeOfEnemy: 1
 --- !u!114 &4111332269468107079 stripped
 MonoBehaviour:
